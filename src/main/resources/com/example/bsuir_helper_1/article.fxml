@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.ArticleController">
+      <TabPane layoutY="82.0" prefHeight="518.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+          <Tab fx:id="firstarticlesbutton" text="Вводная Статья">
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="488.0" prefWidth="800.0">
+                        <ScrollBar fx:id="articlesScrollBar" layoutX="775.0" layoutY="1.0" orientation="VERTICAL" prefHeight="488.0" prefWidth="26.0" />
+                        <AnchorPane layoutX="28.0" layoutY="24.0" prefHeight="460.0" prefWidth="719.0" style="-fx-background-color: #FAFAFA; -fx-border-color: #000000;">
+                              <Text layoutX="21.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Миссия университета - подготовка специалистов с высшим образованием и кадров высшей научной квалификации, способных воспринимать, генерировать и воплощать инновационные идеи, создавать конкурентоспособную наукоемкую продукцию в области информатики и электроники." wrappingWidth="658.9367065429688" />
+                        </AnchorPane>
+                  </AnchorPane>
+          </Tab>
+          <Tab fx:id="secondarticlesbutton" text="БГУИР">
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="293.0" prefWidth="487.0">
+                  <ImageView fx:id="imageButtonHome" fitHeight="290.0" fitWidth="321.0" layoutX="255.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+                      <Image url="@assets/unnamed.jpg" />
+                  </ImageView>
+                  </AnchorPane>
+          </Tab>
+      </TabPane>
+      <AnchorPane layoutY="-1.0" prefHeight="82.0" prefWidth="800.0" style="-fx-background-color: #2E3348;">
+            <Label layoutX="174.0" layoutY="11.0" prefHeight="59.0" prefWidth="476.0" text="BSUIR HELPER. STUDY AND PLAY" textFill="#ffd414">
+               <font>
+                  <Font name="Roboto Black" size="30.0" />
+               </font>
+            </Label>
+      </AnchorPane>
+</AnchorPane>
