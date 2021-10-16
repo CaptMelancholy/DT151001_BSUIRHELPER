@@ -9,7 +9,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-
 public class Controller {
 
     @FXML
@@ -33,7 +32,7 @@ public class Controller {
                     try {
                         loader.load();
                     } catch (IOException e) {
-                        LOGGER.log("context", e);
+                        e.printStackTrace();
                     }
 
                     Parent root = loader.getRoot();
