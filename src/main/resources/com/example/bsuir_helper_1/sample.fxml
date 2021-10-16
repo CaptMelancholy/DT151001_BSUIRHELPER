@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.Controller">
+        <AnchorPane layoutX="-1.0" layoutY="543.0" prefHeight="59.0" prefWidth="802.0" style="-fx-background-color: #d3d3d3; -fx-border-color: #000000;">
+
+                <Text layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VERSION 0.0.1 ALPHA" textAlignment="CENTER" wrappingWidth="800.0">
+                    <font>
+                        <Font name="Roboto" size="12.0" />
+                    </font>
+                </Text>
+                <Text layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="© Dream Team 151001, all right reserved, 2021" textAlignment="CENTER" wrappingWidth="800.0">
+                    <font>
+                        <Font name="Roboto" size="12.0" />
+                    </font>
+                </Text>
+        </AnchorPane>
+        <AnchorPane layoutX="-1.0" layoutY="79.0" prefHeight="464.0" prefWidth="802.0" style="-fx-background-color: #FAFAFA; -fx-border-color: #000000;">
+                <AnchorPane layoutX="156.0" layoutY="45.0" prefHeight="368.0" prefWidth="459.0" style="-fx-border-color: #000000; -fx-background-color: #d3d3d3; -fx-border-width: 3;">
+                        <AnchorPane layoutX="7.0" layoutY="9.0" prefHeight="59.0" prefWidth="476.0" style="-fx-background-color: #FAFAFA; -fx-border-color: #000000;">
+
+                                <Label layoutX="202.0" layoutY="12.0" text="MENU">
+                                    <font>
+                                        <Font name="Roboto Black" size="25.0" />
+                                    </font>
+                                </Label>
+                        </AnchorPane>
+                        <AnchorPane layoutX="7.0" layoutY="69.0" prefHeight="298.0" prefWidth="476.0" style="-fx-border-color: #000000;">
+
+                                <Button fx:id="menuOrganizerButton" layoutX="132.0" layoutY="93.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="212.0" style="-fx-background-color: #ffffff; -fx-background-radius: 11; -fx-border-color: #000000; -fx-border-radius: 10;" text="ОРГАНАЙЗЕР" textOverrun="CLIP">
+                                    <font>
+                                        <Font name="Roboto" size="14.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="menuFlashCardsButton" layoutX="132.0" layoutY="207.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="212.0" style="-fx-background-color: #ffffff; -fx-background-radius: 11; -fx-border-color: #000000; -fx-border-radius: 10;" text="FLASH-CARDS" textOverrun="CLIP">
+                                    <font>
+                                        <Font name="Roboto" size="14.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="menuArticlesButton" layoutX="132.0" layoutY="40.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="212.0" style="-fx-background-color: #ffffff; -fx-background-radius: 11; -fx-border-color: #000000; -fx-border-radius: 10;" text="СТАТЬИ" textOverrun="CLIP">
+                                    <font>
+                                        <Font name="Roboto" size="14.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="menuGameButton" layoutX="132.0" layoutY="149.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="212.0" style="-fx-background-color: #ffffff; -fx-background-radius: 11; -fx-border-color: #000000; -fx-border-radius: 10;" text="TIME-TO-CHILL" textOverrun="CLIP">
+                                    <font>
+                                        <Font name="Roboto" size="14.0" />
+                                    </font>
+                                </Button>
+
+                        </AnchorPane>
+                </AnchorPane>
+        </AnchorPane>
+        <Label layoutX="162.0" layoutY="14.0" prefHeight="59.0" prefWidth="476.0" text="BSUIR HELPER. STUDY AND PLAY" textFill="#ffd414">
+            <font>
+                <Font name="Roboto Black" size="30.0" />
+            </font>
+        </Label>
+</AnchorPane>
+
+
