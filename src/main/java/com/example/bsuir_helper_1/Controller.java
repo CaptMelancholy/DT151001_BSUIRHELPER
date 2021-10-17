@@ -41,5 +41,38 @@ public class Controller {
                     stage.showAndWait();
                 }
                 );
+        menuOrganizerButton.setOnAction(actionEvent -> {
+            menuOrganizerButton.getScene().getWindow().hide();
+                FXMLLoader loader = new FXMLLoader();
+                loader.setLocation(getClass().getResource("organizer.fxml"));
+                try {
+                    loader.load();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Parent root = loader.getRoot();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.showAndWait();
+
+        });
+
+        menuFlashCardsButton.setOnAction(actionEvent -> {
+            menuFlashCardsButton.getScene().getWindow().hide();
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("flashcards.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+
+        });
     }
 }
