@@ -9,12 +9,12 @@
     <version>1.0-SNAPSHOT</version>
     <name>bsuir_helper_1</name>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <junit.version>5.7.1</junit.version>
-        <sonar.organization>captmelancholy-1</sonar.organization>
-        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-    </properties>
+        <properties>
+            <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+            <junit.version>5.7.1</junit.version>
+            <sonar.organization>captmelancholy-1</sonar.organization>
+            <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        </properties>
 
         <dependencies>
             <dependency>
@@ -114,7 +114,7 @@
                             <!-- Default configuration for running with: mvn clean javafx:run -->
                             <id>default-cli</id>
                             <configuration>
-                                <mainClass>com.example.demo3/com.example.demo3.HelloApplication</mainClass>
+                                <mainClass>com.example.bsuir_helper_1/com.example.bsuir_helper_1.Main</mainClass>
                             </configuration>
                         </execution>
                     </executions>
