@@ -23,7 +23,7 @@ public class Controller {
     @FXML
     private Button menuOrganizerButton;
 
-    @FXML
+    @FXML // Придумать как это все сделать без повторения строк и строчек
     void initialize () {
         menuArticlesButton.setOnAction(actionEvent -> {
             menuArticlesButton.getScene().getWindow().hide();
