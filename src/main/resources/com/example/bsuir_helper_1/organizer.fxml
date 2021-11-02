@@ -27,9 +27,6 @@
       </items>
    </SplitPane>
    <ButtonBar layoutX="248.0" layoutY="483.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0">
-      <buttons>
-         <BottomNavigationButton />
-      </buttons>
    </ButtonBar>
    <MenuBar layoutX="200.0" layoutY="81.0" prefHeight="28.0" prefWidth="317.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0">
      <menus>
