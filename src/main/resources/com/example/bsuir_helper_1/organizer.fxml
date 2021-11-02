@@ -1,15 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.gluonhq.charm.glisten.control.BottomNavigationButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TreeView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.OrganizerController">
-      <AnchorPane layoutY="-1.0" prefHeight="82.0" prefWidth="800.0" style="-fx-background-color: #2E3348;">
-            <Label layoutX="174.0" layoutY="11.0" prefHeight="59.0" prefWidth="476.0" text="BSUIR HELPER. STUDY AND PLAY" textFill="#ffd414">
-               <font>
-                  <Font name="Roboto Black" size="30.0" />
-               </font>
-            </Label>
-      </AnchorPane>
+    <AnchorPane layoutY="-1.0" prefHeight="82.0" prefWidth="800.0" style="-fx-background-color: #2E3348;" AnchorPane.rightAnchor="0.0">
+        <Label layoutX="174.0" layoutY="11.0" prefHeight="59.0" prefWidth="476.0" text="BSUIR HELPER. STUDY AND PLAY" textFill="#ffd414">
+            <font>
+                <Font name="Roboto Black" size="30.0" />
+            </font>
+        </Label>
+    </AnchorPane>
+   <SplitPane layoutX="14.0" layoutY="118.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="81.0">
+      <items>
+         <TreeView prefHeight="200.0" prefWidth="200.0" />
+      </items>
+   </SplitPane>
+   <ButtonBar layoutX="248.0" layoutY="483.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0">
+      <buttons>
+         <BottomNavigationButton />
+      </buttons>
+   </ButtonBar>
+   <MenuBar layoutX="200.0" layoutY="81.0" prefHeight="28.0" prefWidth="317.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0">
+     <menus>
+       <Menu mnemonicParsing="false" text="Исправить">
+         <items>
+           <MenuItem mnemonicParsing="false" text="Отменить" />
+               <MenuItem mnemonicParsing="false" text="Удалить" />
+         </items>
+       </Menu>
+       <Menu mnemonicParsing="false" text="Help">
+         <items>
+           <MenuItem mnemonicParsing="false" text="About" />
+         </items>
+       </Menu>
+     </menus>
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+   </MenuBar>
+   <TextArea layoutX="200.0" layoutY="109.0" prefHeight="446.0" prefWidth="600.0" />
 </AnchorPane>
