@@ -74,5 +74,21 @@ public class Controller {
             stage.showAndWait();
 
         });
+        menuGameButton.setOnAction(actionEvent -> {
+            menuGameButton.getScene().getWindow().hide();
+                    FXMLLoader loader = new FXMLLoader();
+                    loader.setLocation(getClass().getResource("gamesnake.fxml"));
+                    try {
+                        loader.load();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    Parent root = loader.getRoot();
+                    Stage stage = new Stage();
+                    stage.setScene(new Scene(root));
+                    stage.showAndWait();
+                }
+        );
     }
 }
