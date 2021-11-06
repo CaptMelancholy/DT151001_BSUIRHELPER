@@ -31,8 +31,8 @@ public class Food {
     }
 
     public void getRandomSpotForFood(){
-        int positionX = random.nextInt(12);
-        int positionY = random.nextInt(12);
+        int positionX = random.nextInt(10);
+        int positionY = random.nextInt(10);
         rectangle.setX(positionX * size);
         rectangle.setY(positionY * size);
 
