@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.Controller">
         <AnchorPane layoutX="-1.0" layoutY="543.0" prefHeight="59.0" prefWidth="802.0" style="-fx-background-color: #d3d3d3; -fx-border-color: #000000;">
 
                 <Text layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VERSION 0.0.1 ALPHA" textAlignment="CENTER" wrappingWidth="800.0">

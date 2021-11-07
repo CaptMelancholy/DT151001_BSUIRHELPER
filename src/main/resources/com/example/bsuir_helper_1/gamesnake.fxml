@@ -3,7 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="550.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.GameController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="550.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.GameController">
       <AnchorPane fx:id="GameField" layoutY="73.0" onKeyPressed="#moveSquareKeyPressed" prefHeight="550.0" prefWidth="550.0" style="-fx-background-color: #ffffff;" />
       <Button fx:id="startButton" layoutX="33.0" layoutY="21.0" mnemonicParsing="false" onKeyPressed="#moveSquareKeyPressed" onMouseClicked="#start" prefHeight="26.0" prefWidth="130.0" text="START GAME" />
       <Button fx:id="exitButton" layoutX="410.0" layoutY="21.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="83.0" text="EXIT" />
