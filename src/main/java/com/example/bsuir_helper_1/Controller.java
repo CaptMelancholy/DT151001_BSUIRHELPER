@@ -1,5 +1,4 @@
 package com.example.bsuir_helper_1;
-
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

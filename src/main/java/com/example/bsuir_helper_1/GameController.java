@@ -4,15 +4,20 @@ import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -48,7 +53,7 @@ public class GameController implements Initializable {
     private AnchorPane GameField;
 
     @FXML
-    private Button exit;
+    private Button exitButton;
 
 
     //Timeline that is running the game every time the KeyFrame is called (0.3 s)
@@ -100,6 +105,7 @@ public class GameController implements Initializable {
         }));
         food = new Food(0,0,GameField,snakeSize);
     }
+
     //Change position with key pressed
     @FXML
     void moveSquareKeyPressed(KeyEvent event) {
