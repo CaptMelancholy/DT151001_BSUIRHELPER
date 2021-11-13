@@ -3,9 +3,11 @@ package com.example.bsuir_helper_1;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -21,6 +23,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class GameController implements Initializable {
@@ -47,6 +50,9 @@ public class GameController implements Initializable {
 
     //Game ticks is how many times the snake have moved
     private int gameTicks;
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
 
 
     @FXML
@@ -87,6 +93,14 @@ public class GameController implements Initializable {
 
         GameField.getChildren().addAll(snakeHead, snakeTail_1);
     }
+    @FXML
+    public void exit(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sample.fxml")));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         timeline = new Timeline(new KeyFrame(Duration.seconds(0.3), e -> {
@@ -96,7 +110,6 @@ public class GameController implements Initializable {
                 moveSnakeTail(snakeBody.get(i), i);
             }
             canChangeDirection = true;
-            //System.out.println((xPos + snakeHead.getX()) + "-----" + (yPos + snakeHead.getY()));
             eatFood();
             gameTicks++;
             if(checkIfGameIsOver()){
@@ -208,6 +221,7 @@ public class GameController implements Initializable {
         }
         return false;
     }
+
 
 
 }

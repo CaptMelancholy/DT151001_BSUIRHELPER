@@ -3,7 +3,6 @@ package com.example.bsuir_helper_1;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-
 import java.util.Random;
 
 public class Food {
@@ -17,10 +16,12 @@ public class Food {
         this.size = (int) size;
         position = new Position(xPos,yPos);
         rectangle = new Rectangle(position.getXPos(),position.getYPos(),size,size);
+
         Color color = Color.GREEN;
         rectangle.setFill(color);
         pane.getChildren().add(rectangle);
     }
+
 
     public Position getPosition() {
         return position;
