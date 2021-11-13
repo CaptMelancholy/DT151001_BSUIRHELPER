@@ -11,6 +11,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
@@ -30,6 +31,7 @@ public class GameController implements Initializable {
     //A snake body part is 50x50
     private final Double snakeSize = 50.;
     public Button startButton;
+    public Label gameoverlabel;
     //The head of the snake is created, at position (250,250)
     private Rectangle snakeHead;
     //x and y position of the snake head different from starting position
@@ -71,7 +73,7 @@ public class GameController implements Initializable {
         for (Rectangle snake : snakeBody) {
             GameField.getChildren().remove(snake);
         }
-
+        gameoverlabel.setText("");
         gameTicks = 0;
         positions.clear();
         snakeBody.clear();
@@ -96,6 +98,7 @@ public class GameController implements Initializable {
     @FXML
     public void exit(ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sample.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sample.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -116,7 +119,7 @@ public class GameController implements Initializable {
                 timeline.stop();
             }
         }));
-        food = new Food(0,0,GameField,snakeSize);
+        food = new Food(-50,-50,GameField,snakeSize);
     }
 
     //Change position with key pressed
@@ -173,6 +176,10 @@ public class GameController implements Initializable {
     public boolean checkIfGameIsOver() {
         if (xPos > 250 || xPos < -250 ||yPos < -250 || yPos > 250) {
             System.out.println("Game_over");
+            gameoverlabel.setText("GAME OVER PLEASE TRY AGAIN");
+            for (Rectangle snake : snakeBody) {
+                GameField.getChildren().remove(snake);
+            }
             return true;
         } else return snakeHitItSelf();
     }
@@ -183,7 +190,10 @@ public class GameController implements Initializable {
             for (int i = size - snakeBody.size(); i < size; i++) {
                 if(positions.get(size).getXPos() == (positions.get(i).getXPos())
                         && positions.get(size).getYPos() == (positions.get(i).getYPos())){
-                    System.out.println("Hit");
+                    gameoverlabel.setText("HIT! PLEASE TRY AGAIN");
+                    for (Rectangle snake : snakeBody) {
+                        GameField.getChildren().remove(snake);
+                    }
                     return true;
                 }
             }
