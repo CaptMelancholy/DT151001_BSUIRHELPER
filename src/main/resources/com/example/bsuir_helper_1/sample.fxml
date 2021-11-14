@@ -32,27 +32,27 @@
                         </AnchorPane>
                         <AnchorPane layoutX="7.0" layoutY="69.0" prefHeight="298.0" prefWidth="476.0" style="-fx-border-color: #000000;">
 
-                                <Button fx:id="menuOrganizerButton" layoutX="132.0" layoutY="61.0" mnemonicParsing="false" onAction="#movetoorganizer" prefHeight="36.0" prefWidth="212.0" style="-fx-background-color: #ffffff; -fx-background-radius: 11; -fx-border-color: #000000; -fx-border-radius: 10;" text="ОРГАНАЙЗЕР" textOverrun="CLIP">
+                                <Button layoutX="132.0" layoutY="61.0" mnemonicParsing="false" onAction="#movetoorganizer" prefHeight="36.0" prefWidth="212.0" style="-fx-background-color: #ffffff; -fx-background-radius: 11; -fx-border-color: #000000; -fx-border-radius: 10;" text="ОРГАНАЙЗЕР" textOverrun="CLIP">
                                     <font>
                                         <Font name="Roboto" size="14.0" />
                                     </font>
                                 </Button>
-                                <Button fx:id="menuFlashCardsButton" layoutX="132.0" layoutY="149.0" mnemonicParsing="false" onAction="#movetoflashcards" prefHeight="36.0" prefWidth="212.0" style="-fx-background-color: #ffffff; -fx-background-radius: 11; -fx-border-color: #000000; -fx-border-radius: 10;" text="FLASH-CARDS" textOverrun="CLIP">
+                                <Button layoutX="132.0" layoutY="149.0" mnemonicParsing="false" onAction="#movetoflashcards" prefHeight="36.0" prefWidth="212.0" style="-fx-background-color: #ffffff; -fx-background-radius: 11; -fx-border-color: #000000; -fx-border-radius: 10;" text="FLASH-CARDS" textOverrun="CLIP">
                                     <font>
                                         <Font name="Roboto" size="14.0" />
                                     </font>
                                 </Button>
-                                <Button fx:id="menuArticlesButton" layoutX="132.0" layoutY="14.0" mnemonicParsing="false" onAction="#movetoarticles" prefHeight="36.0" prefWidth="212.0" style="-fx-background-color: #ffffff; -fx-background-radius: 11; -fx-border-color: #000000; -fx-border-radius: 10;" text="СТАТЬИ" textOverrun="CLIP">
+                                <Button layoutX="132.0" layoutY="14.0" mnemonicParsing="false" onAction="#movetoarticles" prefHeight="36.0" prefWidth="212.0" style="-fx-background-color: #ffffff; -fx-background-radius: 11; -fx-border-color: #000000; -fx-border-radius: 10;" text="СТАТЬИ" textOverrun="CLIP">
                                     <font>
                                         <Font name="Roboto" size="14.0" />
                                     </font>
                                 </Button>
-                                <Button fx:id="menuGameButton" layoutX="132.0" layoutY="104.0" mnemonicParsing="false" onAction="#movetogamesnake" prefHeight="36.0" prefWidth="212.0" style="-fx-background-color: #ffffff; -fx-background-radius: 11; -fx-border-color: #000000; -fx-border-radius: 10;" text="TIME-TO-CHILL" textOverrun="CLIP">
+                                <Button layoutX="132.0" layoutY="104.0" mnemonicParsing="false" onAction="#movetogamesnake" prefHeight="36.0" prefWidth="212.0" style="-fx-background-color: #ffffff; -fx-background-radius: 11; -fx-border-color: #000000; -fx-border-radius: 10;" text="TIME-TO-CHILL" textOverrun="CLIP">
                                     <font>
                                         <Font name="Roboto" size="14.0" />
                                     </font>
                                 </Button>
-            <Button fx:id="menuWeatherButton" layoutX="132.0" layoutY="194.0" mnemonicParsing="false" onAction="#movetoweather" prefHeight="36.0" prefWidth="212.0" style="-fx-background-color: #ffffff; -fx-background-radius: 11; -fx-border-color: #000000; -fx-border-radius: 10;" text="WEATHER CHECKER" textOverrun="CLIP">
+            <Button layoutX="132.0" layoutY="194.0" mnemonicParsing="false" onAction="#movetoweather" prefHeight="36.0" prefWidth="212.0" style="-fx-background-color: #ffffff; -fx-background-radius: 11; -fx-border-color: #000000; -fx-border-radius: 10;" text="WEATHER CHECKER" textOverrun="CLIP">
                <font>
                   <Font name="Roboto" size="14.0" />
                </font>

@@ -29,9 +29,6 @@ public class WeatherController {
     private Text air_pressure;
 
     @FXML
-    private Button backtomenubutton;
-
-    @FXML
     private Button checkWeatherButton;
 
     @FXML

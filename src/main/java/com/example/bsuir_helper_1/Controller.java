@@ -1,31 +1,16 @@
 package com.example.bsuir_helper_1;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.Objects;
 
 public class Controller {
-    @FXML
-    public Button menuWeatherButton;
 
-    @FXML
-    private Button menuArticlesButton;
-
-    @FXML
-    private Button menuFlashCardsButton;
-
-    @FXML
-    private Button menuGameButton;
-
-    @FXML
-    private Button menuOrganizerButton;
 
     private Stage stage;
     private Scene scene;
