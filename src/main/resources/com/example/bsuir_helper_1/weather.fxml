@@ -31,6 +31,9 @@
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
             </Button>
             <ImageView fitHeight="66.0" fitWidth="62.0" layoutX="236.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
                   <Image url="@assets/weather.png" />
@@ -84,6 +87,9 @@
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
             </Button>
             <Text fx:id="weather" fill="WHITE" layoutX="14.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WEATHER:">
                <font>
