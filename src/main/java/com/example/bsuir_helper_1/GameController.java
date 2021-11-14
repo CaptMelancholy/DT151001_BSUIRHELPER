@@ -83,12 +83,12 @@ public class GameController implements Initializable {
         food.moveFood();
 
         snakeBody.add(snakeHead);
-        snakeHead.setFill(Color.RED);
+        snakeHead.setFill(Color.DARKORANGE);
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
 
         snakeBody.add(snakeTail_1);
-
+        snakeTail_1.setFill(Color.GREEN);
         GameField.getChildren().addAll(snakeHead, snakeTail_1);
     }
     @FXML
@@ -165,12 +165,12 @@ public class GameController implements Initializable {
                 snakeBody.get(1).getY() + yPos,
                 snakeSize, snakeSize);
         snakeBody.add(snakeTail);
+        snakeTail.setFill(Color.GREEN);
         GameField.getChildren().add(snakeTail);
     }
     //Change position with key pressed
     public boolean checkIfGameIsOver() {
         if (xPos > 250 || xPos < -250 ||yPos < -250 || yPos > 250) {
-            System.out.println("Game_over");
             gameoverlabel.setText("GAME OVER PLEASE TRY AGAIN");
             for (Rectangle snake : snakeBody) {
                 GameField.getChildren().remove(snake);
@@ -224,7 +224,6 @@ public class GameController implements Initializable {
             for (int i = size - snakeBody.size(); i < size; i++) {
                 if(food.getPosition().getXPos() == (positions.get(i).getXPos())
                         && food.getPosition().getYPos() == (positions.get(i).getYPos())){
-                    System.out.println("Inside");
                     return true;
                 }
             }
