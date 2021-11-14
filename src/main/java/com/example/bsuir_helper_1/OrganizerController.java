@@ -67,4 +67,12 @@ public class OrganizerController implements Initializable {
     @FXML
     private SplitPane SplitPane;
 
+    public void Undo(ActionEvent actionEvent) {
+    }
+
+    public void Delete(ActionEvent actionEvent) {
+    }
+
+    public void Help(ActionEvent actionEvent) {
+    }
 }

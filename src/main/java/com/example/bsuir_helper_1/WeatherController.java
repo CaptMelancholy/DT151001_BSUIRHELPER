@@ -61,6 +61,7 @@ public class WeatherController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sample.fxml")));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
+        stage.setTitle("BSUIR HELPER");
             stage.setScene(scene);
             stage.show();
         }
