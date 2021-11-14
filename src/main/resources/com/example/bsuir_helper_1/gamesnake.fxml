@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="550.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.GameController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="550.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.GameController">
       <AnchorPane fx:id="GameField" layoutY="133.0" onKeyPressed="#moveSquareKeyPressed" prefHeight="550.0" prefWidth="550.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;">
          <Label fx:id="gameoverlabel" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="154.0" prefHeight="242.0" prefWidth="527.0" textFill="RED">
             <font>

@@ -1,13 +1,11 @@
 package com.example.bsuir_helper_1;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.DialogPane;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
@@ -22,8 +20,6 @@ public class Controller {
     private Stage stage;
     private Scene scene;
     private Parent root;
-    @FXML
-    private DialogPane covid19dialog;
 
     public void movetogamesnake(ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("gamesnake.fxml")));
