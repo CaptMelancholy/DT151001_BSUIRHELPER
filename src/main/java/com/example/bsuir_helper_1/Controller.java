@@ -12,6 +12,8 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class Controller {
+    @FXML
+    public Button menuWeatherButton;
 
     @FXML
     private Button menuArticlesButton;
@@ -62,4 +64,6 @@ public class Controller {
     }
 
 
+    public void movetoweather(ActionEvent actionEvent) {
+    }
 }

@@ -21,26 +21,18 @@
         </Label>
     </AnchorPane>
    <SplitPane layoutX="14.0" layoutY="118.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="81.0">
-      <items>
          <TreeView prefHeight="200.0" prefWidth="200.0" />
-      </items>
    </SplitPane>
    <ButtonBar layoutX="248.0" layoutY="483.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0">
    </ButtonBar>
    <MenuBar layoutX="200.0" layoutY="81.0" prefHeight="28.0" prefWidth="317.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0">
-     <menus>
        <Menu mnemonicParsing="false" text="Исправить">
-         <items>
            <MenuItem mnemonicParsing="false" text="Отменить" />
                <MenuItem mnemonicParsing="false" text="Удалить" />
-         </items>
        </Menu>
        <Menu mnemonicParsing="false" text="Help">
-         <items>
            <MenuItem mnemonicParsing="false" text="About" />
-         </items>
        </Menu>
-     </menus>
       <opaqueInsets>
          <Insets />
       </opaqueInsets>

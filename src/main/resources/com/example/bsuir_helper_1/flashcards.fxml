@@ -10,47 +10,29 @@
 <?import javafx.scene.web.HTMLEditor?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.FlashCardsController">
-   <children>
       <AnchorPane layoutY="-1.0" prefHeight="82.0" prefWidth="800.0" style="-fx-background-color: #2E3348;">
-         <children>
             <Label layoutX="174.0" layoutY="11.0" prefHeight="59.0" prefWidth="476.0" text="BSUIR HELPER. STUDY AND PLAY" textFill="#ffd414">
                <font>
                   <Font name="Roboto Black" size="30.0" />
                </font>
             </Label>
-         </children>
       </AnchorPane>
       <TabPane layoutY="81.0" prefHeight="522.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
-         <tabs>
             <Tab text="еда">
-               <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="219.0" prefWidth="837.0">
-                     <children>
                         <TextField layoutY="14.0" nodeOrientation="LEFT_TO_RIGHT" style="-fx-border-color: #fafafa;" text="что-то" />
                         <Button layoutX="304.0" layoutY="419.0" mnemonicParsing="false" text="сгенерировать новую что-то" />
-                     </children>
                   </AnchorPane>
-               </content>
             </Tab>
             <Tab text="идеи для занятий">
-               <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
                         <Button layoutX="304.0" layoutY="419.0" mnemonicParsing="false" text="сгенерировать новую что-то" />
-                     </children>
                   </AnchorPane>
-               </content>
             </Tab>
             <Tab text="своё">
-               <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
-                     <children>
                         <HTMLEditor accessibleRole="IMAGE_VIEW" cache="true" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="-6.0" prefHeight="414.0" prefWidth="806.0" AnchorPane.topAnchor="0.0" />
-                     </children>
                   </AnchorPane>
-               </content>
             </Tab>
-         </tabs>
       </TabPane>
-   </children>
 </AnchorPane>

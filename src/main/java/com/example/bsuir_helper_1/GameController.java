@@ -32,6 +32,8 @@ public class GameController implements Initializable {
     private final Double snakeSize = 50.;
     public Button startButton;
     public Label gameoverlabel;
+    public Label gamecounterlabel;
+    public Button exitButton;
     //The head of the snake is created, at position (250,250)
     private Rectangle snakeHead;
     //x and y position of the snake head different from starting position
@@ -52,16 +54,10 @@ public class GameController implements Initializable {
 
     //Game ticks is how many times the snake have moved
     private int gameTicks;
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
 
 
     @FXML
     private AnchorPane GameField;
-
-    @FXML
-    private Button exitButton;
 
 
     //Timeline that is running the game every time the KeyFrame is called (0.3 s)
@@ -97,10 +93,9 @@ public class GameController implements Initializable {
     }
     @FXML
     public void exit(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sample.fxml")));
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sample.fxml")));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sample.fxml")));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
@@ -180,6 +175,8 @@ public class GameController implements Initializable {
             for (Rectangle snake : snakeBody) {
                 GameField.getChildren().remove(snake);
             }
+            gamecounterlabel.setText("EATEN SQUARES: " + counter + " GOOD JOB, SEE YOU LATER");
+            counter = 0;
             return true;
         } else return snakeHitItSelf();
     }
@@ -190,20 +187,22 @@ public class GameController implements Initializable {
             for (int i = size - snakeBody.size(); i < size; i++) {
                 if(positions.get(size).getXPos() == (positions.get(i).getXPos())
                         && positions.get(size).getYPos() == (positions.get(i).getYPos())){
-                    gameoverlabel.setText("HIT! PLEASE TRY AGAIN");
+                    gamecounterlabel.setText("HIT! PLEASE TRY AGAIN");
                     for (Rectangle snake : snakeBody) {
                         GameField.getChildren().remove(snake);
                     }
+                    counter = 0;
                     return true;
                 }
             }
         }
         return false;
     }
-
+    public int counter = 0;
     private void eatFood(){
         if(xPos + snakeHead.getX() == food.getPosition().getXPos() && yPos + snakeHead.getY() == food.getPosition().getYPos()){
-            System.out.println("Eat food");
+            counter++;
+            gamecounterlabel.setText("EATEN SQUARES:" + counter);
             foodCantSpawnInsideSnake();
             addSnakeTail();
         }
