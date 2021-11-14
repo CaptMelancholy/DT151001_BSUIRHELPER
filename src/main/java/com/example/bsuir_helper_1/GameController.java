@@ -187,10 +187,11 @@ public class GameController implements Initializable {
             for (int i = size - snakeBody.size(); i < size; i++) {
                 if(positions.get(size).getXPos() == (positions.get(i).getXPos())
                         && positions.get(size).getYPos() == (positions.get(i).getYPos())){
-                    gamecounterlabel.setText("HIT! PLEASE TRY AGAIN");
+                    gameoverlabel.setText("HIT! PLEASE TRY AGAIN");
                     for (Rectangle snake : snakeBody) {
                         GameField.getChildren().remove(snake);
                     }
+                    gamecounterlabel.setText("EATEN SQUARES: " + counter + " GOOD JOB, SEE YOU LATER");
                     counter = 0;
                     return true;
                 }
