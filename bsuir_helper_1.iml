@@ -84,5 +84,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.ow2.asm:asm-analysis:9.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.ow2.asm:asm-tree:9.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.jacoco:org.jacoco.report:0.8.7" level="project" />
+    <orderEntry type="library" name="json-20210307" level="project" />
   </component>
 </module>

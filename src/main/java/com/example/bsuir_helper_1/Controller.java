@@ -64,6 +64,11 @@ public class Controller {
     }
 
 
-    public void movetoweather(ActionEvent actionEvent) {
+    public void movetoweather(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("weather.fxml")));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }

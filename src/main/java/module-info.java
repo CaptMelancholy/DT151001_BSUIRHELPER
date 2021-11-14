@@ -10,6 +10,7 @@ module com.example.bsuir_helper_1 {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires org.json;
 
     opens com.example.bsuir_helper_1 to javafx.fxml;
     exports com.example.bsuir_helper_1;
