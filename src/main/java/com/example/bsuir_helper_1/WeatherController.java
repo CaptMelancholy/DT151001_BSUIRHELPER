@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -21,9 +22,8 @@ import javafx.stage.Stage;
 import org.json.JSONObject;
 
 public class WeatherController {
-
     @FXML
-    private Label notfoundLabel;
+    public Label donfound;
 
     @FXML
     private Text air_pressure;
@@ -71,9 +71,10 @@ public class WeatherController {
         checkWeatherButton.setOnAction(event -> {
             String getUserCity = cityenterfield.getText().trim();
             String output = getUrlContent("https://api.openweathermap.org/data/2.5/weather?q=" + getUserCity + "&appid=e69fcdd9b060345b438437356f59cb01&units=metric&lang=ru");
-            notfoundLabel.setText("");
             System.out.println(output);
             if(!output.isEmpty()) {
+                donfound.setTextFill(Color.GREEN);
+                donfound.setText("CITY " + getUserCity + " WEATHER");
                 JSONObject obj = new JSONObject(output);
                 temp_info.setText("TEMPERATURE: " + obj.getJSONObject("main").getDouble("temp") + " °C");
                 temp_fills.setText("FILLS LIKE: " + obj.getJSONObject("main").getDouble("feels_like") + " °C");
@@ -101,7 +102,9 @@ public class WeatherController {
             bufferedReader.close();
 
         } catch (Exception e) {
-            notfoundLabel.setText("CITY NOT FOUND, TRY AGAIN");
+            donfound.setTextFill(Color.RED);
+            donfound.setText("CITY DOESN'T FOUND");
+            System.out.println("!!!");
 
         }
         return content.toString();

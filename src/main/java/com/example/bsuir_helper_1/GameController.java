@@ -176,7 +176,7 @@ public class GameController implements Initializable {
             for (Rectangle snake : snakeBody) {
                 GameField.getChildren().remove(snake);
             }
-            gamecounterlabel.setText("EATEN SQUARES: " + counter + " GOOD JOB, SEE YOU LATER");
+            gamecounterlabel.setText("EATEN SQUARES:  " + counter + "  GOOD JOB, SEE YOU LATER");
             counter = 0;
             return true;
         } else return snakeHitItSelf();
