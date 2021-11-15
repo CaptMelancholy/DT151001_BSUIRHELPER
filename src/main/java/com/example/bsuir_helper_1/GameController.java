@@ -70,6 +70,7 @@ public class GameController implements Initializable {
             GameField.getChildren().remove(snake);
         }
         gameoverlabel.setText("");
+        gamecounterlabel.setText("");
         gameTicks = 0;
         positions.clear();
         snakeBody.clear();
@@ -176,7 +177,7 @@ public class GameController implements Initializable {
             for (Rectangle snake : snakeBody) {
                 GameField.getChildren().remove(snake);
             }
-            gamecounterlabel.setText("EATEN SQUARES:  " + counter + "  GOOD JOB, SEE YOU LATER");
+            gamecounterlabel.setText("EATEN SQUARES: " + counter + " GOOD JOB, SEE YOU LATER");
             counter = 0;
             return true;
         } else return snakeHitItSelf();
@@ -194,6 +195,7 @@ public class GameController implements Initializable {
                     }
                     gamecounterlabel.setText("EATEN SQUARES: " + counter + " GOOD JOB, SEE YOU LATER");
                     counter = 0;
+
                     return true;
                 }
             }
