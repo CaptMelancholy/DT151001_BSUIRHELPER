@@ -14,6 +14,7 @@ import javafx.scene.text.Text;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.UTFDataFormatException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.Objects;
@@ -70,7 +71,7 @@ public class WeatherController {
     void initialize() {
         checkWeatherButton.setOnAction(event -> {
             String getUserCity = cityenterfield.getText().trim();
-            String output = getUrlContent("https://api.openweathermap.org/data/2.5/weather?q=" + getUserCity + "&appid=e69fcdd9b060345b438437356f59cb01&units=metric&lang=ru");
+            String output = getUrlContent("https://api.openweathermap.org/data/2.5/weather?q=" + getUserCity + "&appid=e69fcdd9b060345b438437356f59cb01&units=metric&lang=en");
             System.out.println(output);
             if(!output.isEmpty()) {
                 donfound.setTextFill(Color.GREEN);
