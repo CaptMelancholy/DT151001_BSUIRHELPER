@@ -14,7 +14,6 @@ import javafx.scene.text.Text;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.UTFDataFormatException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.Objects;
