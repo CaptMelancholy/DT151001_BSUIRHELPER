@@ -10,10 +10,10 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="642.0" prefWidth="298.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.WeatherController">
-      <AnchorPane layoutX="-1.0" layoutY="52.0" prefHeight="533.0" prefWidth="298.0" style="-fx-background-color: #404040;">
-            <AnchorPane prefHeight="59.0" prefWidth="298.0" style="-fx-background-color: #303030;">
-                  <Text blendMode="COLOR_DODGE" fill="WHITE" layoutX="11.0" layoutY="37.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="WEATHER RIGHT NOW">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="642.0" prefWidth="403.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.WeatherController">
+      <AnchorPane layoutX="-1.0" layoutY="52.0" prefHeight="530.0" prefWidth="403.0" style="-fx-background-color: #404040;">
+            <AnchorPane prefHeight="59.0" prefWidth="403.0" style="-fx-background-color: #303030;">
+                  <Text blendMode="COLOR_DODGE" fill="WHITE" layoutX="9.0" layoutY="40.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="WEATHER RIGHT NOW" textAlignment="CENTER" wrappingWidth="384.8759765625">
                      <font>
                         <Font name="System Bold" size="25.0" />
                      </font>
@@ -22,12 +22,12 @@
                      </cursor>
                   </Text>
             </AnchorPane>
-            <TextField fx:id="cityenterfield" layoutX="41.0" layoutY="91.0" prefHeight="34.0" prefWidth="217.0" promptText="ENTER THE CITY" style="-fx-background-color: #f2f2f2; -fx-border-color: #646464; -fx-border-radius: 7; -fx-background-radius: 7;">
+            <TextField fx:id="cityenterfield" layoutX="93.0" layoutY="75.0" prefHeight="34.0" prefWidth="217.0" promptText="ENTER THE CITY" style="-fx-background-color: #f2f2f2; -fx-border-color: #646464; -fx-border-radius: 7; -fx-background-radius: 7;">
                <font>
                   <Font size="18.0" />
                </font>
             </TextField>
-            <Button fx:id="checkWeatherButton" layoutX="66.0" layoutY="140.0" mnemonicParsing="false" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: #000000;" text="CHECK THE WEATHER">
+            <Button fx:id="checkWeatherButton" layoutX="118.0" layoutY="140.0" mnemonicParsing="false" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: #000000;" text="CHECK THE WEATHER">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -35,7 +35,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
             </Button>
-            <ImageView fitHeight="66.0" fitWidth="62.0" layoutX="236.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="81.0" fitWidth="86.0" layoutX="311.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
                   <Image url="@assets/weather.png" />
             </ImageView>
             <Text fill="RED" layoutX="14.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: UniSans;" text="INFORMATION">
@@ -43,7 +43,7 @@
                   <Font name="UniSansHeavyCaps" size="25.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="77.0" layoutY="526.0" stroke="BLACK" strokeType="OUTSIDE" text="BY FORECAST OPENWEATHERMAP.ORG">
+            <Text fill="WHITE" layoutX="118.0" layoutY="521.0" stroke="BLACK" strokeType="OUTSIDE" text="WEATHER FORECAST BYOPENWEATHERMAP.ORG">
                <font>
                   <Font name="UniSansHeavyCapsItalic" size="12.0" />
                </font>
@@ -83,7 +83,7 @@
                   <Font name="UniSansHeavyCaps" size="18.0" />
                </font>
             </Text>
-            <Button layoutX="64.0" layoutY="479.0" mnemonicParsing="false" onAction="#backtomenu" prefHeight="31.0" prefWidth="171.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: #000000;" text="BACK TO MENU">
+            <Button layoutX="116.0" layoutY="474.0" mnemonicParsing="false" onAction="#backtomenu" prefHeight="31.0" prefWidth="171.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: #000000;" text="BACK TO MENU">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -96,18 +96,18 @@
                   <Font name="UniSansHeavyCaps" size="18.0" />
                </font>
             </Text>
-            <Label fx:id="notfoundLabel" alignment="CENTER" layoutX="42.0" layoutY="67.0" prefHeight="15.0" prefWidth="218.0" textAlignment="CENTER" textFill="#fa0000">
-               <font>
-                  <Font name="UniSansHeavyCaps" size="12.0" />
-               </font>
-            </Label>
+      <Label fx:id="donfound" layoutX="143.0" layoutY="117.0" textFill="RED">
+         <font>
+            <Font name="UniSansHeavyCaps" size="12.0" />
+         </font>
+      </Label>
       </AnchorPane>
-      <Label layoutX="45.0" prefHeight="59.0" prefWidth="207.0" text="BSUIR HELPER" textFill="#ffd414">
+      <Label layoutX="96.0" prefHeight="59.0" prefWidth="207.0" text="BSUIR HELPER" textFill="#ffd414">
          <font>
             <Font name="Roboto Black" size="30.0" />
          </font>
       </Label>
-      <Label layoutX="33.0" layoutY="582.0" prefHeight="59.0" prefWidth="238.0" text="TAKE UMBRELLA" textFill="#ffd414">
+      <Label layoutX="81.0" layoutY="582.0" prefHeight="59.0" prefWidth="238.0" text="TAKE UMBRELLA" textFill="#ffd414">
          <font>
             <Font name="Roboto Black" size="30.0" />
          </font>

@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,14 +21,18 @@ import java.util.Objects;
 import javafx.stage.Stage;
 import org.json.JSONObject;
 
+/**
+ * WeatherController class for managing the Weather Checker window and implementation of its functionality
+ * @author CaptMelancholy (Danko Artyom)
+ * @version 1.0
+ */
+
 public class WeatherController {
 
     @FXML
-    private Label notfoundLabel;
-
+    public Label donfound;
     @FXML
     private Text air_pressure;
-
     @FXML
     private Button checkWeatherButton;
 
@@ -55,6 +60,11 @@ public class WeatherController {
     @FXML
     private Text weather;
 
+    /**
+     * A method that initializes the return to the main page by clicking the button.
+     * @param event it is an object describing the user clicks on the button
+     * @throws IOException when there is error connected with an input or an output
+     */
     @FXML
     void backtomenu(ActionEvent event) throws IOException {
 
@@ -66,14 +76,18 @@ public class WeatherController {
             stage.show();
         }
 
+    /**
+     * The method responsible for receiving information from the text input field, transferring it to a link, receiving information from the server of the weather forecast site and transferring data from it to separate text fields
+     */
     @FXML
     void initialize() {
         checkWeatherButton.setOnAction(event -> {
             String getUserCity = cityenterfield.getText().trim();
-            String output = getUrlContent("https://api.openweathermap.org/data/2.5/weather?q=" + getUserCity + "&appid=e69fcdd9b060345b438437356f59cb01&units=metric&lang=ru");
-            notfoundLabel.setText("");
+            String output = getUrlContent("https://api.openweathermap.org/data/2.5/weather?q=" + getUserCity + "&appid=e69fcdd9b060345b438437356f59cb01&units=metric&lang=en");
             System.out.println(output);
             if(!output.isEmpty()) {
+                donfound.setTextFill(Color.GREEN);
+                donfound.setText("CITY " + getUserCity + " WEATHER");
                 JSONObject obj = new JSONObject(output);
                 temp_info.setText("TEMPERATURE: " + obj.getJSONObject("main").getDouble("temp") + " °C");
                 temp_fills.setText("FILLS LIKE: " + obj.getJSONObject("main").getDouble("feels_like") + " °C");
@@ -86,6 +100,11 @@ public class WeatherController {
             }
         });
     }
+
+    /**
+     * @param urlAdress // TODO information about class
+     * @return content.toString()
+     */
     private String getUrlContent(String urlAdress) {
         StringBuilder content = new StringBuilder();
 
@@ -101,7 +120,9 @@ public class WeatherController {
             bufferedReader.close();
 
         } catch (Exception e) {
-            notfoundLabel.setText("CITY NOT FOUND, TRY AGAIN");
+            donfound.setTextFill(Color.RED);
+            donfound.setText("CITY DOESN'T FOUND");
+            System.out.println("!!!");
 
         }
         return content.toString();
