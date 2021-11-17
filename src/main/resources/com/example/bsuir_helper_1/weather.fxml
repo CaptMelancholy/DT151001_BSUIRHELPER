@@ -43,7 +43,7 @@
                   <Font name="UniSansHeavyCaps" size="25.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="118.0" layoutY="521.0" stroke="BLACK" strokeType="OUTSIDE" text="WEATHER FORECAST BYOPENWEATHERMAP.ORG">
+            <Text fill="WHITE" layoutX="100.0" layoutY="521.0" stroke="BLACK" strokeType="OUTSIDE" text="WEATHER FORECAST BY OPENWEATHERMAP.ORG">
                <font>
                   <Font name="UniSansHeavyCapsItalic" size="12.0" />
                </font>

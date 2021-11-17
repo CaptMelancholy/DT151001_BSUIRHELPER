@@ -87,7 +87,7 @@ public class WeatherController {
             System.out.println(output);
             if(!output.isEmpty()) {
                 donfound.setTextFill(Color.GREEN);
-                donfound.setText("CITY " + getUserCity + " WEATHER");
+                donfound.setText("WEATHER IN THE " + getUserCity + " CITY");
                 JSONObject obj = new JSONObject(output);
                 temp_info.setText("TEMPERATURE: " + obj.getJSONObject("main").getDouble("temp") + " °C");
                 temp_fills.setText("FILLS LIKE: " + obj.getJSONObject("main").getDouble("feels_like") + " °C");
@@ -102,14 +102,14 @@ public class WeatherController {
     }
 
     /**
-     * @param urlAdress // TODO information about class
+     * @param urlAddress // TODO information about class
      * @return content.toString()
      */
-    private String getUrlContent(String urlAdress) {
+    private String getUrlContent(String urlAddress) {
         StringBuilder content = new StringBuilder();
 
         try {
-            URL url = new URL(urlAdress);
+            URL url = new URL(urlAddress);
             URLConnection urlConn = url.openConnection();
 
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConn.getInputStream()));
@@ -121,7 +121,7 @@ public class WeatherController {
 
         } catch (Exception e) {
             donfound.setTextFill(Color.RED);
-            donfound.setText("CITY DOESN'T FOUND");
+            donfound.setText("THE CITY WASN'T FOUND");
             System.out.println("!!!");
 
         }
