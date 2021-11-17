@@ -1,4 +1,4 @@
-module com.example.bsuir_helper_1 {
+module com.example.bsuir_helper_ {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -11,6 +11,7 @@ module com.example.bsuir_helper_1 {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires org.json;
+    requires javafx.base;
 
     opens com.example.bsuir_helper_1 to javafx.fxml;
     exports com.example.bsuir_helper_1;
