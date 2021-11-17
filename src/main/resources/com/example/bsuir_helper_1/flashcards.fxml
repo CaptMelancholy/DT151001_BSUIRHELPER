@@ -1,32 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.web.HTMLEditor?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.FlashCardsController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.FlashCardsController">
       <AnchorPane layoutY="-1.0" prefHeight="82.0" prefWidth="800.0" style="-fx-background-color: #2E3348;">
             <Label layoutX="174.0" layoutY="11.0" prefHeight="59.0" prefWidth="476.0" text="BSUIR HELPER. STUDY AND PLAY" textFill="#ffd414">
-               <font>
-                  <Font name="Roboto Black" size="30.0" />
-               </font>
+                  <font>
+                        <Font name="Roboto Black" size="30.0" />
+                  </font>
             </Label>
       </AnchorPane>
-      <TabPane layoutY="81.0" prefHeight="522.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane layoutY="81.0" prefHeight="482.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
             <Tab text="еда">
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="219.0" prefWidth="837.0">
-                        <TextField layoutY="14.0" nodeOrientation="LEFT_TO_RIGHT" style="-fx-border-color: #fafafa;" text="что-то" />
-                        <Button layoutX="304.0" layoutY="419.0" mnemonicParsing="false" text="сгенерировать новую что-то" />
+                        <Button layoutX="304.0" layoutY="419.0" mnemonicParsing="false" onAction="#generate_new_something" text="сгенерировать новую тему" />
+            <Text fx:id="eda" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                   </AnchorPane>
             </Tab>
             <Tab text="идеи для занятий">
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                        <Button layoutX="304.0" layoutY="419.0" mnemonicParsing="false" text="сгенерировать новую что-то" />
+                        <Button layoutX="304.0" layoutY="419.0" mnemonicParsing="false" onAction="#generate_new_something2" text="сгенерировать новую что-то" />
+            <Text fx:id="ideas" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                   </AnchorPane>
             </Tab>
             <Tab text="своё">
@@ -35,4 +32,5 @@
                   </AnchorPane>
             </Tab>
       </TabPane>
+      <Button layoutX="698.0" layoutY="550.0" mnemonicParsing="false" onAction="#back_to_menu_org" text="Back to menu" />
 </AnchorPane>
