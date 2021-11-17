@@ -179,6 +179,7 @@ public class GameController implements Initializable {
             }
             gamecounterlabel.setText("EATEN SQUARES: " + counter + " GOOD JOB, SEE YOU LATER");
             counter = 0;
+            food.gameoverFood();
             return true;
         } else return snakeHitItSelf();
     }
@@ -193,9 +194,9 @@ public class GameController implements Initializable {
                     for (Rectangle snake : snakeBody) {
                         GameField.getChildren().remove(snake);
                     }
-                    gamecounterlabel.setText("EATEN SQUARES: " + counter + " GOOD JOB, SEE YOU LATER");
+                    gamecounterlabel.setText("EATEN SQUARES: " + counter + " - GOOD JOB, SEE YOU LATER");
                     counter = 0;
-
+                    food.gameoverFood();
                     return true;
                 }
             }
@@ -206,7 +207,7 @@ public class GameController implements Initializable {
     private void eatFood(){
         if(xPos + snakeHead.getX() == food.getPosition().getXPos() && yPos + snakeHead.getY() == food.getPosition().getYPos()){
             counter++;
-            gamecounterlabel.setText("EATEN SQUARES:" + counter);
+            gamecounterlabel.setText("EATEN SQUARES: " + counter);
             foodCantSpawnInsideSnake();
             addSnakeTail();
         }

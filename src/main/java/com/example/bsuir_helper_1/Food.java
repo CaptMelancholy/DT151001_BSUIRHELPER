@@ -29,6 +29,19 @@ public class Food {
         getRandomSpotForFood();
     }
 
+    public void gameoverFood() { getStaticSpotForFood();}
+
+    public void getStaticSpotForFood() {
+        int positionX = -100;
+        int positionY = -100;
+        rectangle.setX(positionX*size);
+        rectangle.setY(positionY*size);
+
+        position.setXPos(positionX * size);
+        position.setYPos(positionY * size);
+
+    }
+
     public void getRandomSpotForFood(){
         int positionX = random.nextInt(10);
         int positionY = random.nextInt(10);
