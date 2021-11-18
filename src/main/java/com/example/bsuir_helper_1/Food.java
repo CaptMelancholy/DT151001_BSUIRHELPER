@@ -25,9 +25,7 @@ public class Food {
         return position;
     }
 
-    public void moveFood(){
-        getRandomSpotForFood();
-    }
+    public void moveFood(){getRandomSpotForFood();}
 
     public void gameoverFood() { getStaticSpotForFood();}
 

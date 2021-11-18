@@ -12,6 +12,7 @@ module com.example.bsuir_helper_ {
     requires eu.hansolo.tilesfx;
     requires org.json;
     requires javafx.base;
+    requires javafx.media;
 
     opens com.example.bsuir_helper_1 to javafx.fxml;
     exports com.example.bsuir_helper_1;

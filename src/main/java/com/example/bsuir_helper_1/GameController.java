@@ -19,6 +19,9 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import java.io.File;
 
 import java.io.IOException;
 import java.net.URL;
@@ -170,6 +173,18 @@ public class GameController implements Initializable {
         snakeTail.setFill(Color.GREEN);
         GameField.getChildren().add(snakeTail);
     }
+    public void gameoverSound() {
+        String gameovermusicfile = "C:/Users/user/Desktop/bsuir_helper_1/src/main/resources/com/example/bsuir_helper_1/gameover.mp3";
+        Media sound = new Media(new File(gameovermusicfile).toURI().toString());
+        MediaPlayer gameoverplayer = new MediaPlayer(sound);
+        gameoverplayer.play();
+    }
+    public void takefoodSound() {
+        String foodmusicfile = "C:/Users/user/Desktop/bsuir_helper_1/src/main/resources/com/example/bsuir_helper_1/food.mp3";
+        Media sound = new Media(new File(foodmusicfile).toURI().toString());
+        MediaPlayer foodplayer = new MediaPlayer(sound);
+        foodplayer.play();
+    }
     //Change position with key pressed
     public boolean checkIfGameIsOver() {
         if (xPos > 250 || xPos < -250 ||yPos < -250 || yPos > 250) {
@@ -180,6 +195,7 @@ public class GameController implements Initializable {
             gamecounterlabel.setText("EATEN SQUARES: " + counter + " GOOD JOB, SEE YOU LATER");
             counter = 0;
             food.gameoverFood();
+            gameoverSound();
             return true;
         } else return snakeHitItSelf();
     }
@@ -197,6 +213,7 @@ public class GameController implements Initializable {
                     gamecounterlabel.setText("EATEN SQUARES: " + counter + " - GOOD JOB, SEE YOU LATER");
                     counter = 0;
                     food.gameoverFood();
+                    gameoverSound();
                     return true;
                 }
             }
@@ -207,9 +224,11 @@ public class GameController implements Initializable {
     private void eatFood(){
         if(xPos + snakeHead.getX() == food.getPosition().getXPos() && yPos + snakeHead.getY() == food.getPosition().getYPos()){
             counter++;
+            takefoodSound();
             gamecounterlabel.setText("EATEN SQUARES: " + counter);
             foodCantSpawnInsideSnake();
             addSnakeTail();
+
         }
     }
 
