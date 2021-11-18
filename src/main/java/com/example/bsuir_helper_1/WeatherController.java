@@ -84,7 +84,6 @@ public class WeatherController {
         checkWeatherButton.setOnAction(event -> {
             String getUserCity = cityenterfield.getText().trim();
             String output = getUrlContent("https://api.openweathermap.org/data/2.5/weather?q=" + getUserCity + "&appid=e69fcdd9b060345b438437356f59cb01&units=metric&lang=en");
-            System.out.println(output);
             if(!output.isEmpty()) {
                 donfound.setTextFill(Color.GREEN);
                 donfound.setText("WEATHER IN THE " + getUserCity + " CITY");
@@ -122,7 +121,6 @@ public class WeatherController {
         } catch (Exception e) {
             donfound.setTextFill(Color.RED);
             donfound.setText("THE CITY WASN'T FOUND");
-            System.out.println("!!!");
 
         }
         return content.toString();

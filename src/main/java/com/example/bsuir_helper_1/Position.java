@@ -25,11 +25,4 @@ public class Position {
         this.yPos = yPos;
     }
 
-    @Override
-    public String toString() {
-        return "Position{" +
-                "xPos=" + xPos +
-                ", yPos=" + yPos +
-                '}';
-    }
 }

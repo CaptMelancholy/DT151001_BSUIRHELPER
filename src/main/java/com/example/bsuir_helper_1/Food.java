@@ -56,6 +56,5 @@ public class Food {
         float opacity = 1;
         Color randomColor = new Color(r, g, b, opacity);
        rectangle.setFill(randomColor);
-        // System.out.println((positionX * size) + "---FOOD---" +(positionY * size));
     }
 }
