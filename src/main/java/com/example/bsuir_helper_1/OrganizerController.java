@@ -1,10 +1,17 @@
 package com.example.bsuir_helper_1;
 
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.TreeItemPropertyValueFactory;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -13,6 +20,9 @@ public class OrganizerController implements Initializable {
 
     @FXML
     private TreeView TreeView;
+
+    public OrganizerController() {
+    }
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
@@ -46,33 +56,98 @@ public class OrganizerController implements Initializable {
 
     }
 
-    @FXML
-    private MenuBar MenuBar;
 
     @FXML
-    private Menu ChangeMenu;
+    void initialize() {
+        ButtonBase branchItem1;
+        branchItem1.setOnAction(Event ->  {
+            branchItem1.getScene().getWindow().hide();
 
-    @FXML
-    private MenuItem UndoMenuItem;
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("homework.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
-    @FXML
-    private MenuItem DeleteMenuItem;
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
 
-    @FXML
-    private Menu HelpMenu;
+        ButtonBase branchItem2;
+        branchItem2.setOnAction(Event ->  {
+            branchItem2.getScene().getWindow().hide();
 
-    @FXML
-    private MenuItem AboutMenuItem;
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("plans.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
-    @FXML
-    private SplitPane SplitPane;
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
 
-    public void Undo(ActionEvent actionEvent) {
+        ButtonBase branchItem3;
+        branchItem3.setOnAction(Event ->  {
+            branchItem3.getScene().getWindow().hide();
+
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("watch.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
+
+        ButtonBase branchItem4;
+        branchItem4.setOnAction(Event ->  {
+            branchItem4.getScene().getWindow().hide();
+
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("music.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
+
+        ButtonBase branchItem5;
+        branchItem5.setOnAction(Event ->  {
+            branchItem5.getScene().getWindow().hide();
+
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("places.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
     }
 
-    public void Delete(ActionEvent actionEvent) {
-    }
-
-    public void Help(ActionEvent actionEvent) {
-    }
 }
