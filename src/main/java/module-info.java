@@ -16,4 +16,6 @@ module com.example.bsuir_helper_ {
 
     opens com.example.bsuir_helper_1 to javafx.fxml;
     exports com.example.bsuir_helper_1;
+    exports com.example.bsuir_helper_1.weather;
+    opens com.example.bsuir_helper_1.weather to javafx.fxml;
 }

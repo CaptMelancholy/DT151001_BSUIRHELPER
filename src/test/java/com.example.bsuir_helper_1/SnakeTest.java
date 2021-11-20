@@ -31,7 +31,7 @@ public class SnakeTest {
     }
 
     @Test
-    public void testSnakeMovesWhenItShouldMove() {
+    public void testSnakeMovesWhenItShouldMoveDown() {
         ObservableList observableList = Mockito.mock(SimpleListProperty.class);
         Mockito.when(observableList.add(Mockito.any())).thenReturn(true);
         Mockito.when(anchorPane.getChildren()).thenReturn(observableList);
@@ -42,6 +42,75 @@ public class SnakeTest {
         Position afterMoveHeadPosition = snake.getSnakeHeadPosition();
         assertEquals(initialHeadPosition.getXPos(), afterMoveHeadPosition.getXPos());
         assertEquals(SNAKE_SIZE,  afterMoveHeadPosition.getYPos() - initialHeadPosition.getYPos());
+
+
+    }
+    @Test
+    public void testSnakeMovesWhenItShouldMoveUP() {
+        ObservableList observableList = Mockito.mock(SimpleListProperty.class);
+        Mockito.when(observableList.add(Mockito.any())).thenReturn(true);
+        Mockito.when(anchorPane.getChildren()).thenReturn(observableList);
+        snake.start();
+        Position initialHeadPosition = snake.getSnakeHeadPosition();
+        snake.setDirection(Direction.UP);
+        snake.moveSnakeForward();
+        Position afterMoveHeadPosition = snake.getSnakeHeadPosition();
+        assertEquals(initialHeadPosition.getXPos(), afterMoveHeadPosition.getXPos());
+        assertEquals(SNAKE_SIZE,  initialHeadPosition.getYPos() - afterMoveHeadPosition.getYPos());
+
+
+    }
+
+    @Test
+    public void testSnakeMovesWhenItShouldMoveRight() {
+        ObservableList observableList = Mockito.mock(SimpleListProperty.class);
+        Mockito.when(observableList.add(Mockito.any())).thenReturn(true);
+        Mockito.when(anchorPane.getChildren()).thenReturn(observableList);
+        snake.start();
+        Position initialHeadPosition = snake.getSnakeHeadPosition();
+        System.out.println(initialHeadPosition);
+        snake.setDirection(Direction.RIGHT);
+        snake.moveSnakeForward();
+        Position afterMoveHeadPosition = snake.getSnakeHeadPosition();
+        assertEquals(initialHeadPosition.getYPos(), afterMoveHeadPosition.getYPos());
+        assertEquals(SNAKE_SIZE,  afterMoveHeadPosition.getXPos() - initialHeadPosition.getXPos());
+
+
+    }
+
+    @Test
+    public void testHitTheWallRight() {
+        ObservableList observableList = Mockito.mock(SimpleListProperty.class);
+        Mockito.when(observableList.add(Mockito.any())).thenReturn(true);
+        Mockito.when(anchorPane.getChildren()).thenReturn(observableList);
+        snake.start();
+        Position initialHeadPosition = snake.getSnakeHeadPosition();
+        System.out.println(initialHeadPosition);
+        snake.setDirection(Direction.RIGHT);
+        snake.moveSnakeForward();
+        snake.moveSnakeForward();
+        snake.moveSnakeForward();
+        snake.moveSnakeForward();
+        snake.moveSnakeForward();
+        snake.isSnakeHitWall();
+        Position afterMoveHeadPosition = snake.getSnakeHeadPosition();
+        assertEquals(initialHeadPosition.getYPos(), afterMoveHeadPosition.getYPos());
+        assertEquals(afterMoveHeadPosition.getXPos(), initialHeadPosition.getXPos() + 250);
+
+
+    }
+    @Test
+    public void testSnakeMovesWhenItShouldMoveLeft() {
+        ObservableList observableList = Mockito.mock(SimpleListProperty.class);
+        Mockito.when(observableList.add(Mockito.any())).thenReturn(true);
+        Mockito.when(anchorPane.getChildren()).thenReturn(observableList);
+        snake.start();
+        Position initialHeadPosition = snake.getSnakeHeadPosition();
+        snake.setDirection(Direction.LEFT);
+        snake.moveSnakeForward();
+        Position afterMoveHeadPosition = snake.getSnakeHeadPosition();
+        assertEquals(initialHeadPosition.getYPos(), afterMoveHeadPosition.getYPos());
+        assertEquals(SNAKE_SIZE, initialHeadPosition.getXPos() - afterMoveHeadPosition.getXPos());
 
 
     }
@@ -57,5 +126,17 @@ public class SnakeTest {
         snake.onFoodEat();
         Assert.assertEquals(snake.getSnakeSize(), initialSnakeSize + 1);
         Mockito.verify(observableList, Mockito.times(1)).add(Mockito.any());
+    }
+    @Test
+    public void testSnakeCleanItSelfWhenWeNeed() {
+
+        ObservableList observableList = Mockito.mock(SimpleListProperty.class);
+        Mockito.when(observableList.add(Mockito.any())).thenReturn(true);
+        Mockito.when(anchorPane.getChildren()).thenReturn(observableList);
+        snake.start();
+        int initialSnakeSize = snake.getSnakeSize();
+        System.out.println(initialSnakeSize);
+        snake.cleanItself();
+        Assert.assertEquals(snake.getSnakeSize(),  initialSnakeSize);
     }
 }

@@ -1,5 +1,8 @@
 package com.example.bsuir_helper_1;
 
+import com.example.bsuir_helper_1.weather.HttpService;
+import com.example.bsuir_helper_1.weather.OpenMapWeatherService;
+import com.example.bsuir_helper_1.weather.Weather;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,15 +14,10 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.URL;
-import java.net.URLConnection;
 import java.util.Objects;
 
 import javafx.stage.Stage;
-import org.json.JSONObject;
 
 /**
  * WeatherController class for managing the Weather Checker window and implementation of its functionality
@@ -60,6 +58,8 @@ public class WeatherController {
     @FXML
     private Text weather;
 
+    public OpenMapWeatherService openMapWeatherService = new OpenMapWeatherService(new HttpService());
+
     /**
      * A method that initializes the return to the main page by clicking the button.
      * @param event it is an object describing the user clicks on the button
@@ -80,50 +80,28 @@ public class WeatherController {
      * The method responsible for receiving information from the text input field, transferring it to a link, receiving information from the server of the weather forecast site and transferring data from it to separate text fields
      */
     @FXML
-    void initialize() {
+    public void initialize() {
         checkWeatherButton.setOnAction(event -> {
             String getUserCity = cityenterfield.getText().trim();
-            String output = getUrlContent("https://api.openweathermap.org/data/2.5/weather?q=" + getUserCity + "&appid=e69fcdd9b060345b438437356f59cb01&units=metric&lang=en");
-            if(!output.isEmpty()) {
+            Weather weather = openMapWeatherService.getWeatherForCity(getUserCity);
+            if (weather.getPressure() == 0) {
+                donfound.setTextFill(Color.RED);
+                donfound.setText("THE CITY WASN'T FOUND");
+            } else {
                 donfound.setTextFill(Color.GREEN);
                 donfound.setText("WEATHER IN THE " + getUserCity + " CITY");
-                JSONObject obj = new JSONObject(output);
-                temp_info.setText("TEMPERATURE: " + obj.getJSONObject("main").getDouble("temp") + " °C");
-                temp_fills.setText("FILLS LIKE: " + obj.getJSONObject("main").getDouble("feels_like") + " °C");
-                humidity.setText("humidity: " + obj.getJSONObject("main").getDouble("humidity") + "%");
-                air_pressure.setText("AIR PRESSURE: " + obj.getJSONObject("main").getDouble("pressure"));
-                wind_speed.setText("WIND SPEED: " + obj.getJSONObject("wind").getDouble("speed") + " М/C");
-                weather.setText("Weather: " + obj.getJSONArray("weather").getJSONObject(Integer.parseInt("0")).getString("description"));
-                cloudiness.setText("Cloudiness: " + obj.getJSONObject("clouds").getDouble("all") + "%");
-                country.setText("COUNTRY: " + obj.getJSONObject("sys").getString("country"));
+                temp_info.setText("TEMPERATURE: " + weather.getTemp() + " °C");
+                temp_fills.setText("FILLS LIKE: " + weather.getFeels_like() + " °C");
+                humidity.setText("HUMIDITY: " + weather.getHumidity() + "%");
+                air_pressure.setText("PRESSURE: " + weather.getPressure());
+                wind_speed.setText("WIND SPEED: " + weather.getSpeed() + " М/C");
+                this.weather.setText("WEATHER: " + weather.getDescription());
+                cloudiness.setText("CLOUDINESS: " + weather.getCloudiness() + "%");
+                country.setText("COUNTRY: " + weather.getCountry());
             }
         });
     }
 
-    /**
-     * @param urlAddress // TODO information about class
-     * @return content.toString()
-     */
-    private String getUrlContent(String urlAddress) {
-        StringBuilder content = new StringBuilder();
 
-        try {
-            URL url = new URL(urlAddress);
-            URLConnection urlConn = url.openConnection();
-
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConn.getInputStream()));
-            String line;
-            while((line = bufferedReader.readLine()) != null) {
-                content.append(line).append("\n");
-            }
-            bufferedReader.close();
-
-        } catch (Exception e) {
-            donfound.setTextFill(Color.RED);
-            donfound.setText("THE CITY WASN'T FOUND");
-
-        }
-        return content.toString();
-    }
 
 }
