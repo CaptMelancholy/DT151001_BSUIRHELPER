@@ -19,12 +19,6 @@ import java.util.Objects;
 
 import javafx.stage.Stage;
 
-/**
- * WeatherController class for managing the Weather Checker window and implementation of its functionality
- * @author CaptMelancholy (Danko Artyom)
- * @version 1.0
- */
-
 public class WeatherController {
 
     @FXML
@@ -60,11 +54,6 @@ public class WeatherController {
 
     public OpenMapWeatherService openMapWeatherService = new OpenMapWeatherService(new HttpService());
 
-    /**
-     * A method that initializes the return to the main page by clicking the button.
-     * @param event it is an object describing the user clicks on the button
-     * @throws IOException when there is error connected with an input or an output
-     */
     @FXML
     void backtomenu(ActionEvent event) throws IOException {
 
@@ -76,9 +65,6 @@ public class WeatherController {
             stage.show();
         }
 
-    /**
-     * The method responsible for receiving information from the text input field, transferring it to a link, receiving information from the server of the weather forecast site and transferring data from it to separate text fields
-     */
     @FXML
     public void initialize() {
         checkWeatherButton.setOnAction(event -> {

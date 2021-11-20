@@ -13,7 +13,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="659.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.ArticleController">
       <TabPane layoutY="82.0" prefHeight="518.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
-          <Tab fx:id="firstarticlesbutton" text="Вводная Статья">
+          <Tab text="Вводная Статья">
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="596.0" prefWidth="800.0">
                <ScrollPane layoutX="13.0" layoutY="8.0" prefHeight="474.0" prefWidth="781.0">
                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="717.0" prefWidth="763.0" style="-fx-background-color: #FAFAFA; -fx-border-color: #000000;">
@@ -22,9 +22,9 @@
                </ScrollPane>
                   </AnchorPane>
           </Tab>
-          <Tab fx:id="secondarticlesbutton" text="БГУИР">
+          <Tab text="БГУИР">
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="293.0" prefWidth="487.0">
-                  <ImageView fx:id="imageButtonHome" fitHeight="290.0" fitWidth="321.0" layoutX="255.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="290.0" fitWidth="321.0" layoutX="255.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
                       <Image url="@assets/unnamed.jpg" />
                   </ImageView>
                   </AnchorPane>

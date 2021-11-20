@@ -1,6 +1,5 @@
 package com.example.bsuir_helper_1;
 
-import javafx.geometry.Pos;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -10,7 +9,7 @@ import java.util.List;
 
 public class Snake {
     //A snake body part is 50x50
-    private double snakeSize;
+    private final double snakeSize;
     //Game ticks is how many times the snake have moved
     private int gameTicks;
 
@@ -22,7 +21,7 @@ public class Snake {
 
     private Rectangle snakeHead;
     private final ArrayList<Rectangle> snakeBody = new ArrayList<>();
-    private AnchorPane gameField;
+    private final AnchorPane gameField;
 
     //List of all position of the snake head
     private final List<Position> positions = new ArrayList<>();

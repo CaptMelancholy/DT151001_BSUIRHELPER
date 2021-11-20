@@ -15,7 +15,6 @@ import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import javafx.scene.media.Media;
@@ -30,14 +29,11 @@ import java.util.ResourceBundle;
 
 public class GameController implements Initializable {
     public static final int SNAKE_SIZE = 50;
-    //A snake body part is 50x50
-    private final Double snakeSize = 50.;
     public Button startButton;
     public Label gameoverlabel;
     public Label gamecounterlabel;
     public Button exitButton;
     //The head of the snake is created, at position (2  50,250)
-    private Rectangle snakeHead;
     //x and y position of the snake head different from starting position
 
     //Food
@@ -46,7 +42,6 @@ public class GameController implements Initializable {
 
 
     //Game ticks is how many times the snake have moved
-    private int gameTicks;
 
     private Snake snake;
 
@@ -100,6 +95,8 @@ public class GameController implements Initializable {
                 foodHitCounter = 0;
             }
         }));
+        //A snake body part is 50x50
+        double snakeSize = 50.;
         food = new Food(-50, -50, gameField, snakeSize);
     }
 

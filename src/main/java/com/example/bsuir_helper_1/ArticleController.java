@@ -6,8 +6,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Tab;
-import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
 
@@ -17,17 +15,6 @@ import java.util.Objects;
 public class ArticleController {
     @FXML
     public Button goonmainmenuButton;
-    @FXML
-    private Tab firstarticlesbutton;
-
-    @FXML
-    private ImageView imageButtonHome;
-
-    @FXML
-    private Tab secondarticlesbutton;
-
-    @FXML
-    private Button backButton;
 
 
     @FXML // Придумать как это все сделать без повторения строк и строчек
