@@ -30,8 +30,8 @@ public class Food {
     public void gameoverFood() { getStaticSpotForFood();}
 
     public void getStaticSpotForFood() {
-        int positionX = -100;
-        int positionY = -100;
+        double positionX = -100;
+        double positionY = -100;
         rectangle.setX(positionX*size);
         rectangle.setY(positionY*size);
 
@@ -41,8 +41,8 @@ public class Food {
     }
 
     public void getRandomSpotForFood(){
-        int positionX = random.nextInt(10);
-        int positionY = random.nextInt(10);
+        double positionX = random.nextInt(10);
+        double positionY = random.nextInt(10);
         rectangle.setX(positionX * size);
         rectangle.setY(positionY * size);
 
