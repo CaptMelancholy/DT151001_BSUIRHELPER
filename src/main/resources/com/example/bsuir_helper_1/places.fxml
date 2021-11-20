@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.HTMLEditor?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.ArticleController">
+    <AnchorPane layoutY="-1.0" prefHeight="132.0" prefWidth="800.0" style="-fx-background-color: #2E3348;">
+        <Label layoutX="174.0" layoutY="11.0" prefHeight="59.0" prefWidth="476.0" text="BSUIR HELPER. STUDY AND PLAY" textFill="#ffd414">
+            <font>
+                <Font name="Roboto Black" size="30.0" />
+            </font>
+        </Label>
+        <Label layoutX="312.0" layoutY="76.0" text="PLACES TO VISIT" textFill="#ffd414">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+    </AnchorPane>
+    <AnchorPane layoutY="131.0" prefHeight="470.0" prefWidth="800.0">
+        <children>
+            <HTMLEditor htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" prefHeight="470.0" prefWidth="800.0" />
+        </children>
+    </AnchorPane>
+</AnchorPane>
