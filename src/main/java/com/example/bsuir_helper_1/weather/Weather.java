@@ -1,14 +1,14 @@
 package com.example.bsuir_helper_1.weather;
 
 public class Weather {
-    public double temp;
-    public double feels_like;
-    public double humidity;
-    public double pressure;
-    public double speed;
-    public String description;
-    public double cloudiness;
-    public String country;
+    private double temp;
+    private double feelsLike;
+    private double humidity;
+    private double pressure;
+    private double speed;
+    private String description;
+    private double cloudiness;
+    private String country;
 
     public double getTemp() {
         return temp;
@@ -18,12 +18,12 @@ public class Weather {
         this.temp = temp;
     }
 
-    public double getFeels_like() {
-        return feels_like;
+    public double getFeelsLike() {
+        return feelsLike;
     }
 
-    public void setFeels_like(double feels_like) {
-        this.feels_like = feels_like;
+    public void setFeelsLike(double feels_like) {
+        this.feelsLike = feels_like;
     }
 
     public double getHumidity() {

@@ -21,8 +21,8 @@ public class HttpService {
             }
             bufferedReader.close();
 
-        } catch (Exception e) {
-          System.out.println("FUCK");
+        } catch (Exception ignored) {
+
 
         }
         return content.toString();

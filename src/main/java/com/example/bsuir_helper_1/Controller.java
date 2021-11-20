@@ -93,8 +93,8 @@ public class Controller {
         layout.getChildren().addAll(label, label1, label2, label3, label4, label5, closeButton);
         layout.setAlignment(Pos.CENTER);
 
-        Scene scene = new Scene(layout);
-        window.setScene(scene);
+        Scene sceneofattention = new Scene(layout);
+        window.setScene(sceneofattention);
         window.show();
 
     }

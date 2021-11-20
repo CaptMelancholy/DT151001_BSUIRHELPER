@@ -5,7 +5,7 @@ import org.json.JSONObject;
 public class OpenMapWeatherService {
 
     public static final String OPENWEATHERMAP_SERVICE_URL = "https://api.openweathermap.org/data/2.5/weather";
-    public HttpService httpService;
+    private final HttpService httpService;
 
     public OpenMapWeatherService(HttpService service) {
         this.httpService = service;
@@ -18,11 +18,10 @@ public class OpenMapWeatherService {
     public Weather getResponseFromService(String getUserCity) {
         String output = httpService.getUrlContent(OPENWEATHERMAP_SERVICE_URL + "?q=" + getUserCity + "&appid=e69fcdd9b060345b438437356f59cb01&units=metric&lang=en");
         Weather weather = new Weather();
-        System.out.println(output);
         if (!output.isEmpty()) {
             JSONObject obj = new JSONObject(output);
             weather.setTemp(obj.getJSONObject("main").getDouble("temp"));
-            weather.setFeels_like(obj.getJSONObject("main").getDouble("feels_like"));
+            weather.setFeelsLike(obj.getJSONObject("main").getDouble("feels_like"));
             weather.setHumidity(obj.getJSONObject("main").getDouble("humidity"));
             weather.setPressure(obj.getJSONObject("main").getDouble("pressure"));
             weather.setSpeed(obj.getJSONObject("wind").getDouble("speed"));

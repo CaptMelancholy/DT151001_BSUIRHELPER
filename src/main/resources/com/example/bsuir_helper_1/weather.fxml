@@ -48,17 +48,17 @@
                   <Font name="UniSansHeavyCapsItalic" size="12.0" />
                </font>
             </Text>
-            <Text fx:id="temp_info" fill="WHITE" layoutX="14.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temperature:">
+            <Text fx:id="tempInfo" fill="WHITE" layoutX="14.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temperature:">
                <font>
                   <Font name="UniSansHeavyCaps" size="18.0" />
                </font>
             </Text>
-            <Text fx:id="temp_fills" fill="WHITE" layoutX="14.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FILLS LIKE:">
+            <Text fx:id="tempFills" fill="WHITE" layoutX="14.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FILLS LIKE:">
                <font>
                   <Font name="UniSansHeavyCaps" size="18.0" />
                </font>
             </Text>
-            <Text fx:id="air_pressure" fill="WHITE" layoutX="14.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Air pressure:">
+            <Text fx:id="airPressure" fill="WHITE" layoutX="14.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Air pressure:">
                <font>
                   <Font name="UniSansHeavyCaps" size="18.0" />
                </font>
@@ -68,7 +68,7 @@
                   <Font name="UniSansHeavyCaps" size="18.0" />
                </font>
             </Text>
-            <Text fx:id="wind_speed" fill="WHITE" layoutX="14.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WIND SPEED:">
+            <Text fx:id="windSpeed" fill="WHITE" layoutX="14.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WIND SPEED:">
                <font>
                   <Font name="UniSansHeavyCaps" size="18.0" />
                </font>

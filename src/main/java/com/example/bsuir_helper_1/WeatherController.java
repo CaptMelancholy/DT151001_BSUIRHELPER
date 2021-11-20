@@ -24,7 +24,7 @@ public class WeatherController {
     @FXML
     public Label donfound;
     @FXML
-    private Text air_pressure;
+    private Text airPressure;
     @FXML
     private Button checkWeatherButton;
 
@@ -41,18 +41,18 @@ public class WeatherController {
     private Text humidity;
 
     @FXML
-    private Text temp_fills;
+    private Text tempFills;
 
     @FXML
-    private Text temp_info;
+    private Text tempInfo;
 
     @FXML
-    private Text wind_speed;
+    private Text windSpeed;
 
     @FXML
     private Text weather;
 
-    public OpenMapWeatherService openMapWeatherService = new OpenMapWeatherService(new HttpService());
+    private final OpenMapWeatherService openMapWeatherService = new OpenMapWeatherService(new HttpService());
 
     @FXML
     void backtomenu(ActionEvent event) throws IOException {
@@ -69,21 +69,21 @@ public class WeatherController {
     public void initialize() {
         checkWeatherButton.setOnAction(event -> {
             String getUserCity = cityenterfield.getText().trim();
-            Weather weather = openMapWeatherService.getWeatherForCity(getUserCity);
-            if (weather.getPressure() == 0) {
+            Weather weatherForCity = openMapWeatherService.getWeatherForCity(getUserCity);
+            if (weatherForCity.getPressure() == 0) {
                 donfound.setTextFill(Color.RED);
                 donfound.setText("THE CITY WASN'T FOUND");
             } else {
                 donfound.setTextFill(Color.GREEN);
                 donfound.setText("WEATHER IN THE " + getUserCity + " CITY");
-                temp_info.setText("TEMPERATURE: " + weather.getTemp() + " °C");
-                temp_fills.setText("FILLS LIKE: " + weather.getFeels_like() + " °C");
-                humidity.setText("HUMIDITY: " + weather.getHumidity() + "%");
-                air_pressure.setText("PRESSURE: " + weather.getPressure());
-                wind_speed.setText("WIND SPEED: " + weather.getSpeed() + " М/C");
-                this.weather.setText("WEATHER: " + weather.getDescription());
-                cloudiness.setText("CLOUDINESS: " + weather.getCloudiness() + "%");
-                country.setText("COUNTRY: " + weather.getCountry());
+                tempInfo.setText("TEMPERATURE: " + weatherForCity.getTemp() + " °C");
+                tempFills.setText("FILLS LIKE: " + weatherForCity.getFeelsLike() + " °C");
+                humidity.setText("HUMIDITY: " + weatherForCity.getHumidity() + "%");
+                airPressure.setText("PRESSURE: " + weatherForCity.getPressure());
+                windSpeed.setText("WIND SPEED: " + weatherForCity.getSpeed() + " М/C");
+                this.weather.setText("WEATHER: " + weatherForCity.getDescription());
+                cloudiness.setText("CLOUDINESS: " + weatherForCity.getCloudiness() + "%");
+                country.setText("COUNTRY: " + weatherForCity.getCountry());
             }
         });
     }
