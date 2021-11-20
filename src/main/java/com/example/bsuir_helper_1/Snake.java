@@ -40,12 +40,12 @@ public class Snake {
         snakeBody.clear();
         snakeHead = new Rectangle(250, 250, snakeSize, snakeSize);
         //First snake tail created behind the head of the snake
-        Rectangle snakeTail_1 = new Rectangle(snakeHead.getX() - snakeSize, snakeHead.getY(), snakeSize, snakeSize);
+        Rectangle snakeTail1 = new Rectangle(snakeHead.getX() - snakeSize, snakeHead.getY(), snakeSize, snakeSize);
         snakeBody.add(snakeHead);
         snakeHead.setFill(Color.DARKORANGE);
-        snakeBody.add(snakeTail_1);
-        snakeTail_1.setFill(Color.GREEN);
-        gameField.getChildren().addAll(snakeHead, snakeTail_1);
+        snakeBody.add(snakeTail1);
+        snakeTail1.setFill(Color.GREEN);
+        gameField.getChildren().addAll(snakeHead, snakeTail1);
         snakeHead.setFill(Color.DARKORANGE);
         xPos = snakeHead.getLayoutX();
         yPos = snakeHead.getLayoutY();

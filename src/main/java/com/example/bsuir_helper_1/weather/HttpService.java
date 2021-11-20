@@ -21,10 +21,7 @@ public class HttpService {
             }
             bufferedReader.close();
 
-        } catch (Exception ignored) {
-
-
-        }
+        } catch (Exception ignored) {}
         return content.toString();
     }
 }

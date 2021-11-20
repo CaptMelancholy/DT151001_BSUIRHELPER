@@ -22,8 +22,8 @@ public class Weather {
         return feelsLike;
     }
 
-    public void setFeelsLike(double feels_like) {
-        this.feelsLike = feels_like;
+    public void setFeelsLike(double feelsLike) {
+        this.feelsLike = feelsLike;
     }
 
     public double getHumidity() {

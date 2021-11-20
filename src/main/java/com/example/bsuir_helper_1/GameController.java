@@ -38,7 +38,7 @@ public class GameController implements Initializable {
 
     //Food
     Food food;
-    public int foodHitCounter = 0;
+    private int foodHitCounter;
 
 
     //Game ticks is how many times the snake have moved
