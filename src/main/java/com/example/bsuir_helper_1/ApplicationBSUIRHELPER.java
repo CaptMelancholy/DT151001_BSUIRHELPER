@@ -8,17 +8,16 @@ import java.io.IOException;
 
 public class ApplicationBSUIRHELPER extends javafx.application.Application {
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(ApplicationBSUIRHELPER.class.getResource("sample.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+    public void start(final Stage stage) throws IOException {
+        final FXMLLoader fxmlLoader = new FXMLLoader(ApplicationBSUIRHELPER.class.getResource("sample.fxml"));
+        final Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         stage.setResizable(false);
         stage.setTitle("BSUIR HELPER");
         stage.setScene(scene);
         stage.show();
-
     }
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         launch();
     }
 }

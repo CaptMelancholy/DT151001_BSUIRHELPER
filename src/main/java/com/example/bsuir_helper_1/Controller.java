@@ -1,4 +1,5 @@
 package com.example.bsuir_helper_1;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
@@ -15,13 +16,11 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class Controller {
-
-
     private Stage stage;
     private Scene scene;
     private Parent root;
 
-    public void movetogamesnake(ActionEvent event) throws IOException {
+    public void moveToGameSnake(final ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("gamesnake.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -30,7 +29,7 @@ public class Controller {
         stage.show();
  }
 
-    public void movetoarticles(ActionEvent event) throws IOException {
+    public void moveToArticles(final ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("article.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -39,7 +38,7 @@ public class Controller {
         stage.show();
     }
 
-    public void movetoorganizer(ActionEvent event) throws IOException {
+    public void moveToOrganizer(final ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("organizer.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -48,7 +47,7 @@ public class Controller {
         stage.show();
     }
 
-    public void movetoflashcards(ActionEvent event) throws IOException {
+    public void moveToFlashcards(final ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("flashcards.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -58,7 +57,7 @@ public class Controller {
     }
 
 
-    public void movetoweather(ActionEvent event) throws IOException {
+    public void moveToWeather(final ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("weather.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -67,7 +66,8 @@ public class Controller {
         stage.show();
     }
 
-    public void covid19(){
+    //TODO переделать, тут алохо почти всё
+    public void moveToCovid19AlertPage(){
         Stage window = new Stage();
 
         window.initModality(Modality.APPLICATION_MODAL);
@@ -96,6 +96,5 @@ public class Controller {
         Scene sceneofattention = new Scene(layout);
         window.setScene(sceneofattention);
         window.show();
-
     }
 }

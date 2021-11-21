@@ -27,12 +27,15 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
+//TODO такие комментрарии иногда пишут для пояснения сложных/неочевидных кусков кода, в остальных случаях пишите java-doc-и для описания классов и методов
 public class GameController implements Initializable {
+    //TODO почему всё public ? Где-то нет модификаторов доступа совсем, переменные раскиданы по всему классу фиг знает как, выглядит очень так себе, перепишите нормально
     public static final int SNAKE_SIZE = 50;
     public Button startButton;
     public Label gameoverlabel;
     public Label gamecounterlabel;
     public Button exitButton;
+    //TODO этот комментарий к чему ?
     //The head of the snake is created, at position (2  50,250)
     //x and y position of the snake head different from starting position
 
@@ -56,11 +59,8 @@ public class GameController implements Initializable {
 
     @FXML
     void start() {
-
-
         gameoverlabel.setText("");
         gamecounterlabel.setText("");
-
 
         canChangeDirection = true;
         food.moveFood();
@@ -68,11 +68,10 @@ public class GameController implements Initializable {
         snake.start();
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
-
     }
 
     @FXML
-    public void exit(ActionEvent event) throws IOException {
+    public void exit(final ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sample.fxml")));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
@@ -82,7 +81,7 @@ public class GameController implements Initializable {
     }
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(final URL url, final ResourceBundle resourceBundle) {
        snake = new Snake(gameField, SNAKE_SIZE);
         timeline = new Timeline(new KeyFrame(Duration.seconds(0.3), e -> {
             canChangeDirection = true;
@@ -106,7 +105,7 @@ public class GameController implements Initializable {
         gamecounterlabel.setText("EATEN SQUARES: " + foodHitCounter + " GOOD JOB, SEE YOU LATER");
 
         food.gameoverFood();
-        gameoverSound();
+        gameOverSound();
         timeline.stop();
     }
 
@@ -127,17 +126,14 @@ public class GameController implements Initializable {
         }
     }
 
-
-
-
-    public void gameoverSound() {
+    public void gameOverSound() {
         String gameovermusicfile = "C:/Users/user/Desktop/bsuir_helper_1/src/main/resources/com/example/bsuir_helper_1/gameover.mp3";
         Media sound = new Media(new File(gameovermusicfile).toURI().toString());
         MediaPlayer gameoverplayer = new MediaPlayer(sound);
         gameoverplayer.play();
     }
 
-    public void takefoodSound() {
+    public void takeFoodSound() {
         String foodmusicfile = "C:/Users/user/Desktop/bsuir_helper_1/src/main/resources/com/example/bsuir_helper_1/food.mp3";
         Media sound = new Media(new File(foodmusicfile).toURI().toString());
         MediaPlayer foodplayer = new MediaPlayer(sound);
@@ -151,13 +147,11 @@ public class GameController implements Initializable {
 
     private void eatFood() {
             foodHitCounter++;
-            takefoodSound();
+            takeFoodSound();
             gamecounterlabel.setText("EATEN SQUARES: " + foodHitCounter);
             foodCantSpawnInsideSnake();
             snake.onFoodEat();
     }
-
-
 
     private void foodCantSpawnInsideSnake() {
         food.moveFood();

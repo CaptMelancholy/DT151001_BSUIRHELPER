@@ -21,10 +21,13 @@ import javafx.stage.Stage;
 
 public class WeatherController {
 
+    //TODO переименовать, проверить нужен ли тут public
     @FXML
     public Label donfound;
+
     @FXML
     private Text airPressure;
+
     @FXML
     private Button checkWeatherButton;
 
@@ -52,14 +55,14 @@ public class WeatherController {
     @FXML
     private Text weather;
 
-    private final OpenMapWeatherService openMapWeatherService = new OpenMapWeatherService(new HttpService());
+    private static final OpenMapWeatherService openMapWeatherService = new OpenMapWeatherService(new HttpService());
 
     @FXML
-    void backtomenu(ActionEvent event) throws IOException {
-
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sample.fxml")));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
+    //TODO тут и везде переименуйте переменные и методы в одном стиле, что-то вроже backToMenu, почитайте Java Code Convension
+    void backtomenu(final ActionEvent event) throws IOException {
+        final Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sample.fxml")));
+        final Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        final Scene scene = new Scene(root);
         stage.setTitle("BSUIR HELPER");
             stage.setScene(scene);
             stage.show();
@@ -68,8 +71,8 @@ public class WeatherController {
     @FXML
     public void initialize() {
         checkWeatherButton.setOnAction(event -> {
-            String getUserCity = cityenterfield.getText().trim();
-            Weather weatherForCity = openMapWeatherService.getWeatherForCity(getUserCity);
+            final String getUserCity = cityenterfield.getText().trim();
+            final Weather weatherForCity = openMapWeatherService.getWeatherForCity(getUserCity);
             if (weatherForCity.getPressure() == 0) {
                 donfound.setTextFill(Color.RED);
                 donfound.setText("THE CITY WASN'T FOUND");
@@ -87,7 +90,4 @@ public class WeatherController {
             }
         });
     }
-
-
-
 }

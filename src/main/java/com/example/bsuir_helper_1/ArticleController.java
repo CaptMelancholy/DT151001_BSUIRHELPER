@@ -14,14 +14,14 @@ import java.util.Objects;
 
 public class ArticleController {
     @FXML
-    public Button goonmainmenuButton;
+    public Button goToMainMenuButton;
 
-
-    @FXML // Придумать как это все сделать без повторения строк и строчек
-    public void gotomenu(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sample.fxml")));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
+    //TODO Придумать как это все сделать без повторения строк и строчек
+    @FXML
+    public void goToMenu(final ActionEvent event) throws IOException {
+        final Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sample.fxml")));
+        final Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        final Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }

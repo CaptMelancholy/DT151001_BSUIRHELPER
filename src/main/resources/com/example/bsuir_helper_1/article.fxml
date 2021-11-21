@@ -37,5 +37,5 @@
                </font>
             </Label>
       </AnchorPane>
-   <Button fx:id="goonmainmenuButton" layoutX="655.0" layoutY="619.0" mnemonicParsing="false" onAction="#gotomenu" text="GOING TO MAIN PAGE" />
+   <Button fx:id="goToMainMenuButton" layoutX="655.0" layoutY="619.0" mnemonicParsing="false" onAction="#goToMenu" text="GOING TO MAIN PAGE" />
 </AnchorPane>
