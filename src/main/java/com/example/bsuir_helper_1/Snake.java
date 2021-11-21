@@ -153,11 +153,4 @@ public class Snake {
     }
 
 
-
-
-
-
-
-
-
 }

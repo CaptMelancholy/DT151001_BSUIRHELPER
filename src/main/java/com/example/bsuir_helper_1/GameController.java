@@ -112,7 +112,7 @@ public class GameController implements Initializable {
 
     //Change position with key pressed
     @FXML
-    void moveSquareKeyPressed(KeyEvent event) {
+    private void moveSquareKeyPressed(KeyEvent event) {
         if (canChangeDirection) {
             if (event.getCode().equals(KeyCode.W) && snake.getDirection() != Direction.DOWN) {
                 snake.setDirection(Direction.UP);

@@ -8,7 +8,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.TreeItemPropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -52,6 +51,7 @@ public class OrganizerController implements Initializable {
         if(item != null) {
             System.out.println(item.getValue());
         }
+        assert item != null;
         System.out.println(item.getValue());
 
     }
@@ -59,7 +59,8 @@ public class OrganizerController implements Initializable {
 
     @FXML
     void initialize() {
-        ButtonBase branchItem1;
+        ButtonBase branchItem1 = null;
+        assert false;
         branchItem1.setOnAction(Event ->  {
             branchItem1.getScene().getWindow().hide();
 
@@ -77,7 +78,7 @@ public class OrganizerController implements Initializable {
             stage.showAndWait();
         });
 
-        ButtonBase branchItem2;
+        ButtonBase branchItem2 = null;
         branchItem2.setOnAction(Event ->  {
             branchItem2.getScene().getWindow().hide();
 
@@ -95,7 +96,7 @@ public class OrganizerController implements Initializable {
             stage.showAndWait();
         });
 
-        ButtonBase branchItem3;
+        ButtonBase branchItem3 = null;
         branchItem3.setOnAction(Event ->  {
             branchItem3.getScene().getWindow().hide();
 
@@ -113,7 +114,7 @@ public class OrganizerController implements Initializable {
             stage.showAndWait();
         });
 
-        ButtonBase branchItem4;
+        ButtonBase branchItem4 = null;
         branchItem4.setOnAction(Event ->  {
             branchItem4.getScene().getWindow().hide();
 
@@ -131,7 +132,7 @@ public class OrganizerController implements Initializable {
             stage.showAndWait();
         });
 
-        ButtonBase branchItem5;
+        ButtonBase branchItem5 = null;
         branchItem5.setOnAction(Event ->  {
             branchItem5.getScene().getWindow().hide();
 
@@ -150,4 +151,6 @@ public class OrganizerController implements Initializable {
         });
     }
 
+    public void Help(ActionEvent actionEvent) {
+    }
 }
