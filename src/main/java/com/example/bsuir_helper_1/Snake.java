@@ -7,6 +7,10 @@ import javafx.scene.shape.Rectangle;
 import java.util.ArrayList;
 import java.util.List;
 
+//TODO такие комментарии никто не пишет, либо название переменной говорить само за себя, либо переменная названа плохо, должно хватить java-doc-ов
+//TODO не используйте double там где хватит float
+
+//TODO спизжено вот отсюда https://gist.github.com/Da9el00/1f811591153b8b4f691b9c583bba51f0 , попытайтесь не так сильно палиться
 public class Snake {
     //A snake body part is 50x50
     private final double snakeSize;

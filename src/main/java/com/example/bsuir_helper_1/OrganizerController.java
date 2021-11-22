@@ -18,14 +18,15 @@ import java.util.ResourceBundle;
 public class OrganizerController implements Initializable {
 
     @FXML
-    private TreeView TreeView;
+    private TreeView<String> TreeView;
 
+    //TODO зачем он тут нужен ?
     public OrganizerController() {
     }
 
     @Override
-    public void initialize(URL arg0, ResourceBundle arg1) {
-
+    public void initialize(final URL arg0, final ResourceBundle arg1) {
+        //TODO так переменные не называют
         TreeItem<String> rootItem1 = new TreeItem<>("Важное");
 
         TreeItem<String> branchItem1 = new TreeItem<>("Домашнее задание");
@@ -46,20 +47,20 @@ public class OrganizerController implements Initializable {
     }
 
     public void SelectItem() {
-
-        TreeItem<String> item = (TreeItem<String>) TreeView.getSelectionModel().getSelectedItem();
+        final TreeItem<String> item = TreeView.getSelectionModel().getSelectedItem();
+        //TODO hahaha, это что ?? очень смешно, почитайте что сами написали
         if(item != null) {
             System.out.println(item.getValue());
         }
         assert item != null;
         System.out.println(item.getValue());
-
     }
 
 
     @FXML
     void initialize() {
         ButtonBase branchItem1 = null;
+        //TODO это что и зачем оно тут ? Как оно решает то что ни один branchItem не инициализируется ? Вам new Button() написать религия не позволяет ?
         assert false;
         branchItem1.setOnAction(Event ->  {
             branchItem1.getScene().getWindow().hide();
@@ -151,6 +152,6 @@ public class OrganizerController implements Initializable {
         });
     }
 
-    public void Help(ActionEvent actionEvent) {
+    public void Help(final ActionEvent actionEvent) {
     }
 }

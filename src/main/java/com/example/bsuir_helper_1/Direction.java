@@ -1,5 +1,8 @@
 package com.example.bsuir_helper_1;
 
-public enum Direction { // Перечисление логически связанных констант - в нашем случае - управление по стрелочкам
+/**
+ * Перечисление логически связанных констант - в нашем случае - управление по стрелочкам
+ */
+public enum Direction {
     UP, DOWN, RIGHT, LEFT
 }
