@@ -63,10 +63,31 @@ public class SnakeTest {
 
         int initialSnakeSize = snake.getSnakeSize();
         System.out.println(initialSnakeSize);
+        snake.setDirection(Direction.RIGHT);
+        snake.moveSnakeForward();
+
         snake.onFoodEat();
+        snake.moveSnakeForward();
+        snake.onFoodEat();
+        snake.moveSnakeForward();
+        snake.onFoodEat();
+        snake.moveSnakeForward();
+        snake.moveSnakeForward();
+        snake.onFoodEat();
+        snake.moveSnakeForward();
+        snake.moveSnakeForward();
+        snake.setDirection(Direction.DOWN);
+        snake.moveSnakeForward();
+        snake.setDirection(Direction.LEFT);
+        snake.moveSnakeForward();
+        snake.setDirection(Direction.UP);
+        snake.moveSnakeForward();
+
+
+
         snake.isSnakeHitItSelf();
-        Assert.assertEquals(snake.getSnakeSize(), initialSnakeSize + 1);
-        Mockito.verify(observableList, Mockito.times(1)).add(Mockito.any());
+        Assert.assertEquals(snake.getSnakeSize(), initialSnakeSize + 4);
+        Mockito.verify(observableList, Mockito.times(4)).add(Mockito.any());
 
 
     }
@@ -85,10 +106,11 @@ public class SnakeTest {
         snake.moveSnakeForward();
         snake.moveSnakeForward();
         snake.moveSnakeForward();
+        snake.moveSnakeForward();
         snake.isSnakeHitWall();
         Position afterMoveHeadPosition = snake.getSnakeHeadPosition();
         assertEquals(initialHeadPosition.getYPos(), afterMoveHeadPosition.getYPos());
-        assertEquals(afterMoveHeadPosition.getXPos(), initialHeadPosition.getXPos() + 250);
+        assertEquals(afterMoveHeadPosition.getXPos(), initialHeadPosition.getXPos() + 300);
 
 
     }
@@ -107,10 +129,11 @@ public class SnakeTest {
         snake.moveSnakeForward();
         snake.moveSnakeForward();
         snake.moveSnakeForward();
+        snake.moveSnakeForward();
         snake.isSnakeHitWall();
         Position afterMoveHeadPosition = snake.getSnakeHeadPosition();
         assertEquals(initialHeadPosition.getXPos(), afterMoveHeadPosition.getXPos());
-        assertEquals(afterMoveHeadPosition.getYPos(), initialHeadPosition.getYPos() + 250);
+        assertEquals(afterMoveHeadPosition.getYPos(), initialHeadPosition.getYPos() + 300);
 
 
     }
@@ -128,10 +151,11 @@ public class SnakeTest {
         snake.moveSnakeForward();
         snake.moveSnakeForward();
         snake.moveSnakeForward();
+        snake.moveSnakeForward();
         snake.isSnakeHitWall();
         Position afterMoveHeadPosition = snake.getSnakeHeadPosition();
         assertEquals(initialHeadPosition.getXPos(), afterMoveHeadPosition.getXPos());
-        assertEquals(afterMoveHeadPosition.getYPos(), initialHeadPosition.getYPos() - 250);
+        assertEquals(afterMoveHeadPosition.getYPos(), initialHeadPosition.getYPos() - 300);
 
 
     }
@@ -151,10 +175,11 @@ public class SnakeTest {
         snake.moveSnakeForward();
         snake.moveSnakeForward();
         snake.moveSnakeForward();
+        snake.moveSnakeForward();
         snake.isSnakeHitWall();
         Position afterMoveHeadPosition = snake.getSnakeHeadPosition();
         assertEquals(initialHeadPosition.getYPos(), afterMoveHeadPosition.getYPos());
-        assertEquals(afterMoveHeadPosition.getXPos(), initialHeadPosition.getXPos() - 250);
+        assertEquals(afterMoveHeadPosition.getXPos(), initialHeadPosition.getXPos() - 300);
 
     }
     @Test
