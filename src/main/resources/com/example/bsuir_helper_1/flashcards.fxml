@@ -16,13 +16,13 @@
       <TabPane layoutY="81.0" prefHeight="482.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
             <Tab text="еда">
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="219.0" prefWidth="837.0">
-                        <Button layoutX="304.0" layoutY="419.0" mnemonicParsing="false" onAction="#generate_new_something" text="сгенерировать новую тему" />
+                        <Button layoutX="304.0" layoutY="419.0" mnemonicParsing="false" onAction="#GenerateNewPlace" text="сгенерировать новую тему" />
             <Text fx:id="eda" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                   </AnchorPane>
             </Tab>
             <Tab text="идеи для занятий">
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                        <Button layoutX="304.0" layoutY="419.0" mnemonicParsing="false" onAction="#generate_new_something2" text="сгенерировать новую что-то" />
+                        <Button layoutX="304.0" layoutY="419.0" mnemonicParsing="false" onAction="#GenerateNewClasses" text="сгенерировать новую что-то" />
             <Text fx:id="ideas" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                   </AnchorPane>
             </Tab>

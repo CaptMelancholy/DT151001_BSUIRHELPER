@@ -11,7 +11,9 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.Objects;
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 //TODO переписать названия переменных в одном стиле, желательно на одном языке, текста вроде "tema1" быть не должно нигде
@@ -22,19 +24,16 @@ public class FlashCardsController {
     @FXML
     private Text ideas;
 
-    //TODO ужасно, переделать
-    public void generate_new_something(final ActionEvent event) throws IOException {
+    final public String [] ListOfFood = new String[] {"сталовка 4к","сталовка 2к","буфет 4к","буфет 5к","церковная лавка","продукты бар","корона","буфут 2к","еще что-то"};
+    final public int NumberOfFood = Array.getLength(ListOfFood);
 
-        int rand = ThreadLocalRandom.current().nextInt(1, 4);
-        //TODO Нет default
-        switch (rand) {
-            case (1) -> eda.setText("tema1");
-            case (2) -> eda.setText("tema2");
-            case (3) -> eda.setText("tema3");
-            case (4) -> eda.setText("tema4");
-        }
+    //TODO ужасно, переделать
+    public void GenerateNewPlace(ActionEvent event){
+        int NewRandFood = (int) (Math.random() *NumberOfFood);
+        eda.setText(ListOfFood[NewRandFood]);
+
     }
-    public void generate_new_something2(final ActionEvent event) throws IOException {
+    public void GenerateNewClasses(final ActionEvent event){
         //TODO Так переменные не называют
         int rand2 = ThreadLocalRandom.current().nextInt(1, 4);
         //TODO Нет default
