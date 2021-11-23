@@ -13,38 +13,31 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.Objects;
-import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 //TODO переписать названия переменных в одном стиле, желательно на одном языке, текста вроде "tema1" быть не должно нигде
 public class FlashCardsController {
     @FXML
-    private Text eda;
+    private Text Food;
 
     @FXML
-    private Text ideas;
+    private Text Classes;
 
-    final public String [] ListOfFood = new String[] {"сталовка 4к","сталовка 2к","буфет 4к","буфет 5к","церковная лавка","продукты бар","корона","буфут 2к","еще что-то"};
+    final public String [] ListOfFood = new String[] {"сталовка 4к","сталовка 2к","буфет 4к","буфет 5к","церковная лавка","продукты бар","корона","буфут 2к"};
     final public int NumberOfFood = Array.getLength(ListOfFood);
+    final public String [] ListOfClasses = new String[] {"лабы/учеба","фильмец","накотить встречу с друзьями","прогуляться по улице","погамать в компик","заняться свои хобби"};
+    final public int NumberOfClasses = Array.getLength(ListOfClasses);
 
     //TODO ужасно, переделать
     public void GenerateNewPlace(ActionEvent event){
         int NewRandFood = (int) (Math.random() *NumberOfFood);
-        eda.setText(ListOfFood[NewRandFood]);
+        Food.setText(ListOfFood[NewRandFood]);
 
     }
     public void GenerateNewClasses(final ActionEvent event){
-        //TODO Так переменные не называют
-        int rand2 = ThreadLocalRandom.current().nextInt(1, 4);
-        //TODO Нет default
-        switch (rand2) {
-            case (1) -> ideas.setText("tema1");
-            case (2) -> ideas.setText("tema2");
-            case (3) -> ideas.setText("tema3");
-            case (4) -> ideas.setText("tema4");
-        }
+        int NewRandClasses = (int) (Math.random() *NumberOfClasses);
+        Classes.setText(ListOfClasses[NewRandClasses]);
     }
-    public void back_to_menu_org(final ActionEvent event) throws IOException
+    public void BackToMenuFlashCards(final ActionEvent event) throws IOException
     {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sample.fxml")));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

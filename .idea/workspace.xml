@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3b620bc-31f0-44f9-ad2b-2085894b5a5e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/bsuir_helper_1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bsuir_helper_1.iml" afterDir="false" />
+    <list default="true" id="c3b620bc-31f0-44f9-ad2b-2085894b5a5e" name="Changes" comment="Create random and array of places in food section of organaiser">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bsuir_helper_1/FlashCardsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bsuir_helper_1/FlashCardsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bsuir_helper_1/flashcards.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bsuir_helper_1/flashcards.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +36,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -78,7 +79,7 @@
       <workItem from="1637562410055" duration="523000" />
       <workItem from="1637669541726" duration="636000" />
       <workItem from="1637687165556" duration="2051000" />
-      <workItem from="1637689344910" duration="319000" />
+      <workItem from="1637689344910" duration="1295000" />
     </task>
     <task id="LOCAL-00001" summary="back to menu in flashcards and something else;">
       <created>1636971613009</created>
@@ -94,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637047072948</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Create random and array of places in food section of organaiser">
+      <created>1637689943438</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1637689943438</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
