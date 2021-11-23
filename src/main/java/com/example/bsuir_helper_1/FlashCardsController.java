@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Tab;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -14,8 +15,10 @@ import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.Objects;
 
-//TODO переписать названия переменных в одном стиле, желательно на одном языке, текста вроде "tema1" быть не должно нигде
 public class FlashCardsController {
+    @FXML
+    public Tab NameOfTopic;
+
     @FXML
     private Text Food;
 
@@ -27,7 +30,6 @@ public class FlashCardsController {
     final public String [] ListOfClasses = new String[] {"лабы/учеба","фильмец","накотить встречу с друзьями","прогуляться по улице","погамать в компик","заняться свои хобби"};
     final public int NumberOfClasses = Array.getLength(ListOfClasses);
 
-    //TODO ужасно, переделать
     public void GenerateNewPlace(ActionEvent event){
         int NewRandFood = (int) (Math.random() *NumberOfFood);
         Food.setText(ListOfFood[NewRandFood]);
