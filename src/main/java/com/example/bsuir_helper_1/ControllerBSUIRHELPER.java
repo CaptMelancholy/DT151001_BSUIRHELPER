@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
-public class Controller {
+public class ControllerBSUIRHELPER {
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -20,25 +20,16 @@ public class Controller {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
-        stage.setTitle("BSUIR HELPER. JUST-TO-CHILL");
+        stage.setTitle("BSUIR HELPER. PLAY IN FREE TIME");
         stage.show();
  }
-
-    public void moveToArticles(final ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("article.fxml")));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.setTitle("BSUIR HELPER. ARTICLES");
-        stage.show();
-    }
 
     public void moveToOrganizer(final ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("organizer.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
-        stage.setTitle("BSUIR HELPER. ORGANIZER");
+        stage.setTitle("BSUIR HELPER. TO-DO-LIST");
         stage.show();
     }
 
