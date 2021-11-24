@@ -59,7 +59,7 @@ public class WeatherController {
 
     @FXML
     //TODO тут и везде переименуйте переменные и методы в одном стиле, что-то вроже backToMenu, почитайте Java Code Convension
-    void backtomenu(final ActionEvent event) throws IOException {
+    void backToMenu(final ActionEvent event) throws IOException {
         final Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sample.fxml")));
         final Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         final Scene scene = new Scene(root);

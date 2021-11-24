@@ -27,24 +27,18 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-//TODO такие комментрарии иногда пишут для пояснения сложных/неочевидных кусков кода, в остальных случаях пишите java-doc-и для описания классов и методов
+
 public class GameController implements Initializable {
     //TODO почему всё public ? Где-то нет модификаторов доступа совсем, переменные раскиданы по всему классу фиг знает как, выглядит очень так себе, перепишите нормально
-    public static final int SNAKE_SIZE = 50;
+    private static final int SNAKE_SIZE = 50;
     public Button startButton;
     public Label gameoverlabel;
     public Label gamecounterlabel;
     public Button exitButton;
-    //TODO этот комментарий к чему ?
-    //The head of the snake is created, at position (2  50,250)
-    //x and y position of the snake head different from starting position
 
-    //Food
+
     Food food;
     private int foodHitCounter;
-
-
-    //Game ticks is how many times the snake have moved
 
     private Snake snake;
 
@@ -54,7 +48,6 @@ public class GameController implements Initializable {
 
     //Timeline that is running the game every time the KeyFrame is called (0.3 s)
     Timeline timeline;
-    //Method called after the stage is loaded
     private boolean canChangeDirection;
 
     @FXML
@@ -71,7 +64,7 @@ public class GameController implements Initializable {
     }
 
     @FXML
-    public void exit(final ActionEvent event) throws IOException {
+    public void gotoMainMenu(final ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sample.fxml")));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
