@@ -21,9 +21,8 @@ import javafx.stage.Stage;
 
 public class WeatherController {
 
-    //TODO переименовать, проверить нужен ли тут public
     @FXML
-    public Label donfound;
+    private Label donfound;
 
     @FXML
     private Text airPressure;
@@ -58,7 +57,6 @@ public class WeatherController {
     private static final OpenMapWeatherService openMapWeatherService = new OpenMapWeatherService(new HttpService());
 
     @FXML
-    //TODO тут и везде переименуйте переменные и методы в одном стиле, что-то вроже backToMenu, почитайте Java Code Convension
     void backToMenu(final ActionEvent event) throws IOException {
         final Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sample.fxml")));
         final Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

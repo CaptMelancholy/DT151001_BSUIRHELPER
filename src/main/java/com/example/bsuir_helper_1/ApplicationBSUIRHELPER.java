@@ -15,8 +15,8 @@ public class ApplicationBSUIRHELPER extends javafx.application.Application {
         stage.setTitle("BSUIR HELPER");
         stage.setScene(scene);
         stage.show();
+        Notification.moveToCovid19AlertPage();
     }
-
     public static void main(final String[] args) {
         launch();
     }

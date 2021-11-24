@@ -34,7 +34,6 @@ public class GameController implements Initializable {
     public Button startButton;
     public Label gameoverlabel;
     public Label gamecounterlabel;
-    public Button exitButton;
 
 
     Food food;

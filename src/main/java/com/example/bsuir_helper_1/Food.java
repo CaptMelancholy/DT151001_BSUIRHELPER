@@ -6,7 +6,6 @@ import javafx.scene.shape.Rectangle;
 
 import java.util.Random;
 
-//TODO сдесь и везде по проекту посоветую не использовать примитивные типы без явной необходимости, лучше использовать классы-обертки, будет меньше проблем в будущем
 public class Food {
     private final Position position;
     private final Rectangle rectangle;
