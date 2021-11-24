@@ -33,8 +33,8 @@ public class Food {
     }
 
     public void getStaticSpotForFood() {
-        double positionX = -100;
-        double positionY = -100;
+        double positionX = -200;
+        double positionY = -200;
         rectangle.setX(positionX * size);
         rectangle.setY(positionY * size);
 

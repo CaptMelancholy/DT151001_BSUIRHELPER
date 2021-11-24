@@ -90,7 +90,7 @@ public class GameController implements Initializable {
         }));
         //A snake body part is 50x50
         double snakeSize = 50.;
-        food = new Food(-50, -50, gameField, snakeSize);
+        food = new Food(-100, -100, gameField, snakeSize);
     }
 
     private void notifyUser() {
