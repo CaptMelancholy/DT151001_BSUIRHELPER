@@ -34,17 +34,15 @@ public class OrganizerController implements Initializable {
     @FXML
     private void addEventHandler(ActionEvent e)
     {
-        //create new Event by getting values from gui
+        //создает новое событие
         var newEvent = new LocalEvent(datePicker.getValue(), eventDescriptionTextField.getText());
 
-        // add the new event to the list
+        //добавляет событие
         eventListView.getItems().add(newEvent);
 
-        //reset fields
-        // set date on today
+        //сегодняшняя дата
         datePicker.setValue(LocalDate.now());
 
-        // set text empty
         eventDescriptionTextField.setText("");
     }
 
