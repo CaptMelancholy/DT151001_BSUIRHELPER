@@ -21,6 +21,7 @@ public class ControllerBSUIRHELPER {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("BSUIR HELPER. PLAY IN FREE TIME");
+        stage.centerOnScreen();
         stage.show();
  }
 
@@ -30,6 +31,7 @@ public class ControllerBSUIRHELPER {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("BSUIR HELPER. TO-DO-LIST");
+        stage.centerOnScreen();
         stage.show();
     }
 
@@ -39,6 +41,7 @@ public class ControllerBSUIRHELPER {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("BSUIR HELPER. FLASH-CARDS");
+        stage.centerOnScreen();
         stage.show();
     }
 
@@ -49,6 +52,7 @@ public class ControllerBSUIRHELPER {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("BSUIR HELPER. WEATHER CHECKER");
+        stage.centerOnScreen();
         stage.show();
     }
 }

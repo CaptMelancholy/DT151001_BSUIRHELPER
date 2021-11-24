@@ -12,6 +12,7 @@ public class ApplicationBSUIRHELPER extends javafx.application.Application {
         final FXMLLoader fxmlLoader = new FXMLLoader(ApplicationBSUIRHELPER.class.getResource("sample.fxml"));
         final Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         stage.setResizable(false);
+        stage.centerOnScreen();
         stage.setTitle("BSUIR HELPER");
         stage.setScene(scene);
         stage.show();

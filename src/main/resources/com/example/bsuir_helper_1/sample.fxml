@@ -1,78 +1,193 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.ControllerBSUIRHELPER">
-        <AnchorPane layoutX="-1.0" layoutY="543.0" prefHeight="59.0" prefWidth="802.0" style="-fx-background-color: #d3d3d3; -fx-border-color: #000000;">
-
-                <Text layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VERSION 0.1.0 ALPHA" textAlignment="CENTER" wrappingWidth="800.0">
-                    <font>
-                        <Font name="Roboto" size="12.0" />
-                    </font>
-                </Text>
-                <Text layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="© Dream Team 151001, all right reserved, 2021" textAlignment="CENTER" wrappingWidth="800.0">
-                    <font>
-                        <Font name="Roboto" size="12.0" />
-                    </font>
-                </Text>
-        </AnchorPane>
-        <AnchorPane layoutX="-1.0" layoutY="79.0" prefHeight="464.0" prefWidth="802.0" style="-fx-background-color: #FAFAFA; -fx-border-color: #000000;">
-                <AnchorPane layoutX="156.0" layoutY="45.0" prefHeight="368.0" prefWidth="459.0" style="-fx-border-color: #000000; -fx-background-color: #d3d3d3; -fx-border-width: 3;">
-                        <AnchorPane layoutX="7.0" layoutY="9.0" prefHeight="60.0" prefWidth="476.0" style="-fx-background-color: #FAFAFA; -fx-border-color: #000000;">
-
-                                <Label layoutX="202.0" layoutY="15.0" text="MENU">
-                                    <font>
-                                        <Font name="Roboto Black" size="25.0" />
-                                    </font>
-                                </Label>
-                        </AnchorPane>
-                        <AnchorPane layoutX="7.0" layoutY="70.0" prefHeight="298.0" prefWidth="476.0" style="-fx-border-color: #000000;">
-
-                                <Button layoutX="128.0" layoutY="40.0" mnemonicParsing="false" onAction="#moveToOrganizer" prefHeight="35.0" prefWidth="220.0" style="-fx-background-color: #ffffff; -fx-background-radius: 11; -fx-border-color: #000000; -fx-border-radius: 10;" text="TO-DO-LIST" textOverrun="CLIP">
-                                    <font>
-                                        <Font name="Roboto" size="14.0" />
-                                    </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-                                </Button>
-                                <Button layoutX="128.0" layoutY="160.0" mnemonicParsing="false" onAction="#moveToFlashcards" prefHeight="35.0" prefWidth="220.0" style="-fx-background-color: #ffffff; -fx-background-radius: 11; -fx-border-color: #000000; -fx-border-radius: 10;" text="FLASH-CARDS" textOverrun="CLIP">
-                                    <font>
-                                        <Font name="Roboto" size="14.0" />
-                                    </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-                                </Button>
-                                <Button layoutX="128.0" layoutY="100.0" mnemonicParsing="false" onAction="#moveToGameSnake" prefHeight="35.0" prefWidth="220.0" style="-fx-background-color: #ffffff; -fx-background-radius: 11; -fx-border-color: #000000; -fx-border-radius: 10;" text="PLAY IN FREE TIME" textOverrun="CLIP">
-                                    <font>
-                                        <Font name="Roboto" size="14.0" />
-                                    </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-                                </Button>
-            <Button layoutX="128.0" layoutY="220.0" mnemonicParsing="false" onAction="#moveToWeather" prefHeight="35.0" prefWidth="220.0" style="-fx-background-color: #ffffff; -fx-background-radius: 11; -fx-border-color: #000000; -fx-border-radius: 10;" text="WEATHER CHECKER" textOverrun="CLIP">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #a297cd;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.ControllerBSUIRHELPER">
+      <AnchorPane prefHeight="600.0" prefWidth="225.0" style="-fx-background-color: #2E3348;">
+            <AnchorPane layoutY="200.0" prefHeight="88.0" prefWidth="200.0">
+                  <ImageView fitHeight="51.0" fitWidth="51.0" layoutX="10.0" layoutY="10.0">
+                        <Image url="@assets/captmelancholy.png" />
+                  </ImageView>
+                  <Text fill="#d8d3ea" layoutY="-10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Artyom Dan'ko" wrappingWidth="94.0" x="75.0" y="40.0">
+                     <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#d8d3ea" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\@CaptMelancholy" wrappingWidth="105.54608154296875" x="75.0" y="40.0">
+                     <font>
+                        <Font name="Roboto Italic" size="12.0" />
+                     </font></Text>
+                  <Text fill="#d8d3ea" layoutX="-60.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact: cflabravo@yahoo.com" wrappingWidth="175.14605712890625" x="75.0" y="40.0">
+                     <font>
+                        <Font name="Roboto Regular" size="12.0" />
+                     </font></Text>
+            </AnchorPane>
+            <Label layoutX="10.0" layoutY="5.0" text="BSUIR HELPER" textFill="#d8d3ea">
                <font>
-                  <Font name="Roboto" size="14.0" />
+                  <Font name="Roboto Bold" size="30.0" />
                </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-
-                        </AnchorPane>
-                </AnchorPane>
-        </AnchorPane>
-        <Label layoutX="162.0" layoutY="14.0" prefHeight="59.0" prefWidth="476.0" text="BSUIR HELPER. STUDY AND PLAY" textFill="#ffd414">
-            <font>
-                <Font name="Roboto Black" size="30.0" />
-            </font>
-        </Label>
-    
+            </Label>
+            <Label layoutX="10.0" layoutY="35.0" text="#joinus" textFill="#d8d3ea">
+               <font>
+                  <Font name="Roboto Thin Italic" size="18.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutY="300.0" prefHeight="88.0" prefWidth="200.0">
+                  <ImageView fitHeight="51.0" fitWidth="51.0" layoutX="10.0" layoutY="10.0">
+                        <Image url="@assets/rinrisha.png" />
+                  </ImageView>
+                  <Text fill="#d8d3ea" layoutY="-10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arina Tarabarova" wrappingWidth="126.0" x="75.0" y="40.0">
+                     <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#d8d3ea" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\@rinrisha" wrappingWidth="105.54608154296875" x="75.0" y="40.0">
+                     <font>
+                        <Font name="Roboto Italic" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#d8d3ea" layoutX="-60.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact: yaarinaigorevna@gmail.com" wrappingWidth="206.4000244140625" x="75.0" y="40.0">
+                     <font>
+                        <Font name="Roboto Regular" size="12.0" />
+                     </font>
+                  </Text>
+            </AnchorPane>
+            <AnchorPane layoutY="400.0" prefHeight="88.0" prefWidth="200.0">
+                  <ImageView fitHeight="51.0" fitWidth="51.0" layoutX="10.0" layoutY="10.0">
+                        <Image url="@assets/vashka04.png" />
+                  </ImageView>
+                  <Text fill="#d8d3ea" layoutY="-10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Artyom Vashkevich" wrappingWidth="126.0" x="75.0" y="40.0">
+                     <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#d8d3ea" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\@vashka04 " wrappingWidth="105.54608154296875" x="75.0" y="40.0">
+                     <font>
+                        <Font name="Roboto Italic" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#d8d3ea" layoutX="-60.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact: vashkevichartem@mail.ru" wrappingWidth="206.4000244140625" x="75.0" y="40.0">
+                     <font>
+                        <Font name="Roboto Regular" size="12.0" />
+                     </font>
+                  </Text>
+            </AnchorPane>
+            <Label layoutX="52.0" layoutY="176.0" text="DEVELOPERS" textFill="#d8d3ea">
+               <font>
+                  <Font name="Roboto Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="5.0" layoutY="580.0" prefHeight="18.0" prefWidth="213.0" text="© Dream Team 151001, all right reserved, 2021" textFill="#d8d3ea">
+               <font>
+                  <Font name="Roboto Bold" size="10.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="35.0" layoutY="500.0">
+                  <Image url="@assets/canvas.png" />
+            </ImageView>
+      </AnchorPane>
+      <AnchorPane layoutX="225.0" prefHeight="60.0" prefWidth="575.0" style="-fx-background-color: #59648d;">
+            <Label layoutX="214.0" layoutY="11.0" text="MAIN MENU" textFill="#d8d3ea">
+               <font>
+                  <Font name="Roboto Bold" size="30.0" />
+               </font>
+            </Label>
+         </AnchorPane>
+      <Button layoutX="300.0" layoutY="100.0" mnemonicParsing="false" onAction="#moveToFlashcards" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #7867b6; -fx-background-radius: 90;">
+         <graphic>
+            <ImageView fitHeight="128.0" fitWidth="128.0">
+                  <Image url="@assets/flashcards.png" />
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+         </graphic>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="341.0" layoutY="310.0" text="FLASH-CARDS" textFill="#2e3348">
+         <font>
+            <Font name="UniSansHeavyCaps" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="552.0" layoutY="100.0" mnemonicParsing="false" onAction="#moveToGameSnake" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #7867b6; -fx-background-radius: 90;">
+         <graphic>
+            <ImageView fitHeight="128.0" fitWidth="128.0">
+                  <Image url="@assets/playinfreetime.png" />
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+         </graphic>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="574.0" layoutY="310.0" text="PLAY IN FREE TIME" textFill="#2e3348">
+         <font>
+            <Font name="UniSansHeavyCaps" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="300.0" layoutY="340.0" mnemonicParsing="false" onAction="#moveToOrganizer" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #7867b6; -fx-background-radius: 90;">
+         <graphic>
+            <ImageView fitHeight="128.0" fitWidth="128.0">
+                  <Image url="@assets/todolist.png" />
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+         </graphic>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="351.0" layoutY="550.0" text="TO-DO-LIST" textFill="#2e3348">
+         <font>
+            <Font name="UniSansHeavyCaps" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="552.0" layoutY="340.0" mnemonicParsing="false" onAction="#moveToWeather" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #7867b6; -fx-background-radius: 90;">
+         <graphic>
+            <ImageView fitHeight="128.0" fitWidth="128.0" x="10.0">
+                  <Image url="@assets/weatherchecker.png" />
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+         </graphic>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="570.0" layoutY="550.0" text="WEATHER CHECKER" textFill="#2e3348">
+         <font>
+            <Font name="UniSansHeavyCaps" size="18.0" />
+         </font>
+      </Label>
 </AnchorPane>

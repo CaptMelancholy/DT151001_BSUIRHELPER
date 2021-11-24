@@ -76,6 +76,7 @@ public class OrganizerController implements Initializable {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("BSUIR HELPER");
+        stage.centerOnScreen();
         stage.show();
     }
 }

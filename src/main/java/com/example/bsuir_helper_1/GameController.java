@@ -15,6 +15,7 @@ import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import javafx.scene.media.Media;
@@ -69,6 +70,7 @@ public class GameController implements Initializable {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("BSUIR HELPER");
+        stage.centerOnScreen();
         stage.show();
     }
 
@@ -92,9 +94,10 @@ public class GameController implements Initializable {
     }
 
     private void notifyUser() {
-        gameoverlabel.setText("GAME OVER PLEASE TRY AGAIN");
+        gameoverlabel.setText("GAME OVER\nPLEASE TRY AGAIN");
+        gameoverlabel.setTextAlignment(TextAlignment.CENTER);
         snake.cleanItself();
-        gamecounterlabel.setText("EATEN SQUARES: " + foodHitCounter + " GOOD JOB, SEE YOU LATER");
+        gamecounterlabel.setText("EATEN SQUARES: " + foodHitCounter + "\nGOOD JOB, PLAY AGAIN");
 
         food.gameoverFood();
         gameOverSound();

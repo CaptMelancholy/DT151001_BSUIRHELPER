@@ -62,6 +62,7 @@ public class WeatherController {
         final Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         final Scene scene = new Scene(root);
         stage.setTitle("BSUIR HELPER");
+        stage.centerOnScreen();
             stage.setScene(scene);
             stage.show();
         }
