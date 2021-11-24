@@ -99,7 +99,7 @@ public class GameController implements Initializable {
         snake.cleanItself();
         gamecounterlabel.setText("EATEN SQUARES: " + foodHitCounter + "\nGOOD JOB, PLAY AGAIN");
 
-        food.gameoverFood();
+        food.destroyFood();
         gameOverSound();
         timeline.stop();
     }
