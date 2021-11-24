@@ -3,9 +3,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<?import javafx.scene.web.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.FlashCardsController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.FlashCardsController">
       <AnchorPane layoutY="-1.0" prefHeight="82.0" prefWidth="800.0" style="-fx-background-color: #2E3348;">
             <Label layoutX="174.0" layoutY="11.0" prefHeight="59.0" prefWidth="476.0" text="BSUIR HELPER. STUDY AND PLAY" textFill="#ffd414">
                   <font>
@@ -16,21 +15,25 @@
       <TabPane layoutY="81.0" prefHeight="482.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
             <Tab text="еда">
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="219.0" prefWidth="837.0">
-                        <Button layoutX="304.0" layoutY="419.0" mnemonicParsing="false" onAction="#generate_new_something" text="сгенерировать новую тему" />
-            <Text fx:id="eda" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Button layoutX="304.0" layoutY="419.0" mnemonicParsing="false" onAction="#GenerateNewPlace" text="сгенерировать новую тему" />
+                        <Text fx:id="Food" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                   </AnchorPane>
             </Tab>
             <Tab text="идеи для занятий">
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                        <Button layoutX="304.0" layoutY="419.0" mnemonicParsing="false" onAction="#generate_new_something2" text="сгенерировать новую что-то" />
-            <Text fx:id="ideas" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Button layoutX="304.0" layoutY="419.0" mnemonicParsing="false" onAction="#GenerateNewClasses" text="сгенерировать новую что-то" />
+                        <Text fx:id="Classes" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                   </AnchorPane>
             </Tab>
-            <Tab text="своё">
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
-                        <HTMLEditor accessibleRole="IMAGE_VIEW" cache="true" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="-6.0" prefHeight="414.0" prefWidth="806.0" AnchorPane.topAnchor="0.0" />
+            <Tab fx:id="NameOfTopic" text="своё">
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="545.0" prefWidth="800.0" style="-fx-background-color: white;">
+                        <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Button layoutX="14.0" layoutY="413.0" mnemonicParsing="false" onAction="#ChangeNameOfTab" text="Изменить название вкладки" />
+                        <Button layoutX="596.0" layoutY="413.0" mnemonicParsing="false" onAction="#AddNewFlashCard" text="Добавить свою флеш-карточку" />
+                        <Button layoutX="297.0" layoutY="413.0" mnemonicParsing="false" onAction="#CheckListOfFlashCards" text="Список созданных флеш-карточек" />
                   </AnchorPane>
             </Tab>
       </TabPane>
-      <Button layoutX="698.0" layoutY="550.0" mnemonicParsing="false" onAction="#back_to_menu_org" text="Back to menu" />
+      <Button layoutX="697.0" layoutY="563.0" mnemonicParsing="false" onAction="#BackToMenuFlashCards" text="Back to menu" />
+
 </AnchorPane>
