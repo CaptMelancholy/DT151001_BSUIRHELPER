@@ -1,157 +1,68 @@
 package com.example.bsuir_helper_1;
 
 
+import java.net.URL;
+import java.time.LocalDate;
+import java.util.ResourceBundle;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.*;
-import javafx.stage.Stage;
-
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 
 
 public class OrganizerController implements Initializable {
 
     @FXML
-    private TreeView<String> TreeView;
+    private Button addEventButton;
 
-    //TODO зачем он тут нужен ?
-    public OrganizerController() {
-    }
+    @FXML
+    private TextField eventDescriptionTextField;
 
-    @Override
-    public void initialize(final URL arg0, final ResourceBundle arg1) {
-        //TODO так переменные не называют
-        TreeItem<String> rootItem1 = new TreeItem<>("Важное");
+    @FXML
+    private DatePicker datePicker;
 
-        TreeItem<String> branchItem1 = new TreeItem<>("Домашнее задание");
-        TreeItem<String> branchItem2 = new TreeItem<>("Планы");
-
-        rootItem1.getChildren().addAll(branchItem1, branchItem2);
-
-        TreeItem<String> rootItem2 = new TreeItem<>("Списки");
-
-        TreeItem<String> branchItem3 = new TreeItem<>("Что посмотреть");
-        TreeItem<String> branchItem4 = new TreeItem<>("Музыка");
-        TreeItem<String> branchItem5 = new TreeItem<>("Места для посещения");
-
-        rootItem2.getChildren().addAll(branchItem3, branchItem4, branchItem5);
-
-        TreeView.setRoot(rootItem1);
-        TreeView.setRoot(rootItem2);
-    }
-
-    public void SelectItem() {
-        final TreeItem<String> item = TreeView.getSelectionModel().getSelectedItem();
-        //TODO hahaha, это что ?? очень смешно, почитайте что сами написали
-        if(item != null) {
-            System.out.println(item.getValue());
-        }
-        assert item != null;
-        System.out.println(item.getValue());
-    }
+    @FXML
+    private ListView<LocalEvent> eventListView;
 
 
     @FXML
-    void initialize() {
-        ButtonBase branchItem1 = null;
-        //TODO это что и зачем оно тут ? Как оно решает то что ни один branchItem не инициализируется ? Вам new Button() написать религия не позволяет ?
-        assert false;
-        branchItem1.setOnAction(Event ->  {
-            branchItem1.getScene().getWindow().hide();
+    private void addEventHandler(ActionEvent e)
+    {
+        //create new Event by getting values from gui
+        var newEvent = new LocalEvent(datePicker.getValue(), eventDescriptionTextField.getText());
 
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("homework.fxml"));
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        // add the new event to the list
+        eventListView.getItems().add(newEvent);
 
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.showAndWait();
-        });
+        //reset fields
+        // set date on today
+        datePicker.setValue(LocalDate.now());
 
-        ButtonBase branchItem2 = null;
-        branchItem2.setOnAction(Event ->  {
-            branchItem2.getScene().getWindow().hide();
-
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("plans.fxml"));
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.showAndWait();
-        });
-
-        ButtonBase branchItem3 = null;
-        branchItem3.setOnAction(Event ->  {
-            branchItem3.getScene().getWindow().hide();
-
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("watch.fxml"));
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.showAndWait();
-        });
-
-        ButtonBase branchItem4 = null;
-        branchItem4.setOnAction(Event ->  {
-            branchItem4.getScene().getWindow().hide();
-
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("music.fxml"));
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.showAndWait();
-        });
-
-        ButtonBase branchItem5 = null;
-        branchItem5.setOnAction(Event ->  {
-            branchItem5.getScene().getWindow().hide();
-
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("places.fxml"));
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.showAndWait();
-        });
+        // set text empty
+        eventDescriptionTextField.setText("");
     }
 
-    public void Help(final ActionEvent actionEvent) {
+    public Object[] getEvents()  {
+        return eventListView.getItems().toArray();
     }
+
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+        try {
+            var events = EventSerializer.deserialize();
+            eventListView.getItems().addAll(events);
+        }catch(Exception e)  {
+            Alert alert = new Alert(AlertType.ERROR);
+            alert.setTitle("TodoFX");
+            alert.setHeaderText("Events could not be loaded from file system");
+        }
+
+    }
+
 }
