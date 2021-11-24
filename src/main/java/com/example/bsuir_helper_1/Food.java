@@ -6,14 +6,12 @@ import javafx.scene.shape.Rectangle;
 
 import java.util.Random;
 
-//TODO сдесь и везде по проекту посоветую не использовать примитивные типы без явной необходимости, лучше использовать классы-обертки, будет меньше проблем в будущем
 public class Food {
     private final Position position;
     private final Rectangle rectangle;
     private final Random random = new Random();
-    private final int size;
+    private final double size;
 
-    //TODO почему в сигнатуре конструктора size принимает double, если size в классе типа int
     public Food(final double xPos, final double yPos, final AnchorPane pane, final double size) {
         this.size = (int) size;
         position = new Position(xPos, yPos);
@@ -26,7 +24,6 @@ public class Food {
         return position;
     }
 
-    //TODO для чего существует этот метод ?
     public void moveFood() {
         getRandomSpotForFood();
     }

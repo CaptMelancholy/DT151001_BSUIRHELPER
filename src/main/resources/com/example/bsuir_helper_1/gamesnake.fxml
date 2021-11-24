@@ -21,7 +21,7 @@
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor></Button>
-   <Button fx:id="exitButton" layoutX="405.0" layoutY="692.0" mnemonicParsing="false" onAction="#exit" prefHeight="16.0" prefWidth="130.0" style="-fx-background-radius: 11; -fx-border-color: #000000; -fx-border-radius: 10;" text="EXIT" textOverrun="CLIP">
+   <Button fx:id="exitButton" layoutX="405.0" layoutY="692.0" mnemonicParsing="false" onAction="#gotoMainMenu" prefHeight="16.0" prefWidth="130.0" style="-fx-background-radius: 11; -fx-border-color: #000000; -fx-border-radius: 10;" text="EXIT" textOverrun="CLIP">
       <font>
          <Font name="Roboto" size="14.0" />
       </font>

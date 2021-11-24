@@ -83,7 +83,7 @@
                   <Font name="UniSansHeavyCaps" size="18.0" />
                </font>
             </Text>
-            <Button layoutX="116.0" layoutY="474.0" mnemonicParsing="false" onAction="#backtomenu" prefHeight="31.0" prefWidth="171.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: #000000;" text="BACK TO MENU">
+            <Button layoutX="116.0" layoutY="474.0" mnemonicParsing="false" onAction="#backToMenu" prefHeight="31.0" prefWidth="171.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: #000000;" text="BACK TO MENU">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>

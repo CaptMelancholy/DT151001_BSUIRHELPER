@@ -41,7 +41,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                                 </Button>
-                                <Button layoutX="132.0" layoutY="160.0" mnemonicParsing="false" onAction="#moveToFlashcards" prefHeight="36.0" prefWidth="212.0" style="-fx-background-color: #ffffff; -fx-background-radius: 11; -fx-border-color: #000000; -fx-border-radius: 10;" text="FLASH-CARDS" textOverrun="CLIP">
+                                <Button layoutX="132.0" layoutY="169.0" mnemonicParsing="false" onAction="#moveToFlashcards" prefHeight="36.0" prefWidth="212.0" style="-fx-background-color: #ffffff; -fx-background-radius: 11; -fx-border-color: #000000; -fx-border-radius: 10;" text="FLASH-CARDS" textOverrun="CLIP">
                                     <font>
                                         <Font name="Roboto" size="14.0" />
                                     </font>
@@ -57,7 +57,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                                 </Button>
-                                <Button layoutX="132.0" layoutY="110.0" mnemonicParsing="false" onAction="#moveToGameSnake" prefHeight="36.0" prefWidth="212.0" style="-fx-background-color: #ffffff; -fx-background-radius: 11; -fx-border-color: #000000; -fx-border-radius: 10;" text="TIME-TO-CHILL" textOverrun="CLIP">
+                                <Button layoutX="132.0" layoutY="113.0" mnemonicParsing="false" onAction="#moveToGameSnake" prefHeight="36.0" prefWidth="212.0" style="-fx-background-color: #ffffff; -fx-background-radius: 11; -fx-border-color: #000000; -fx-border-radius: 10;" text="TIME-TO-CHILL" textOverrun="CLIP">
                                     <font>
                                         <Font name="Roboto" size="14.0" />
                                     </font>
@@ -65,15 +65,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                                 </Button>
-            <Button layoutX="132.0" layoutY="210.0" mnemonicParsing="false" onAction="#moveToWeather" prefHeight="36.0" prefWidth="212.0" style="-fx-background-color: #ffffff; -fx-background-radius: 11; -fx-border-color: #000000; -fx-border-radius: 10;" text="WEATHER CHECKER" textOverrun="CLIP">
-               <font>
-                  <Font name="Roboto" size="14.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button layoutX="132.0" layoutY="260.0" mnemonicParsing="false" onAction="#moveToCovid19AlertPage" prefHeight="36.0" prefWidth="212.0" style="-fx-background-color: #ffffff; -fx-background-radius: 11; -fx-border-color: #000000; -fx-border-radius: 10;" text="COVID-19" textOverrun="CLIP">
+            <Button layoutX="132.0" layoutY="224.0" mnemonicParsing="false" onAction="#moveToWeather" prefHeight="36.0" prefWidth="212.0" style="-fx-background-color: #ffffff; -fx-background-radius: 11; -fx-border-color: #000000; -fx-border-radius: 10;" text="WEATHER CHECKER" textOverrun="CLIP">
                <font>
                   <Font name="Roboto" size="14.0" />
                </font>
