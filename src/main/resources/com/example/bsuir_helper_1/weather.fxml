@@ -4,112 +4,127 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="642.0" prefWidth="403.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.WeatherController">
-      <AnchorPane layoutX="-1.0" layoutY="52.0" prefHeight="530.0" prefWidth="403.0" style="-fx-background-color: #404040;">
-            <AnchorPane prefHeight="59.0" prefWidth="403.0" style="-fx-background-color: #303030;">
-                  <Text blendMode="COLOR_DODGE" fill="WHITE" layoutX="9.0" layoutY="40.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="WEATHER RIGHT NOW" textAlignment="CENTER" wrappingWidth="384.8759765625">
-                     <font>
-                        <Font name="System Bold" size="25.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Text>
-            </AnchorPane>
-            <TextField fx:id="cityenterfield" layoutX="93.0" layoutY="75.0" prefHeight="34.0" prefWidth="217.0" promptText="ENTER THE CITY" style="-fx-background-color: #f2f2f2; -fx-border-color: #646464; -fx-border-radius: 7; -fx-background-radius: 7;">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </TextField>
-            <Button fx:id="checkWeatherButton" layoutX="118.0" layoutY="140.0" mnemonicParsing="false" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: #000000;" text="CHECK THE WEATHER">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-            </Button>
-            <ImageView fitHeight="81.0" fitWidth="86.0" layoutX="311.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
-                  <Image url="@assets/weather.png" />
-            </ImageView>
-            <Text fill="RED" layoutX="14.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: UniSans;" text="INFORMATION">
-               <font>
-                  <Font name="UniSansHeavyCaps" size="25.0" />
-               </font>
-            </Text>
-            <Text fill="WHITE" layoutX="100.0" layoutY="521.0" stroke="BLACK" strokeType="OUTSIDE" text="WEATHER FORECAST BY OPENWEATHERMAP.ORG">
-               <font>
-                  <Font name="UniSansHeavyCapsItalic" size="12.0" />
-               </font>
-            </Text>
-            <Text fx:id="tempInfo" fill="WHITE" layoutX="14.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temperature:">
-               <font>
-                  <Font name="UniSansHeavyCaps" size="18.0" />
-               </font>
-            </Text>
-            <Text fx:id="tempFills" fill="WHITE" layoutX="14.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FILLS LIKE:">
-               <font>
-                  <Font name="UniSansHeavyCaps" size="18.0" />
-               </font>
-            </Text>
-            <Text fx:id="airPressure" fill="WHITE" layoutX="14.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Air pressure:">
-               <font>
-                  <Font name="UniSansHeavyCaps" size="18.0" />
-               </font>
-            </Text>
-            <Text fx:id="humidity" fill="WHITE" layoutX="14.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="humidity:">
-               <font>
-                  <Font name="UniSansHeavyCaps" size="18.0" />
-               </font>
-            </Text>
-            <Text fx:id="windSpeed" fill="WHITE" layoutX="14.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WIND SPEED:">
-               <font>
-                  <Font name="UniSansHeavyCaps" size="18.0" />
-               </font>
-            </Text>
-            <Text fx:id="cloudiness" fill="WHITE" layoutX="14.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cloudiness:">
-               <font>
-                  <Font name="UniSansHeavyCaps" size="18.0" />
-               </font>
-            </Text>
-            <Text fx:id="country" fill="WHITE" layoutX="14.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COUNTRY:">
-               <font>
-                  <Font name="UniSansHeavyCaps" size="18.0" />
-               </font>
-            </Text>
-            <Button layoutX="116.0" layoutY="474.0" mnemonicParsing="false" onAction="#backToMenu" prefHeight="31.0" prefWidth="171.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: #000000;" text="BACK TO MENU">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-            </Button>
-            <Text fx:id="weather" fill="WHITE" layoutX="14.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WEATHER:">
-               <font>
-                  <Font name="UniSansHeavyCaps" size="18.0" />
-               </font>
-            </Text>
-      <Label fx:id="donfound" layoutX="143.0" layoutY="117.0" textFill="RED">
-         <font>
-            <Font name="UniSansHeavyCaps" size="12.0" />
-         </font>
-      </Label>
-      </AnchorPane>
-      <Label layoutX="96.0" prefHeight="59.0" prefWidth="207.0" text="BSUIR HELPER" textFill="#ffd414">
-         <font>
-            <Font name="Roboto Black" size="30.0" />
-         </font>
-      </Label>
-      <Label layoutX="81.0" layoutY="582.0" prefHeight="59.0" prefWidth="238.0" text="TAKE UMBRELLA" textFill="#ffd414">
-         <font>
-            <Font name="Roboto Black" size="30.0" />
-         </font>
-      </Label>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #a297cd;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.WeatherController">
+   <AnchorPane prefHeight="600.0" prefWidth="250.0" style="-fx-background-color: #2E3348;">
+         <Label layoutX="10.0" layoutY="5.0" text="BSUIR HELPER" textFill="#d8d3ea">
+            <font>
+               <Font name="Roboto Bold" size="30.0" />
+            </font>
+         </Label>
+         <Label layoutX="10.0" layoutY="35.0" text="#joinus" textFill="#d8d3ea">
+            <font>
+               <Font name="Roboto Thin Italic" size="18.0" />
+            </font>
+         </Label>
+         <Label layoutX="5.0" layoutY="580.0" prefHeight="18.0" prefWidth="213.0" text="© Dream Team 151001, all right reserved, 2021" textFill="#d8d3ea">
+            <font>
+               <Font name="Roboto Bold" size="10.0" />
+            </font>
+         </Label>
+               <TextField fx:id="cityenterfield" layoutX="16.0" layoutY="100.0" prefHeight="34.0" prefWidth="217.0" promptText="ENTER THE CITY" style="-fx-border-color: #646464; -fx-border-radius: 7; -fx-background-radius: 7;">
+                  <font>
+                     <Font name="Roboto Bold" size="18.0" />
+                  </font>
+               </TextField>
+         <Label fx:id="donfound" layoutX="50.0" layoutY="149.0" textFill="RED">
+            <font>
+               <Font name="UniSansHeavyCaps" size="12.0" />
+            </font>
+         </Label>
+               <Button fx:id="checkWeatherButton" layoutX="41.0" layoutY="177.0" mnemonicParsing="false" style="-fx-background-radius: 30; -fx-background-color: #7867b6;" text="CHECK THE WEATHER">
+                  <font>
+                     <Font name="Roboto Bold" size="14.0" />
+                  </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+            <effect>
+               <DropShadow />
+            </effect>
+               </Button>
+               <Button layoutX="39.0" layoutY="538.0" mnemonicParsing="false" onAction="#backToMenu" prefHeight="31.0" prefWidth="171.0" style="-fx-background-radius: 30; -fx-background-color: #7867b6;" text="BACK TO MENU">
+                  <font>
+                     <Font name="Roboto Bold" size="14.0" />
+                  </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+            <effect>
+               <DropShadow />
+            </effect>
+               </Button>
+   </AnchorPane>
+   <AnchorPane layoutX="250.0" prefHeight="60.0" prefWidth="550.0" style="-fx-background-color: #59648d;">
+         <Label contentDisplay="CENTER" layoutX="134.0" layoutY="11.0" text="WEATHER RIGHT NOW" textAlignment="CENTER" textFill="#d8d3ea">
+            <font>
+               <Font name="Roboto Bold" size="30.0" />
+            </font>
+         </Label>
+   </AnchorPane>
+         <Text fx:id="tempInfo" fill="#2e3348" layoutX="277.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TEMPERATURE:">
+            <font>
+               <Font name="Roboto Bold" size="20.0" />
+            </font>
+         </Text>
+         <Text fx:id="tempFills" fill="#2e3348" layoutX="277.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FILLS LIKE:">
+            <font>
+               <Font name="Roboto Bold" size="20.0" />
+            </font>
+         </Text>
+         <Text fx:id="airPressure" fill="#2e3348" layoutX="277.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AIR PRESSURE:">
+            <font>
+               <Font name="Roboto Bold" size="20.0" />
+            </font>
+         </Text>
+         <Text fx:id="humidity" fill="#2e3348" layoutX="277.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HUMIDITY:">
+            <font>
+               <Font name="Roboto Bold" size="20.0" />
+            </font>
+         </Text>
+         <Text fx:id="windSpeed" fill="#2e3348" layoutX="547.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WIND SPEED:">
+            <font>
+               <Font name="Roboto Bold" size="20.0" />
+            </font>
+         </Text>
+         <Text fx:id="cloudiness" fill="#2e3348" layoutX="547.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CLOUDINES:">
+            <font>
+               <Font name="Roboto Bold" size="20.0" />
+            </font>
+         </Text>
+         <Text fx:id="country" fill="#2e3348" layoutX="547.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COUNTRY:">
+            <font>
+               <Font name="Roboto Bold" size="20.0" />
+            </font>
+         </Text>
+         <Text fx:id="weather" fill="#2e3348" layoutX="547.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WEATHER:">
+            <font>
+               <Font name="Roboto Bold" size="20.0" />
+            </font>
+         </Text>
+         <Text fill="WHITE" layoutX="520.0" layoutY="590.0" stroke="BLACK" strokeType="OUTSIDE" text="WEATHER FORECAST BY OPENWEATHERMAP.ORG">
+            <font>
+               <Font name="Roboto Bold" size="12.0" />
+            </font>
+         </Text>
+         <ImageView fitHeight="81.0" fitWidth="86.0" layoutX="710.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@assets/weather.png" />
+         </ImageView>
+    <ImageView fitHeight="85.0" fitWidth="200.0" layoutX="277.0" layoutY="68.0">
+        <effect>
+            <DropShadow height="68.43" radius="31.96" width="61.41">
+                <color>
+                    <Color opacity="0.8253424763679504"/>
+                </color>
+            </DropShadow>
+        </effect>
+        <Image url="@assets/openweather.png"/>
+    </ImageView>
 </AnchorPane>

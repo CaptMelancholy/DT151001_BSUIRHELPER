@@ -103,13 +103,13 @@
                </font>
             </Label>
          </AnchorPane>
-      <Button layoutX="300.0" layoutY="100.0" mnemonicParsing="false" onAction="#moveToFlashcards" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #7867b6; -fx-background-radius: 90;">
+      <Button layoutX="300.0" layoutY="100.0" mnemonicParsing="false" onAction="#moveToFlashcards" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #7867b6; -fx-background-radius: 40;">
          <graphic>
             <ImageView fitHeight="128.0" fitWidth="128.0">
                   <Image url="@assets/flashcards.png" />
-               <effect>
-                  <DropShadow />
-               </effect>
+            <effect>
+               <DropShadow />
+            </effect>
             </ImageView>
          </graphic>
          <effect>
@@ -124,7 +124,7 @@
             <Font name="UniSansHeavyCaps" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="552.0" layoutY="100.0" mnemonicParsing="false" onAction="#moveToGameSnake" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #7867b6; -fx-background-radius: 90;">
+      <Button layoutX="552.0" layoutY="100.0" mnemonicParsing="false" onAction="#moveToGameSnake" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #7867b6; -fx-background-radius: 40;">
          <graphic>
             <ImageView fitHeight="128.0" fitWidth="128.0">
                   <Image url="@assets/playinfreetime.png" />
@@ -145,7 +145,7 @@
             <Font name="UniSansHeavyCaps" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="300.0" layoutY="340.0" mnemonicParsing="false" onAction="#moveToOrganizer" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #7867b6; -fx-background-radius: 90;">
+      <Button layoutX="300.0" layoutY="340.0" mnemonicParsing="false" onAction="#moveToOrganizer" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #7867b6; -fx-background-radius: 40;">
          <graphic>
             <ImageView fitHeight="128.0" fitWidth="128.0">
                   <Image url="@assets/todolist.png" />
@@ -166,7 +166,7 @@
             <Font name="UniSansHeavyCaps" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="552.0" layoutY="340.0" mnemonicParsing="false" onAction="#moveToWeather" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #7867b6; -fx-background-radius: 90;">
+      <Button layoutX="552.0" layoutY="340.0" mnemonicParsing="false" onAction="#moveToWeather" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #7867b6; -fx-background-radius: 40;">
          <graphic>
             <ImageView fitHeight="128.0" fitWidth="128.0" x="10.0">
                   <Image url="@assets/weatherchecker.png" />
