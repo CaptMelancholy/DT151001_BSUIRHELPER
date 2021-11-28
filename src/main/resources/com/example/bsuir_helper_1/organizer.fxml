@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.ToDoListController">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.ToDoListController">
     <AnchorPane layoutX="302.0" layoutY="96.0" prefHeight="504.0" prefWidth="698.0">
         <SplitPane dividerPositions="0.12286324786324786" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #a297cd;">
@@ -94,7 +94,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-                <Button fx:id="deleteButtonOrg1" layoutX="140.0" layoutY="14.0" mnemonicParsing="false" onAction="#deleteButtonOrg1" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
+                <Button layoutX="140.0" layoutY="14.0" mnemonicParsing="false" fx:id="deleteButtonOrg1" onAction="#deleteButtonOrg1" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
                <font>
                   <Font name="Roboto Bold" size="14.0" />
                </font>
@@ -104,7 +104,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-                <Button fx:id="deleteButtonOrg2" layoutX="140.0" layoutY="49.0" mnemonicParsing="false" onAction="#deleteButtonOrg2" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
+                <Button layoutX="140.0" layoutY="49.0" mnemonicParsing="false" fx:id="deleteButtonOrg2" onAction="#deleteButtonOrg2" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
                <font>
                   <Font name="Roboto Bold" size="14.0" />
                </font>
@@ -114,7 +114,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-                <Button fx:id="deleteButtonOrg3" layoutX="140.0" layoutY="84.0" mnemonicParsing="false" onAction="#deleteButtonOrg3" prefHeight="28.0" prefWidth="58.0" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
+                <Button layoutX="140.0" layoutY="84.0" mnemonicParsing="false" fx:id="deleteButtonOrg3" onAction="#deleteButtonOrg3" prefHeight="28.0" prefWidth="58.0" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
                <font>
                   <Font name="Roboto Bold" size="14.0" />
                </font>
@@ -124,7 +124,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-                <Button fx:id="deleteButtonOrg4" layoutX="140.0" layoutY="119.0" mnemonicParsing="false" onAction="#deleteButtonOrg4" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
+                <Button layoutX="140.0" layoutY="119.0" mnemonicParsing="false" fx:id="deleteButtonOrg4" onAction="#deleteButtonOrg4" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
                <font>
                   <Font name="Roboto Bold" size="14.0" />
                </font>
@@ -134,7 +134,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-                <Button fx:id="deleteButtonOrg5" layoutX="140.0" layoutY="154.0" mnemonicParsing="false" onAction="#deleteButtonOrg5" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
+                <Button layoutX="140.0" layoutY="154.0" mnemonicParsing="false" fx:id="deleteButtonOrg5" onAction="#deleteButtonOrg5" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
                <font>
                   <Font name="Roboto Bold" size="14.0" />
                </font>
@@ -144,7 +144,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-                <Button fx:id="deleteButtonOrg6" layoutX="140.0" layoutY="189.0" mnemonicParsing="false" onAction="#deleteButtonOrg6" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
+                <Button layoutX="140.0" layoutY="189.0" mnemonicParsing="false" fx:id="deleteButtonOrg6" onAction="#deleteButtonOrg6" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
                <font>
                   <Font name="Roboto Bold" size="14.0" />
                </font>
@@ -154,7 +154,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-                <Button fx:id="deleteButtonOrg7" layoutX="140.0" layoutY="224.0" mnemonicParsing="false" onAction="#deleteButtonOrg7" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
+                <Button layoutX="140.0" layoutY="224.0" mnemonicParsing="false" fx:id="deleteButtonOrg7" onAction="#deleteButtonOrg7" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
                <font>
                   <Font name="Roboto Bold" size="14.0" />
                </font>
@@ -164,7 +164,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-                <Button fx:id="deleteButtonOrg8" layoutX="140.0" layoutY="259.0" mnemonicParsing="false" onAction="#deleteButtonOrg8" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
+                <Button layoutX="140.0" layoutY="259.0" mnemonicParsing="false" fx:id="deleteButtonOrg8" onAction="#deleteButtonOrg8" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
                <font>
                   <Font name="Roboto Bold" size="14.0" />
                </font>
@@ -174,7 +174,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-                <Button fx:id="deleteButtonOrg9" layoutX="140.0" layoutY="294.0" mnemonicParsing="false" onAction="#deleteButtonOrg9" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
+                <Button layoutX="140.0" layoutY="294.0" mnemonicParsing="false" fx:id="deleteButtonOrg9" onAction="#deleteButtonOrg9" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
                <font>
                   <Font name="Roboto Bold" size="14.0" />
                </font>
@@ -184,7 +184,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-                <Button fx:id="deleteButtonOrg10" layoutX="140.0" layoutY="329.0" mnemonicParsing="false" onAction="#deleteButtonOrg10" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
+                <Button layoutX="140.0" layoutY="329.0" mnemonicParsing="false" fx:id="deleteButtonOrg10" onAction="#deleteButtonOrg10" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
                <font>
                   <Font name="Roboto Bold" size="14.0" />
                </font>
@@ -194,7 +194,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-                <Button fx:id="changePrioritize1" layoutX="11.0" layoutY="14.0" mnemonicParsing="false" onAction="#changePrioritize1" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
+                <Button layoutX="11.0" layoutY="14.0" mnemonicParsing="false" fx:id="changePrioritize1" onAction="#changePrioritize1" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
                <font>
                   <Font name="Roboto Bold" size="14.0" />
                </font>
@@ -204,7 +204,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-                <Button fx:id="changePrioritize2" layoutX="11.0" layoutY="49.0" mnemonicParsing="false" onAction="#changePrioritize2" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
+                <Button layoutX="11.0" layoutY="49.0" mnemonicParsing="false" fx:id="changePrioritize2" onAction="#changePrioritize2" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
                <font>
                   <Font name="Roboto Bold" size="14.0" />
                </font>
@@ -214,7 +214,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-                <Button fx:id="changePrioritize3" layoutX="11.0" layoutY="84.0" mnemonicParsing="false" onAction="#changePrioritize3" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
+                <Button layoutX="11.0" layoutY="84.0" mnemonicParsing="false" fx:id="changePrioritize3" onAction="#changePrioritize3" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
                <font>
                   <Font name="Roboto Bold" size="14.0" />
                </font>
@@ -224,7 +224,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-                <Button fx:id="changePrioritize4" layoutX="11.0" layoutY="119.0" mnemonicParsing="false" onAction="#changePrioritize4" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
+                <Button layoutX="11.0" layoutY="119.0" mnemonicParsing="false" fx:id="changePrioritize4" onAction="#changePrioritize4" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
                <font>
                   <Font name="Roboto Bold" size="14.0" />
                </font>
@@ -234,7 +234,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-                <Button fx:id="changePrioritize5" layoutX="11.0" layoutY="154.0" mnemonicParsing="false" onAction="#changePrioritize5" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
+                <Button layoutX="11.0" layoutY="154.0" mnemonicParsing="false" fx:id="changePrioritize5" onAction="#changePrioritize5" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
                <font>
                   <Font name="Roboto Bold" size="14.0" />
                </font>
@@ -244,7 +244,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-                <Button fx:id="changePrioritize6" layoutX="11.0" layoutY="189.0" mnemonicParsing="false" onAction="#changePrioritize6" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
+                <Button layoutX="11.0" layoutY="189.0" mnemonicParsing="false" fx:id="changePrioritize6" onAction="#changePrioritize6" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
                <font>
                   <Font name="Roboto Bold" size="14.0" />
                </font>
@@ -254,7 +254,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-                <Button fx:id="changePrioritize7" layoutX="11.0" layoutY="224.0" mnemonicParsing="false" onAction="#changePrioritize7" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
+                <Button layoutX="11.0" layoutY="224.0" mnemonicParsing="false" fx:id="changePrioritize7" onAction="#changePrioritize7" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
                <font>
                   <Font name="Roboto Bold" size="14.0" />
                </font>
@@ -264,7 +264,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-                <Button fx:id="changePrioritize8" layoutX="11.0" layoutY="259.0" mnemonicParsing="false" onAction="#changePrioritize8" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
+                <Button layoutX="11.0" layoutY="259.0" mnemonicParsing="false" fx:id="changePrioritize8" onAction="#changePrioritize8" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
                <font>
                   <Font name="Roboto Bold" size="14.0" />
                </font>
@@ -274,7 +274,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-                <Button fx:id="changePrioritize9" layoutX="11.0" layoutY="294.0" mnemonicParsing="false" onAction="#changePrioritize9" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
+                <Button layoutX="11.0" layoutY="294.0" mnemonicParsing="false" fx:id="changePrioritize9" onAction="#changePrioritize9" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
                <font>
                   <Font name="Roboto Bold" size="14.0" />
                </font>
@@ -284,7 +284,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-                <Button fx:id="changePrioritize10" layoutX="11.0" layoutY="329.0" mnemonicParsing="false" onAction="#changePrioritize10" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
+                <Button layoutX="11.0" layoutY="329.0" mnemonicParsing="false" fx:id="changePrioritize10" onAction="#changePrioritize10" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
                <font>
                   <Font name="Roboto Bold" size="14.0" />
                </font>
@@ -300,35 +300,38 @@
    <AnchorPane layoutY="-2.0" prefHeight="603.0" prefWidth="303.0" style="-fx-background-color: #2E3348;">
       <Label layoutX="10.0" layoutY="5.0" prefHeight="38.0" prefWidth="227.0" text="BSUIR HELPER" textFill="#d8d3ea">
          <font>
-            <Font name="Roboto Bold" size="30.0" />
+            <Font name="Roboto Bold" size="30.0"/>
          </font>
       </Label>
       <Label layoutX="10.0" layoutY="35.0" text="#joinus" textFill="#d8d3ea">
          <font>
-            <Font name="Roboto Thin Italic" size="18.0" />
+            <Font name="Roboto Thin Italic" size="18.0"/>
          </font>
       </Label>
-      <Label layoutX="5.0" layoutY="580.0" prefHeight="18.0" prefWidth="241.0" text="© Dream Team 151001, all right reserved, 2021" textFill="#d8d3ea">
+      <Label layoutX="5.0" layoutY="580.0" prefHeight="18.0" prefWidth="241.0"
+             text="© Dream Team 151001, all right reserved, 2021" textFill="#d8d3ea">
          <font>
-            <Font name="Roboto Bold" size="10.0" />
+            <Font name="Roboto Bold" size="10.0"/>
          </font>
       </Label>
-      <Button layoutX="109.0" layoutY="545.0" mnemonicParsing="false" onAction="#gotoMainMenu" prefHeight="26.0" prefWidth="77.0" style="-fx-background-radius: 30; -fx-background-color: #7867b6;" text="EXIT">
+      <Button layoutX="109.0" layoutY="545.0" mnemonicParsing="false" onAction="#gotoMainMenu" prefHeight="26.0"
+              prefWidth="77.0" style="-fx-background-radius: 30; -fx-background-color: #7867b6;" text="EXIT">
          <font>
-            <Font name="Roboto Bold" size="14.0" />
+            <Font name="Roboto Bold" size="14.0"/>
          </font>
          <effect>
-            <DropShadow />
+            <DropShadow/>
          </effect>
          <cursor>
-            <Cursor fx:constant="HAND" />
+            <Cursor fx:constant="HAND"/>
          </cursor>
       </Button>
    </AnchorPane>
    <AnchorPane layoutX="302.0" prefHeight="96.0" prefWidth="698.0" style="-fx-background-color: #59648d;">
-      <Label contentDisplay="CENTER" layoutX="255.0" layoutY="29.0" text="FLASH-CARDS" textAlignment="CENTER" textFill="#d8d3ea">
+      <Label contentDisplay="CENTER" layoutX="255.0" layoutY="29.0" text="FLASH-CARDS" textAlignment="CENTER"
+             textFill="#d8d3ea">
          <font>
-            <Font name="Roboto Bold" size="30.0" />
+            <Font name="Roboto Bold" size="30.0"/>
          </font>
       </Label>
    </AnchorPane>
