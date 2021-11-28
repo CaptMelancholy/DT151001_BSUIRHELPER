@@ -155,8 +155,7 @@ public class FlashCardsController {
         try(BufferedReader reader = new BufferedReader(new FileReader(fileNameOfTab))){
             nameOfTab = reader.readLine();
             nameOfTopic.setText(nameOfTab);
-        }catch (IOException e) {
-            e.printStackTrace();
+        }catch (IOException ignored) {
         }
 
     }
@@ -170,16 +169,12 @@ public class FlashCardsController {
         if (!Objects.equals(newNameOfTab.getText(), "")){
         nameOfTopic.setText(newNameOfTab.getText());
 
-
             try(BufferedWriter writer = new BufferedWriter(new FileWriter(fileNameOfTab))){
                 fileNameOfTab = null;
                 writer.write(newNameOfTab.getText());
                 writer.flush();
-            }catch (IOException e) {
-                e.printStackTrace();
+            }catch (IOException ignored) {
             }
-
-
 
         }
         if (numOfNewFlashcards>14){
@@ -202,22 +197,23 @@ public class FlashCardsController {
             window.show();
         }
         else{
-            if(!addNew.getText().equals("")){
-            listOfNewFlashcards[numOfNewFlashcards] = addNew.getText();
+            newFlashcard = addNew.getText();
+            if(!newFlashcard.equals("")){
+            listOfNewFlashcards[numOfNewFlashcards] = newFlashcard;
             numOfNewFlashcards++;
             numberOfScroll = (numOfNewFlashcards-1)/5;
             if(numberOfScroll>0) nextButton.setDisable(false);
 
             switch ((numOfNewFlashcards-1)%5) {
-                case (0) -> textOfNewFlashcard1.setText(addNew.getText());
-                case (1) -> textOfNewFlashcard2.setText(addNew.getText());
-                case (2) -> textOfNewFlashcard3.setText(addNew.getText());
-                case (3) -> textOfNewFlashcard4.setText(addNew.getText());
-                case (4) -> textOfNewFlashcard5.setText(addNew.getText());
+                case (0) -> textOfNewFlashcard1.setText(newFlashcard);
+                case (1) -> textOfNewFlashcard2.setText(newFlashcard);
+                case (2) -> textOfNewFlashcard3.setText(newFlashcard);
+                case (3) -> textOfNewFlashcard4.setText(newFlashcard);
+                case (4) -> textOfNewFlashcard5.setText(newFlashcard);
                 default -> System.out.println("error");
             }
             try(BufferedWriter writerOfNewFlashcards = new BufferedWriter(new FileWriter(newFlashcards,true))){
-                writerOfNewFlashcards.write(addNew.getText()+"\n");
+                writerOfNewFlashcards.write(newFlashcard+"\n");
                 writerOfNewFlashcards.flush();
                 writerOfNewFlashcards.close();
                 addNew.setText("");
