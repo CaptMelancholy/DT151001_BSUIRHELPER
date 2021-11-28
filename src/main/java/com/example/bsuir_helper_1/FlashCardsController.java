@@ -155,7 +155,8 @@ public class FlashCardsController {
         try(BufferedReader reader = new BufferedReader(new FileReader(fileNameOfTab))){
             nameOfTab = reader.readLine();
             nameOfTopic.setText(nameOfTab);
-        }catch (IOException ignored) {
+        }catch (IOException e) {
+            e.printStackTrace();
         }
 
     }
@@ -173,7 +174,8 @@ public class FlashCardsController {
                 fileNameOfTab = null;
                 writer.write(newNameOfTab.getText());
                 writer.flush();
-            }catch (IOException ignored) {
+            }catch (IOException e) {
+                e.printStackTrace();
             }
 
         }
@@ -210,7 +212,7 @@ public class FlashCardsController {
                 case (2) -> textOfNewFlashcard3.setText(newFlashcard);
                 case (3) -> textOfNewFlashcard4.setText(newFlashcard);
                 case (4) -> textOfNewFlashcard5.setText(newFlashcard);
-                default -> System.out.println("error");
+                default ->numOfNewFlashcards = 0;
             }
             try(BufferedWriter writerOfNewFlashcards = new BufferedWriter(new FileWriter(newFlashcards,true))){
                 writerOfNewFlashcards.write(newFlashcard+"\n");
