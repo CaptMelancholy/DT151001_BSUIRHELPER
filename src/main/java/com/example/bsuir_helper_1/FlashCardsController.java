@@ -212,7 +212,6 @@ public class FlashCardsController {
                 case (2) -> textOfNewFlashcard3.setText(newFlashcard);
                 case (3) -> textOfNewFlashcard4.setText(newFlashcard);
                 case (4) -> textOfNewFlashcard5.setText(newFlashcard);
-                default ->numOfNewFlashcards = 0;
             }
             try(BufferedWriter writerOfNewFlashcards = new BufferedWriter(new FileWriter(newFlashcards,true))){
                 writerOfNewFlashcards.write(newFlashcard+"\n");
