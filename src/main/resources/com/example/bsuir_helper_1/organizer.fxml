@@ -1,71 +1,338 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="1.7976931348623157E308"  maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.ToDoListController">
-    <AnchorPane layoutY="-1.0" prefHeight="132.0" prefWidth="800.0" style="-fx-background-color: #2E3348;">
-        <Label layoutX="174.0" layoutY="11.0" prefHeight="59.0" prefWidth="476.0" text="BSUIR HELPER. STUDY AND PLAY" textFill="#ffd414">
-            <font>
-                <Font name="Roboto Black" size="30.0" />
-            </font>
-        </Label>
-        <Label layoutX="321.0" layoutY="76.0" text="MY PLANS" textFill="#ffd414">
-            <font>
-                <Font size="24.0" />
-            </font>
-        </Label>
-    </AnchorPane>
-    <AnchorPane layoutY="131.0" prefHeight="470.0" prefWidth="800.0">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.ToDoListController">
+    <AnchorPane layoutX="302.0" layoutY="96.0" prefHeight="504.0" prefWidth="698.0">
         <SplitPane dividerPositions="0.12286324786324786" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                <Button fx:id="addEventButton" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#addEventHandler" prefHeight="26.0" prefWidth="73.0" text="ADD" AnchorPane.leftAnchor="14.0" />
-                <DatePicker fx:id="datePicker" layoutX="101.0" layoutY="15.0" prefHeight="26.0" prefWidth="211.0" promptText="выберите дату" />
-                <TextField fx:id="eventDescriptionTextField" layoutX="330.0" layoutY="15.0" prefHeight="26.0" prefWidth="181.0" promptText="добавьте описание события" AnchorPane.rightAnchor="288.0" />
-                <Button layoutX="692.0" layoutY="14.0" mnemonicParsing="false" onAction="#gotoMainMenu" prefHeight="26.0" prefWidth="86.0" text="EXIT" />
-            <ChoiceBox fx:id="choiceBox" layoutX="523.0" layoutY="15.0" prefWidth="150.0" />
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #a297cd;">
+                <Button fx:id="addEventButton" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#addEventHandler" prefHeight="26.0" prefWidth="73.0" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="ADD" AnchorPane.leftAnchor="14.0">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <DatePicker fx:id="datePicker" layoutX="101.0" layoutY="15.0" prefHeight="26.0" prefWidth="211.0" promptText="CHOOSE DATE" />
+                <TextField fx:id="eventDescriptionTextField" layoutX="330.0" layoutY="15.0" prefHeight="26.0" prefWidth="181.0" promptText="DESCRIPTION OF THE EVENT" style="-fx-background-radius: 7;" AnchorPane.rightAnchor="178.79999999999995">
+               <font>
+                  <Font name="Roboto Bold" size="12.0" />
+               </font></TextField>
+            <ChoiceBox fx:id="choiceBox" layoutX="533.0" layoutY="15.0" prefWidth="150.0" style="-fx-background-color: #7867b6; -fx-background-radius: 7;" />
             </AnchorPane>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                <Text fx:id="textOfOrg1" layoutX="200.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-                <Text fx:id="textOfOrg2" layoutX="200.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-                <Text fx:id="textOfOrg3" layoutX="200.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-                <Text fx:id="textOfOrg4" layoutX="200.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-                <Text fx:id="textOfOrg5" layoutX="200.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-                <Text fx:id="textOfOrg6" layoutX="200.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-                <Text fx:id="textOfOrg7" layoutX="200.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-                <Text fx:id="textOfOrg8" layoutX="200.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-                <Text fx:id="textOfOrg9" layoutX="200.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-                <Text fx:id="textOfOrg10" layoutX="200.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-                <Button fx:id="backButtonOrg" layoutX="14.0" layoutY="370.0" mnemonicParsing="false" onAction="#backButtonOrg" prefWidth="70.0" text="back" />
-                <Button fx:id="nextButtonOrg" layoutX="714.0" layoutY="370.0" mnemonicParsing="false" onAction="#nextButtonOrg" prefWidth="70.0" text="next" />
-                <Button layoutX="140.0" layoutY="14.0" mnemonicParsing="false" onAction="#deleteButtonOrg1" text="delete" />
-                <Button layoutX="140.0" layoutY="49.0" mnemonicParsing="false" onAction="#deleteButtonOrg2" text="delete" />
-                <Button layoutX="140.0" layoutY="84.0" mnemonicParsing="false" onAction="#deleteButtonOrg3" prefHeight="16.0" prefWidth="50.0" text="delete" />
-                <Button layoutX="140.0" layoutY="119.0" mnemonicParsing="false" onAction="#deleteButtonOrg4" text="delete" />
-                <Button layoutX="140.0" layoutY="154.0" mnemonicParsing="false" onAction="#deleteButtonOrg5" text="delete" />
-                <Button layoutX="140.0" layoutY="189.0" mnemonicParsing="false" onAction="#deleteButtonOrg6" text="delete" />
-                <Button layoutX="140.0" layoutY="224.0" mnemonicParsing="false" onAction="#deleteButtonOrg7" text="delete" />
-                <Button layoutX="140.0" layoutY="259.0" mnemonicParsing="false" onAction="#deleteButtonOrg8" text="delete" />
-                <Button layoutX="140.0" layoutY="294.0" mnemonicParsing="false" onAction="#deleteButtonOrg9" text="delete" />
-                <Button layoutX="140.0" layoutY="329.0" mnemonicParsing="false" onAction="#deleteButtonOrg10" text="delete" />
-                <Button layoutX="23.0" layoutY="14.0" mnemonicParsing="false" onAction="#changePrioritize1" text="change prioritize" />
-                <Button layoutX="23.0" layoutY="49.0" mnemonicParsing="false" onAction="#changePrioritize2" text="change prioritize" />
-                <Button layoutX="23.0" layoutY="84.0" mnemonicParsing="false" onAction="#changePrioritize3" text="change prioritize" />
-                <Button layoutX="23.0" layoutY="119.0" mnemonicParsing="false" onAction="#changePrioritize4" text="change prioritize" />
-                <Button layoutX="23.0" layoutY="154.0" mnemonicParsing="false" onAction="#changePrioritize5" text="change prioritize" />
-                <Button layoutX="23.0" layoutY="189.0" mnemonicParsing="false" onAction="#changePrioritize6" text="change prioritize" />
-                <Button layoutX="23.0" layoutY="224.0" mnemonicParsing="false" onAction="#changePrioritize7" text="change prioritize" />
-                <Button layoutX="23.0" layoutY="259.0" mnemonicParsing="false" onAction="#changePrioritize8" text="change prioritize" />
-                <Button layoutX="23.0" layoutY="294.0" mnemonicParsing="false" onAction="#changePrioritize9" text="change prioritize" />
-                <Button layoutX="23.0" layoutY="329.0" mnemonicParsing="false" onAction="#changePrioritize10" text="change prioritize" />
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #c1b9de;">
+                <Text fx:id="textOfOrg1" layoutX="230.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Roboto Bold" size="18.0" />
+               </font></Text>
+                <Text fx:id="textOfOrg2" layoutX="230.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Roboto Bold" size="18.0" />
+               </font></Text>
+                <Text fx:id="textOfOrg3" layoutX="230.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Roboto Bold" size="18.0" />
+               </font></Text>
+                <Text fx:id="textOfOrg4" layoutX="230.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Roboto Bold" size="18.0" />
+               </font></Text>
+                <Text fx:id="textOfOrg5" layoutX="230.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Roboto Bold" size="18.0" />
+               </font></Text>
+                <Text fx:id="textOfOrg6" layoutX="230.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Roboto Bold" size="18.0" />
+               </font></Text>
+                <Text fx:id="textOfOrg7" layoutX="230.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Roboto Bold" size="18.0" />
+               </font></Text>
+                <Text fx:id="textOfOrg8" layoutX="230.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Roboto Bold" size="18.0" />
+               </font></Text>
+                <Text fx:id="textOfOrg9" layoutX="230.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Roboto Bold" size="18.0" />
+               </font></Text>
+                <Text fx:id="textOfOrg10" layoutX="230.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Roboto Bold" size="18.0" />
+               </font></Text>
+                <Button fx:id="backButtonOrg" layoutX="483.0" layoutY="369.0" mnemonicParsing="false" onAction="#backButtonOrg" prefWidth="70.0" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="BACK">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button fx:id="nextButtonOrg" layoutX="579.0" layoutY="369.0" mnemonicParsing="false" onAction="#nextButtonOrg" prefWidth="70.0" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="NEXT">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button layoutX="140.0" layoutY="14.0" mnemonicParsing="false" onAction="#deleteButtonOrg1" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button layoutX="140.0" layoutY="49.0" mnemonicParsing="false" onAction="#deleteButtonOrg2" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button layoutX="140.0" layoutY="84.0" mnemonicParsing="false" onAction="#deleteButtonOrg3" prefHeight="28.0" prefWidth="58.0" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button layoutX="140.0" layoutY="119.0" mnemonicParsing="false" onAction="#deleteButtonOrg4" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button layoutX="140.0" layoutY="154.0" mnemonicParsing="false" onAction="#deleteButtonOrg5" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button layoutX="140.0" layoutY="189.0" mnemonicParsing="false" onAction="#deleteButtonOrg6" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button layoutX="140.0" layoutY="224.0" mnemonicParsing="false" onAction="#deleteButtonOrg7" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button layoutX="140.0" layoutY="259.0" mnemonicParsing="false" onAction="#deleteButtonOrg8" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button layoutX="140.0" layoutY="294.0" mnemonicParsing="false" onAction="#deleteButtonOrg9" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button layoutX="140.0" layoutY="329.0" mnemonicParsing="false" onAction="#deleteButtonOrg10" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="delete">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button layoutX="11.0" layoutY="14.0" mnemonicParsing="false" onAction="#changePrioritize1" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button layoutX="11.0" layoutY="49.0" mnemonicParsing="false" onAction="#changePrioritize2" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button layoutX="11.0" layoutY="84.0" mnemonicParsing="false" onAction="#changePrioritize3" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button layoutX="11.0" layoutY="119.0" mnemonicParsing="false" onAction="#changePrioritize4" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button layoutX="11.0" layoutY="154.0" mnemonicParsing="false" onAction="#changePrioritize5" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button layoutX="11.0" layoutY="189.0" mnemonicParsing="false" onAction="#changePrioritize6" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button layoutX="11.0" layoutY="224.0" mnemonicParsing="false" onAction="#changePrioritize7" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button layoutX="11.0" layoutY="259.0" mnemonicParsing="false" onAction="#changePrioritize8" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button layoutX="11.0" layoutY="294.0" mnemonicParsing="false" onAction="#changePrioritize9" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button layoutX="11.0" layoutY="329.0" mnemonicParsing="false" onAction="#changePrioritize10" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="change prioritize">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
             </AnchorPane>
         </SplitPane>
     </AnchorPane>
+   <AnchorPane layoutY="-2.0" prefHeight="603.0" prefWidth="303.0" style="-fx-background-color: #2E3348;">
+      <Label layoutX="10.0" layoutY="5.0" prefHeight="38.0" prefWidth="227.0" text="BSUIR HELPER" textFill="#d8d3ea">
+         <font>
+            <Font name="Roboto Bold" size="30.0"/>
+         </font>
+      </Label>
+      <Label layoutX="10.0" layoutY="35.0" text="#joinus" textFill="#d8d3ea">
+         <font>
+            <Font name="Roboto Thin Italic" size="18.0"/>
+         </font>
+      </Label>
+      <Label layoutX="5.0" layoutY="580.0" prefHeight="18.0" prefWidth="241.0"
+             text="© Dream Team 151001, all right reserved, 2021" textFill="#d8d3ea">
+         <font>
+            <Font name="Roboto Bold" size="10.0"/>
+         </font>
+      </Label>
+      <Button layoutX="109.0" layoutY="545.0" mnemonicParsing="false" onAction="#gotoMainMenu" prefHeight="26.0"
+              prefWidth="77.0" style="-fx-background-radius: 30; -fx-background-color: #7867b6;" text="EXIT">
+         <font>
+            <Font name="Roboto Bold" size="14.0"/>
+         </font>
+         <effect>
+            <DropShadow/>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND"/>
+         </cursor>
+      </Button>
+   </AnchorPane>
+   <AnchorPane layoutX="302.0" prefHeight="96.0" prefWidth="698.0" style="-fx-background-color: #59648d;">
+      <Label contentDisplay="CENTER" layoutX="255.0" layoutY="29.0" text="FLASH-CARDS" textAlignment="CENTER"
+             textFill="#d8d3ea">
+         <font>
+            <Font name="Roboto Bold" size="30.0"/>
+         </font>
+      </Label>
+   </AnchorPane>
 </AnchorPane>
