@@ -86,21 +86,21 @@ public class FlashCardsController {
     @FXML
     private Button listOfFlashcardsButton;
 
-    final public String [] listOfFood = new String[] {"dining room in the 4th building","dining room in the 2nd building","buffet in the 4th building","buffet in the 5th building","church shop(5th building)","shop 'food/bar' ","shop 'corona'","buffet in the 2nd building"};
-    final public int numberOfFood = Array.getLength(listOfFood);
-    final public String [] listOfClasses = new String[] {"make labs","check news","do your studies","watch th film","meet with your friends","take a walk in the street","play in the computer games","do your hobby"};
-    final public int numberOfClasses = Array.getLength(listOfClasses);
+    public final String [] listOfFood = new String[] {"dining room in the 4th building","dining room in the 2nd building","buffet in the 4th building","buffet in the 5th building","church shop(5th building)","shop 'food/bar' ","shop 'corona'","buffet in the 2nd building"};
+    public final int numberOfFood = Array.getLength(listOfFood);
+    public final String [] listOfClasses = new String[] {"make labs","check news","do your studies","watch th film","meet with your friends","take a walk in the street","play in the computer games","do your hobby"};
+    public final int numberOfClasses = Array.getLength(listOfClasses);
 
-    public String [] listOfNewFlashcards = new String[15];
-    public int numOfNewFlashcards = 0;
+    public static final String [] listOfNewFlashcards = new String[15];
+    public static int numOfNewFlashcards = 0;
     public int numberOfScroll;
     public int nowNumberOfScroll = 0;
 
     public String nameOfTab;
     public String newFlashcard;
 
-    public File fileNameOfTab = new File("fileNameOfTab.txt");
-    public File newFlashcards = new File("newFlashcards.txt");
+    public static File fileNameOfTab = new File("fileNameOfTab.txt");
+    public static final File newFlashcards = new File("newFlashcards.txt");
 
     @FXML
     private void initialize() {
