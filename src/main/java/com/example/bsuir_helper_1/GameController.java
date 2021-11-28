@@ -18,11 +18,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
-
-import java.io.File;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.Objects;
@@ -97,10 +92,9 @@ public class GameController implements Initializable {
         gameoverlabel.setText("GAME OVER\nPLEASE TRY AGAIN");
         gameoverlabel.setTextAlignment(TextAlignment.CENTER);
         snake.cleanItself();
-        gamecounterlabel.setText("EATEN SQUARES: " + foodHitCounter + "\nGOOD JOB, PLAY AGAIN");
+        gamecounterlabel.setText("EATEN SQUARES: " + foodHitCounter + "\nGOOD JOB");
 
         food.destroyFood();
-        gameOverSound();
         timeline.stop();
     }
 
@@ -108,31 +102,17 @@ public class GameController implements Initializable {
     @FXML
     private void moveSquareKeyPressed(KeyEvent event) {
         if (canChangeDirection) {
-            if (event.getCode().equals(KeyCode.W) && snake.getDirection() != Direction.DOWN) {
-                snake.setDirection(Direction.UP);
-            } else if (event.getCode().equals(KeyCode.S) && snake.getDirection() != Direction.UP) {
-                snake.setDirection(Direction.DOWN);
-            } else if (event.getCode().equals(KeyCode.A) && snake.getDirection() != Direction.RIGHT) {
-                snake.setDirection(Direction.LEFT);
-            } else if (event.getCode().equals(KeyCode.D) && snake.getDirection() != Direction.LEFT) {
-                snake.setDirection(Direction.RIGHT);
+            if (event.getCode().equals(KeyCode.W) && snake.getDirection() != Direction.S) {
+                snake.setDirection(Direction.W);
+            } else if (event.getCode().equals(KeyCode.S) && snake.getDirection() != Direction.W) {
+                snake.setDirection(Direction.S);
+            } else if (event.getCode().equals(KeyCode.A) && snake.getDirection() != Direction.D) {
+                snake.setDirection(Direction.A);
+            } else if (event.getCode().equals(KeyCode.D) && snake.getDirection() != Direction.A) {
+                snake.setDirection(Direction.D);
             }
             canChangeDirection = false;
         }
-    }
-
-    public void gameOverSound() {
-        String gameovermusicfile = "C:/Users/user/Desktop/bsuir_helper_1/src/main/resources/com/example/bsuir_helper_1/gameover.mp3";
-        Media sound = new Media(new File(gameovermusicfile).toURI().toString());
-        MediaPlayer gameoverplayer = new MediaPlayer(sound);
-        gameoverplayer.play();
-    }
-
-    public void takeFoodSound() {
-        String foodmusicfile = "C:/Users/user/Desktop/bsuir_helper_1/src/main/resources/com/example/bsuir_helper_1/food.mp3";
-        Media sound = new Media(new File(foodmusicfile).toURI().toString());
-        MediaPlayer foodplayer = new MediaPlayer(sound);
-        foodplayer.play();
     }
 
     //Change position with key pressed
@@ -142,7 +122,6 @@ public class GameController implements Initializable {
 
     private void eatFood() {
             foodHitCounter++;
-            takeFoodSound();
             gamecounterlabel.setText("EATEN SQUARES: " + foodHitCounter);
             foodCantSpawnInsideSnake();
             snake.onFoodEat();

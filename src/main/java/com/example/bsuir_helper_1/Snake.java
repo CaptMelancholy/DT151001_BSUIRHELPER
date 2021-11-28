@@ -35,7 +35,7 @@ public class Snake {
 
     public void start() {
         cleanItself();
-        direction = Direction.RIGHT;
+        direction = Direction.D;
         gameTicks = 0;
         positions.clear();
         snakeBody.clear();
@@ -63,16 +63,16 @@ public class Snake {
     }
 
     private void moveHead() {
-        if (getDirection().equals(Direction.RIGHT)) {
+        if (getDirection().equals(Direction.D)) {
             xPos = xPos + snakeSize;
             snakeHead.setTranslateX(xPos);
-        } else if (getDirection().equals(Direction.LEFT)) {
+        } else if (getDirection().equals(Direction.A)) {
             xPos = xPos - snakeSize;
             snakeHead.setTranslateX(xPos);
-        } else if (getDirection().equals(Direction.UP)) {
+        } else if (getDirection().equals(Direction.W)) {
             yPos = yPos - snakeSize;
             snakeHead.setTranslateY(yPos);
-        } else if (getDirection().equals(Direction.DOWN)) {
+        } else if (getDirection().equals(Direction.S)) {
             yPos = yPos + snakeSize;
             snakeHead.setTranslateY(yPos);
         }

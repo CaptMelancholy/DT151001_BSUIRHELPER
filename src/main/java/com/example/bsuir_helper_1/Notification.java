@@ -10,6 +10,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class Notification {
+
     public static void moveToCovid19AlertPage(){
         Stage window = new Stage();
 
@@ -20,13 +21,13 @@ public class Notification {
         Label label = new Label();
         label.setText("Уважаемые пользователи приложения BSUIR HELPER.\n \n Команда разработчиков Dream Team считает своим долгом \n напомнить вам о необходимости носить маски в общественных местах,\n держать социальную дистанцию и пить витаминки. Мы знаем, насколько это тяжело, \n но мы просим вас не опускать руки и готовиться к завершению LockDown-а. \n Пожалуйста, сделайте прививку в ближайшем медицинском пункте, \n тщательно мойте руки, следите за своими друзьями и близкими \n и при первых симптомах обращайтесь к врачу. Берегите себя! \n \n");
         label.setTextAlignment(TextAlignment.CENTER);
-        label.setStyle("-fx-font-family: Comfortaa");
-        Button closeButton = new Button("Я прочитал и понял.");
-        closeButton.setStyle("-fx-font-family: Comfortaa");
+        Button closeButton = new Button("AGREE");
+        closeButton.setStyle("-fx-background-color:  #7867b6; -fx-background-radius: 30; -fx-font-size: 18");
         closeButton.setOnAction(e -> window.close());
 
         VBox layout = new VBox(10);
         layout.getChildren().addAll(label, closeButton);
+        layout.setStyle("-fx-font-family: Comfortaa; -fx-background-color: #a297cd");
         layout.setAlignment(Pos.CENTER);
 
         Scene sceneOfAttention = new Scene(layout);

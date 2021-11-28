@@ -40,13 +40,13 @@ public class SnakeTest {
         snake.start();
         Position initialHeadPosition = snake.getSnakeHeadPosition();
         System.out.println(initialHeadPosition);
-        snake.setDirection(Direction.RIGHT);
+        snake.setDirection(Direction.D);
         snake.moveSnakeForward();
-        snake.setDirection(Direction.DOWN);
+        snake.setDirection(Direction.S);
         snake.moveSnakeForward();
-        snake.setDirection(Direction.LEFT);
+        snake.setDirection(Direction.A);
         snake.moveSnakeForward();
-        snake.setDirection(Direction.UP);
+        snake.setDirection(Direction.W);
         snake.moveSnakeForward();
         Position afterMoveHeadPosition = snake.getSnakeHeadPosition();
         assertEquals(initialHeadPosition.getYPos(), afterMoveHeadPosition.getYPos());
@@ -63,7 +63,7 @@ public class SnakeTest {
 
         int initialSnakeSize = snake.getSnakeSize();
         System.out.println(initialSnakeSize);
-        snake.setDirection(Direction.RIGHT);
+        snake.setDirection(Direction.D);
         snake.moveSnakeForward();
 
         snake.onFoodEat();
@@ -76,11 +76,11 @@ public class SnakeTest {
         snake.onFoodEat();
         snake.moveSnakeForward();
         snake.moveSnakeForward();
-        snake.setDirection(Direction.DOWN);
+        snake.setDirection(Direction.S);
         snake.moveSnakeForward();
-        snake.setDirection(Direction.LEFT);
+        snake.setDirection(Direction.A);
         snake.moveSnakeForward();
-        snake.setDirection(Direction.UP);
+        snake.setDirection(Direction.W);
         snake.moveSnakeForward();
 
 
@@ -100,7 +100,7 @@ public class SnakeTest {
         snake.start();
         Position initialHeadPosition = snake.getSnakeHeadPosition();
         System.out.println(initialHeadPosition);
-        snake.setDirection(Direction.RIGHT);
+        snake.setDirection(Direction.D);
         snake.moveSnakeForward();
         snake.moveSnakeForward();
         snake.moveSnakeForward();
@@ -123,7 +123,7 @@ public class SnakeTest {
 
         Position initialHeadPosition = snake.getSnakeHeadPosition();
         System.out.println(initialHeadPosition);
-        snake.setDirection(Direction.DOWN);
+        snake.setDirection(Direction.S);
         snake.moveSnakeForward();
         snake.moveSnakeForward();
         snake.moveSnakeForward();
@@ -145,7 +145,7 @@ public class SnakeTest {
         snake.start();
         Position initialHeadPosition = snake.getSnakeHeadPosition();
         System.out.println(initialHeadPosition);
-        snake.setDirection(Direction.UP);
+        snake.setDirection(Direction.W);
         snake.moveSnakeForward();
         snake.moveSnakeForward();
         snake.moveSnakeForward();
@@ -169,7 +169,7 @@ public class SnakeTest {
         snake.start();
         Position initialHeadPosition = snake.getSnakeHeadPosition();
         System.out.println(initialHeadPosition);
-        snake.setDirection(Direction.LEFT);
+        snake.setDirection(Direction.A);
         snake.moveSnakeForward();
         snake.moveSnakeForward();
         snake.moveSnakeForward();
