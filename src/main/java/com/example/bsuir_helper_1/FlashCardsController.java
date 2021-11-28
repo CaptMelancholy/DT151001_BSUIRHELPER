@@ -91,16 +91,16 @@ public class FlashCardsController {
     public final String [] listOfClasses = new String[] {"make labs","check news","do your studies","watch th film","meet with your friends","take a walk in the street","play in the computer games","do your hobby"};
     public final int numberOfClasses = Array.getLength(listOfClasses);
 
-    public static final String [] listOfNewFlashcards = new String[15];
-    public static int numOfNewFlashcards = 0;
+    public final String [] listOfNewFlashcards = new String[15];
+    public int numOfNewFlashcards = 0;
     public int numberOfScroll;
     public int nowNumberOfScroll = 0;
 
     public String nameOfTab;
     public String newFlashcard;
 
-    public static File fileNameOfTab = new File("fileNameOfTab.txt");
-    public static final File newFlashcards = new File("newFlashcards.txt");
+    public File fileNameOfTab = new File("fileNameOfTab.txt");
+    public File newFlashcards = new File("newFlashcards.txt");
 
     @FXML
     private void initialize() {
@@ -212,6 +212,7 @@ public class FlashCardsController {
                 case (2) -> textOfNewFlashcard3.setText(newFlashcard);
                 case (3) -> textOfNewFlashcard4.setText(newFlashcard);
                 case (4) -> textOfNewFlashcard5.setText(newFlashcard);
+                default -> textOfNewFlashcard1.setText("error");
             }
             try(BufferedWriter writerOfNewFlashcards = new BufferedWriter(new FileWriter(newFlashcards,true))){
                 writerOfNewFlashcards.write(newFlashcard+"\n");
