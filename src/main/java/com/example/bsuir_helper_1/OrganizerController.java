@@ -169,6 +169,7 @@ public class OrganizerController {
         }
     }
     public void changePrioritize(int number) {
+
     }
     public void changePrioritize1(){
 
