@@ -108,7 +108,6 @@ public class FlashCardsController {
             BufferedReader reader = new BufferedReader(new FileReader(fileNameOfTab));
             nameOfTab = reader.readLine();
             nameOfTopic.setText(nameOfTab);
-            reader.close();
             BufferedReader readerOfNewFlashcards = new BufferedReader(new FileReader(newFlashcards));
             while((newFlashcard = readerOfNewFlashcards.readLine()) != null){
                 if(!newFlashcard.equals("")){
@@ -209,8 +208,7 @@ public class FlashCardsController {
                 case (4) -> textOfNewFlashcard5.setText(addNew.getText());
                 default -> System.out.println("error");
             }
-            try{
-                BufferedWriter writerOfNewFlashcards = new BufferedWriter(new FileWriter(newFlashcards,true));
+            try(BufferedWriter writerOfNewFlashcards = new BufferedWriter(new FileWriter(newFlashcards,true))){
                 writerOfNewFlashcards.write(addNew.getText()+"\n");
                 writerOfNewFlashcards.flush();
                 writerOfNewFlashcards.close();
