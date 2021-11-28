@@ -164,8 +164,7 @@ public class ToDoListController {
             case("High") -> textOfOrg1.setStyle("-fx-fill: red;");
             default -> textOfOrg1.setStyle("-fx-fill: purple;");
         }
-        changePrioritize1.setVisible(true);
-        deleteButtonOrg1.setVisible(true);}
+        }
             else {changePrioritize1.setVisible(false);
         deleteButtonOrg1.setVisible(false);}
         textOfOrg2.setText(listOfTasks[nowNumberOfScroll * 10+1]);
@@ -174,9 +173,7 @@ public class ToDoListController {
             case("Medium") -> textOfOrg2.setStyle("-fx-fill: yellow;");
             case("High") -> textOfOrg2.setStyle("-fx-fill: red;");
             default -> textOfOrg2.setStyle("-fx-fill: purple;");
-        }
-        changePrioritize2.setVisible(true);
-            deleteButtonOrg2.setVisible(true);}
+        }}
         else {changePrioritize2.setVisible(false);
         deleteButtonOrg2.setVisible(false);}
         textOfOrg3.setText(listOfTasks[nowNumberOfScroll * 10+2]);
@@ -185,8 +182,7 @@ public class ToDoListController {
             case("Medium") -> textOfOrg3.setStyle("-fx-fill: yellow;");
             case("High") -> textOfOrg3.setStyle("-fx-fill: red;");
             default -> textOfOrg3.setStyle("-fx-fill: purple;");
-        }changePrioritize3.setVisible(true);
-            deleteButtonOrg3.setVisible(true);}
+        }}
         else {changePrioritize3.setVisible(false);
         deleteButtonOrg3.setVisible(false);}
         textOfOrg4.setText(listOfTasks[nowNumberOfScroll * 10+3]);
@@ -195,8 +191,7 @@ public class ToDoListController {
             case("Medium") -> textOfOrg4.setStyle("-fx-fill: yellow;");
             case("High") -> textOfOrg4.setStyle("-fx-fill: red;");
             default -> textOfOrg4.setStyle("-fx-fill: purple;");
-        }changePrioritize4.setVisible(true);
-            deleteButtonOrg4.setVisible(true);}
+        }}
         else {changePrioritize4.setVisible(false);
         deleteButtonOrg4.setVisible(false);}
         textOfOrg5.setText(listOfTasks[nowNumberOfScroll * 10+4]);
@@ -205,8 +200,7 @@ public class ToDoListController {
             case("Medium") -> textOfOrg5.setStyle("-fx-fill: yellow;");
             case("High") -> textOfOrg5.setStyle("-fx-fill: red;");
             default -> textOfOrg5.setStyle("-fx-fill: purple;");
-        }changePrioritize5.setVisible(true);
-            deleteButtonOrg5.setVisible(true);}
+        }}
         else {changePrioritize5.setVisible(false);
         deleteButtonOrg5.setVisible(false);}
         textOfOrg6.setText(listOfTasks[nowNumberOfScroll * 10+5]);
@@ -215,8 +209,7 @@ public class ToDoListController {
             case("Medium") -> textOfOrg6.setStyle("-fx-fill: yellow;");
             case("High") -> textOfOrg6.setStyle("-fx-fill: red;");
             default -> textOfOrg6.setStyle("-fx-fill: purple;");
-        }changePrioritize6.setVisible(true);
-            deleteButtonOrg6.setVisible(true);}
+        }}
         else {changePrioritize6.setVisible(false);
         deleteButtonOrg6.setVisible(false);}
         textOfOrg7.setText(listOfTasks[nowNumberOfScroll * 10+6]);
@@ -225,8 +218,7 @@ public class ToDoListController {
             case("Medium") -> textOfOrg7.setStyle("-fx-fill: yellow;");
             case("High") -> textOfOrg7.setStyle("-fx-fill: red;");
             default -> textOfOrg7.setStyle("-fx-fill: purple;");
-        }changePrioritize7.setVisible(true);
-            deleteButtonOrg7.setVisible(true);}
+        }}
         else {changePrioritize7.setVisible(false);
         deleteButtonOrg7.setVisible(false);}
         textOfOrg8.setText(listOfTasks[nowNumberOfScroll * 10+7]);
@@ -235,8 +227,7 @@ public class ToDoListController {
             case("Medium") -> textOfOrg8.setStyle("-fx-fill: yellow;");
             case("High") -> textOfOrg8.setStyle("-fx-fill: red;");
             default -> textOfOrg8.setStyle("-fx-fill: purple;");
-        }changePrioritize8.setVisible(true);
-            deleteButtonOrg8.setVisible(true);}
+        }}
         else {changePrioritize8.setVisible(false);
         deleteButtonOrg8.setVisible(false);}
         textOfOrg9.setText(listOfTasks[nowNumberOfScroll * 10+8]);
@@ -245,8 +236,7 @@ public class ToDoListController {
             case("Medium") -> textOfOrg9.setStyle("-fx-fill: yellow;");
             case("High") -> textOfOrg9.setStyle("-fx-fill: red;");
             default -> textOfOrg9.setStyle("-fx-fill: purple;");
-        }changePrioritize9.setVisible(true);
-            deleteButtonOrg9.setVisible(true);}
+        }}
         else {changePrioritize9.setVisible(false);
         deleteButtonOrg9.setVisible(false);}
         textOfOrg10.setText(listOfTasks[nowNumberOfScroll * 10+9]);
@@ -255,8 +245,7 @@ public class ToDoListController {
             case("Medium") -> textOfOrg10.setStyle("-fx-fill: yellow;");
             case("High") -> textOfOrg10.setStyle("-fx-fill: red;");
             default -> textOfOrg10.setStyle("-fx-fill: purple;");
-        }changePrioritize10.setVisible(true);
-            deleteButtonOrg10.setVisible(true);}
+        }}
         else {changePrioritize10.setVisible(false);
             deleteButtonOrg10.setVisible(false);}
     }
@@ -332,7 +321,7 @@ public class ToDoListController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
+
         if (Objects.equals(listOfTasks[nowNumberOfScroll * 10], "")) {deleteButtonOrg1.setVisible(false);changePrioritize1.setVisible(false);}
         if (Objects.equals(listOfTasks[nowNumberOfScroll * 10+1], "")) {deleteButtonOrg2.setVisible(false);changePrioritize2.setVisible(false);}
         if (Objects.equals(listOfTasks[nowNumberOfScroll * 10+2], "")) {deleteButtonOrg3.setVisible(false);changePrioritize3.setVisible(false);}
@@ -342,7 +331,7 @@ public class ToDoListController {
         if (Objects.equals(listOfTasks[nowNumberOfScroll * 10+6], "")) {deleteButtonOrg7.setVisible(false);changePrioritize7.setVisible(false);}
         if (Objects.equals(listOfTasks[nowNumberOfScroll * 10+7], "")) {deleteButtonOrg8.setVisible(false);changePrioritize8.setVisible(false);}
         if (Objects.equals(listOfTasks[nowNumberOfScroll * 10+8], "")) {deleteButtonOrg9.setVisible(false);changePrioritize9.setVisible(false);}
-        if (Objects.equals(listOfTasks[nowNumberOfScroll * 10+9], "")) {deleteButtonOrg10.setVisible(false);changePrioritize10.setVisible(false);}
+        if (Objects.equals(listOfTasks[nowNumberOfScroll * 10+9], "")) {deleteButtonOrg10.setVisible(false);changePrioritize10.setVisible(false);}}
     }
     @FXML
     private void addEventHandler() {
