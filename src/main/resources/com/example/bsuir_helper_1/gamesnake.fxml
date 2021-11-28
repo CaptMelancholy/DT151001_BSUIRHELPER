@@ -7,43 +7,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="800.0" style="-fx-background-color: #a297cd;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.GameController">
-      <AnchorPane fx:id="gameField" layoutX="239.0" layoutY="110.0" onKeyPressed="#moveSquareKeyPressed" prefHeight="550.0" prefWidth="550.0" style="-fx-background-color: #c1c8cf; -fx-border-color: #000000;">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="800.0" style="-fx-background-color: #a297cd;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.GameController">
+      <AnchorPane fx:id="gameField" layoutX="235.0" layoutY="94.0" onKeyPressed="#moveSquareKeyPressed" prefHeight="550.0" prefWidth="550.0" style="-fx-background-color: #c1c8cf; -fx-border-color: #000000;">
          <Label fx:id="gameoverlabel" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="154.0" prefHeight="242.0" prefWidth="527.0" textAlignment="CENTER" textFill="#a40000">
             <font>
                <Font name="Roboto Bold" size="37.0" />
             </font>
          </Label>
       </AnchorPane>
-      <Button fx:id="startButton" layoutX="254.0" layoutY="687.0" mnemonicParsing="false" onKeyPressed="#moveSquareKeyPressed" onMouseClicked="#start" prefHeight="26.0" prefWidth="130.0" style="-fx-background-radius: 30; -fx-background-color: #7867b6;" text="START GAME">
-      <font>
-         <Font name="Roboto Bold" size="14.0" />
-      </font>
-      <cursor>
-         <Cursor fx:constant="HAND" />
-      </cursor>
-      <effect>
-         <DropShadow />
-      </effect></Button>
-   <Button layoutX="639.0" layoutY="687.0" mnemonicParsing="false" onAction="#gotoMainMenu" prefHeight="16.0" prefWidth="130.0" style="-fx-background-radius: 30; -fx-background-color: #7867b6;" text="EXIT" textOverrun="CLIP">
-      <font>
-         <Font name="Roboto Bold" size="14.0" />
-      </font>
-      <cursor>
-         <Cursor fx:constant="HAND" />
-      </cursor>
-      <effect>
-         <DropShadow />
-      </effect>
-   </Button>
    <AnchorPane prefHeight="80.0" prefWidth="800.0" style="-fx-background-color: #59648d;">
-         <Label layoutX="438.0" layoutY="20.0" text="SNAKE GAME" textFill="#d8d3ea">
+         <Label layoutX="408.0" layoutY="20.0" text="SNAKE GAME" textFill="#d8d3ea">
             <font>
                <Font name="Roboto Bold" size="30.0" />
             </font>
          </Label>
    </AnchorPane>
-   <AnchorPane prefHeight="750.0" prefWidth="230.0" style="-fx-background-color: #2E3348;">
+   <AnchorPane prefHeight="675.0" prefWidth="215.0" style="-fx-background-color: #2E3348;">
          <Label layoutX="10.0" layoutY="5.0" text="BSUIR HELPER" textFill="#d8d3ea">
             <font>
                <Font name="Roboto Bold" size="30.0" />
@@ -59,10 +38,32 @@
                <Font name="Roboto Regular" size="20.0" />
             </font>
          </Label>
-         <Label layoutX="5.0" layoutY="717.0" prefHeight="18.0" prefWidth="213.0" text="© Dream Team 151001, all right reserved, 2021" textFill="#d8d3ea">
+         <Label layoutX="4.0" layoutY="652.0" prefHeight="18.0" prefWidth="213.0" text="© Dream Team 151001, all right reserved, 2021" textFill="#d8d3ea">
             <font>
                <Font name="Roboto Bold" size="10.0" />
             </font>
          </Label>
+         <Button fx:id="startButton" layoutX="46.0" layoutY="184.0" mnemonicParsing="false" onKeyPressed="#moveSquareKeyPressed" onMouseClicked="#start" prefHeight="26.0" prefWidth="130.0" style="-fx-background-radius: 30; -fx-background-color: #7867b6;" text="START GAME">
+         <font>
+            <Font name="Roboto Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button layoutX="46.0" layoutY="591.0" mnemonicParsing="false" onAction="#gotoMainMenu" prefHeight="16.0" prefWidth="130.0" style="-fx-background-radius: 30; -fx-background-color: #7867b6;" text="EXIT" textOverrun="CLIP">
+         <font>
+            <Font name="Roboto Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
    </AnchorPane>
 </AnchorPane>
