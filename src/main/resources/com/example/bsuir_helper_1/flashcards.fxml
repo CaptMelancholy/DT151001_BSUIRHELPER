@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.FlashCardsController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bsuir_helper_1.FlashCardsController">
       <AnchorPane layoutY="-1.0" prefHeight="82.0" prefWidth="800.0" style="-fx-background-color: #2E3348;">
             <Label layoutX="174.0" layoutY="11.0" prefHeight="59.0" prefWidth="476.0" text="BSUIR HELPER. STUDY AND PLAY" textFill="#ffd414">
                   <font>
@@ -21,29 +21,30 @@
       <TabPane layoutY="81.0" prefHeight="482.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
             <Tab text="food">
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="219.0" prefWidth="837.0">
-                        <Button layoutX="304.0" layoutY="419.0" mnemonicParsing="false" onAction="#generateNewPlace" text="generate new topic" />
+                        <Button layoutX="337.0" layoutY="419.0" mnemonicParsing="false" onAction="#generateNewPlace" prefHeight="26.0" prefWidth="126.0" text="generate new card" />
                         <Text fx:id="food" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                   </AnchorPane>
             </Tab>
             <Tab text="ideas for classes">
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                        <Button layoutX="304.0" layoutY="419.0" mnemonicParsing="false" onAction="#generateNewClasses" text="generate new class" />
+                        <Button layoutX="337.0" layoutY="419.0" mnemonicParsing="false" onAction="#generateNewClasses" prefHeight="26.0" prefWidth="126.0" text="generate new card" />
                         <Text fx:id="classes" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                   </AnchorPane>
             </Tab>
             <Tab fx:id="nameOfTopic" text="own tab">
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="497.0" prefWidth="800.0" style="-fx-background-color: white;">
-                        <AnchorPane fx:id="mainWindowBackground" prefHeight="454.0" prefWidth="800.0">
-                              <Button mnemonicParsing="false" onAction="#settings" text="settings" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <AnchorPane fx:id="mainWindowBackground" prefHeight="454.0" prefWidth="800.0" visible="false">
+                              <Button layoutX="728.0" layoutY="414.0" mnemonicParsing="false" onAction="#settings" text="settings" />
+               <Button layoutX="337.0" layoutY="419.0" mnemonicParsing="false" onAction="#generateNewFlashcard" prefHeight="26.0" prefWidth="126.0" text="generate new card" />
+               <Text fx:id="newCard" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                         </AnchorPane>
-                        <AnchorPane fx:id="settingsWindowBackground" layoutY="-1.0" prefHeight="491.0" prefWidth="800.0" visible="false">
+                        <AnchorPane fx:id="settingsWindowBackground" layoutY="-1.0" prefHeight="491.0" prefWidth="800.0">
                               <Button layoutX="278.0" layoutY="414.0" mnemonicParsing="false" onAction="#closeButton" prefWidth="68.0" text="close" />
                               <Button layoutX="454.0" layoutY="414.0" mnemonicParsing="false" onAction="#saveButton" prefWidth="68.0" text="save" />
                               <VBox layoutX="14.0" layoutY="14.0" prefHeight="78.0" prefWidth="112.0" style="-fx-border-color: grey;">
-                                          <Button onAction="#nameOfTabButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="110.0" text="name of tab" />
-                                          <Button onAction="#addNewButton" mnemonicParsing="false" prefHeight="73.0" prefWidth="110.0" text="add new flash-card" />
-                                          <Button onAction="#listOfFlashcardsButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="110.0" text="list of flash-cards" />
+                                          <Button fx:id="nameOfTabButton" disable="true" mnemonicParsing="false" onAction="#nameOfTabButton" prefHeight="26.0" prefWidth="110.0" text="name of tab" />
+                                          <Button fx:id="addNewButton" mnemonicParsing="false" onAction="#addNewButton" prefHeight="73.0" prefWidth="110.0" text="add new flash-card" />
+                                          <Button fx:id="listOfFlashcardsButton" mnemonicParsing="false" onAction="#listOfFlashcardsButton" prefHeight="26.0" prefWidth="110.0" text="list of flash-cards" />
                               </VBox>
                               <AnchorPane fx:id="nameOfTabBackground" layoutX="126.0" layoutY="14.0" prefHeight="386.0" prefWidth="666.0" style="-fx-border-color: grey;">
                                           <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="write new name of tab">
@@ -57,7 +58,41 @@
                                           <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="write next fo new flas-card" />
                                           <TextField fx:id="addNew" layoutX="184.0" layoutY="10.0" prefHeight="59.0" prefWidth="470.0" />
                               </AnchorPane>
-                              <AnchorPane fx:id="listBackground" layoutX="126.0" layoutY="14.0" prefHeight="386.0" prefWidth="666.0" style="-fx-border-color: grey;" visible="false" />
+                              <AnchorPane fx:id="listBackground" layoutX="126.0" layoutY="14.0" prefHeight="386.0" prefWidth="666.0" style="-fx-border-color: grey;" visible="false">
+                  <children>
+                     <Button fx:id="backButton" disable="true" layoutX="14.0" layoutY="347.0" mnemonicParsing="false" onAction="#backButton" prefWidth="68.0" text="back" />
+                     <Button fx:id="nextButton" disable="true" layoutX="589.0" layoutY="347.0" mnemonicParsing="false" onAction="#nextButton" prefWidth="68.0" text="next" />
+                     <Text fx:id="newText5" layoutX="70.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" wrappingWidth="585.3367309570312">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Text>
+                     <Text fx:id="newText4" layoutX="70.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" wrappingWidth="585.3367309570312">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Text>
+                     <Text fx:id="newText3" layoutX="70.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" wrappingWidth="585.3367309570312">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Text>
+                     <Text fx:id="newText2" layoutX="70.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" wrappingWidth="585.3367309570312">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Text>
+                     <Text fx:id="newText1" layoutX="70.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" wrappingWidth="585.3367309570312">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Text>
+                     <Button fx:id="deleteButton1" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#deleteButton1" text="delete" />
+                     <Button fx:id="deleteButton2" layoutX="14.0" layoutY="71.0" mnemonicParsing="false" onAction="#deleteButton2" text="delete" />
+                     <Button fx:id="deleteButton3" layoutX="14.0" layoutY="131.0" mnemonicParsing="false" onAction="#deleteButton3" text="delete" />
+                     <Button fx:id="deleteButton4" layoutX="14.0" layoutY="191.0" mnemonicParsing="false" onAction="#deleteButton4" text="delete" />
+                     <Button fx:id="deleteButton5" layoutX="14.0" layoutY="251.0" mnemonicParsing="false" onAction="#deleteButton5" text="delete" />
+                  </children></AnchorPane>
                         </AnchorPane>
                   </AnchorPane>
             </Tab>
