@@ -104,7 +104,6 @@ public class FlashCardsController {
 
     @FXML
     private void initialize() {
-
         try(BufferedReader reader = new BufferedReader(new FileReader(fileNameOfTab))) {
             nameOfTab = reader.readLine();
             nameOfTopic.setText(nameOfTab);
@@ -169,7 +168,6 @@ public class FlashCardsController {
     public void saveButton(){
         if (!Objects.equals(newNameOfTab.getText(), "")){
         nameOfTopic.setText(newNameOfTab.getText());
-
             try(BufferedWriter writer = new BufferedWriter(new FileWriter(fileNameOfTab))){
                 fileNameOfTab = null;
                 writer.write(newNameOfTab.getText());
