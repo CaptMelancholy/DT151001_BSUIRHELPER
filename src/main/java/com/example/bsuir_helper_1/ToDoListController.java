@@ -395,8 +395,9 @@ public class ToDoListController {
                     e.printStackTrace();
                 }
             }
+            changeTasks();
         }
-        changeTasks();
+
     }
     public void deleteButtonOrg1(){
         delete(nowNumberOfScroll*10);
