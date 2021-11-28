@@ -104,11 +104,16 @@ public class FlashCardsController {
 
     @FXML
     private void initialize() {
-        try{
-            BufferedReader reader = new BufferedReader(new FileReader(fileNameOfTab));
+
+        try(BufferedReader reader = new BufferedReader(new FileReader(fileNameOfTab))) {
             nameOfTab = reader.readLine();
             nameOfTopic.setText(nameOfTab);
-            BufferedReader readerOfNewFlashcards = new BufferedReader(new FileReader(newFlashcards));
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        try(BufferedReader readerOfNewFlashcards = new BufferedReader(new FileReader(newFlashcards))){
             while((newFlashcard = readerOfNewFlashcards.readLine()) != null){
                 if(!newFlashcard.equals("")){
                 listOfNewFlashcards[numOfNewFlashcards] = newFlashcard;
@@ -119,7 +124,7 @@ public class FlashCardsController {
             if(numberOfScroll>0) nextButton.setDisable(false);
             textOfNewFlashcard1.setText(listOfNewFlashcards[nowNumberOfScroll*5]);
             textOfNewFlashcard2.setText(listOfNewFlashcards[nowNumberOfScroll*5+1]);
-            textOfNewFlashcard2.setText(listOfNewFlashcards[nowNumberOfScroll*5+2]);
+            textOfNewFlashcard3.setText(listOfNewFlashcards[nowNumberOfScroll*5+2]);
             textOfNewFlashcard4.setText(listOfNewFlashcards[nowNumberOfScroll*5+3]);
             textOfNewFlashcard5.setText(listOfNewFlashcards[nowNumberOfScroll*5+4]);
         }catch (IOException e) {
@@ -147,8 +152,7 @@ public class FlashCardsController {
     public void settings(){
     mainWindowBackground.setVisible(false);
     settingsWindowBackground.setVisible(true);
-        try{
-            BufferedReader reader = new BufferedReader(new FileReader(fileNameOfTab));
+        try(BufferedReader reader = new BufferedReader(new FileReader(fileNameOfTab))){
             nameOfTab = reader.readLine();
             nameOfTopic.setText(nameOfTab);
         }catch (IOException e) {
@@ -165,14 +169,18 @@ public class FlashCardsController {
     public void saveButton(){
         if (!Objects.equals(newNameOfTab.getText(), "")){
         nameOfTopic.setText(newNameOfTab.getText());
-            try{
-                BufferedWriter writer = new BufferedWriter(new FileWriter(fileNameOfTab));
+
+
+            try(BufferedWriter writer = new BufferedWriter(new FileWriter(fileNameOfTab))){
                 fileNameOfTab = null;
                 writer.write(newNameOfTab.getText());
                 writer.flush();
             }catch (IOException e) {
                 e.printStackTrace();
             }
+
+
+
         }
         if (numOfNewFlashcards>14){
             Stage window = new Stage();
@@ -227,8 +235,8 @@ public class FlashCardsController {
                 System.arraycopy(listOfNewFlashcards, number + 1, listOfNewFlashcards, number, numOfNewFlashcards - 1 - number);
             listOfNewFlashcards[numOfNewFlashcards - 1] = "";
             numOfNewFlashcards--;
-            try {
-                BufferedWriter writerOfNewFlashcards = new BufferedWriter(new FileWriter(newFlashcards));
+            try (BufferedWriter writerOfNewFlashcards = new BufferedWriter(new FileWriter(newFlashcards))){
+
                 for (int i = 0; i < numOfNewFlashcards; i++) {
                     writerOfNewFlashcards.write(listOfNewFlashcards[i] + "\n");
                     writerOfNewFlashcards.flush();
@@ -237,18 +245,13 @@ public class FlashCardsController {
                 numberOfScroll = (numOfNewFlashcards - 1) / 5;
                 if (numberOfScroll <= nowNumberOfScroll) nextButton.setDisable(true);
                 if (numOfNewFlashcards % 5 == 0 && nowNumberOfScroll != 0) {
-                    textOfNewFlashcard1.setText(listOfNewFlashcards[(nowNumberOfScroll - 1) * 5]);
-                    textOfNewFlashcard2.setText(listOfNewFlashcards[(nowNumberOfScroll - 1) * 5 + 1]);
-                    textOfNewFlashcard3.setText(listOfNewFlashcards[(nowNumberOfScroll - 1) * 5 + 2]);
-                    textOfNewFlashcard4.setText(listOfNewFlashcards[(nowNumberOfScroll - 1) * 5 + 3]);
-                    textOfNewFlashcard5.setText(listOfNewFlashcards[(nowNumberOfScroll - 1) * 5 + 4]);
-                } else {
-                    textOfNewFlashcard1.setText(listOfNewFlashcards[nowNumberOfScroll * 5]);
-                    textOfNewFlashcard2.setText(listOfNewFlashcards[nowNumberOfScroll * 5 + 1]);
-                    textOfNewFlashcard3.setText(listOfNewFlashcards[nowNumberOfScroll * 5 + 2]);
-                    textOfNewFlashcard4.setText(listOfNewFlashcards[nowNumberOfScroll * 5 + 3]);
-                    textOfNewFlashcard5.setText(listOfNewFlashcards[nowNumberOfScroll * 5 + 4]);
+                    nowNumberOfScroll--;
                 }
+                textOfNewFlashcard1.setText(listOfNewFlashcards[nowNumberOfScroll * 5]);
+                textOfNewFlashcard2.setText(listOfNewFlashcards[nowNumberOfScroll * 5 + 1]);
+                textOfNewFlashcard3.setText(listOfNewFlashcards[nowNumberOfScroll * 5 + 2]);
+                textOfNewFlashcard4.setText(listOfNewFlashcards[nowNumberOfScroll * 5 + 3]);
+                textOfNewFlashcard5.setText(listOfNewFlashcards[nowNumberOfScroll * 5 + 4]);
             } catch (IOException e) {
                 e.printStackTrace();
             }
