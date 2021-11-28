@@ -42,7 +42,7 @@
       </Button>
    </AnchorPane>
       <TabPane layoutX="300.0" layoutY="100.0" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: blue;" tabClosingPolicy="UNAVAILABLE">
-            <Tab text="food">
+            <Tab text="FOOD">
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="219.0" prefWidth="837.0" style="-fx-background-color: #a297cd;">
                         <Button layoutX="233.0" layoutY="414.0" mnemonicParsing="false" onAction="#generateNewPlace" prefHeight="36.0" prefWidth="210.0" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="GENERATE NEW CARD">
                <effect>
@@ -63,7 +63,7 @@
                      </AnchorPane>
                   </AnchorPane>
             </Tab>
-            <Tab text="ideas for classes">
+            <Tab text="IDEAS FOR CLASSES">
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #a297cd;">
                         <Button layoutX="233.0" layoutY="414.0" mnemonicParsing="false" onAction="#generateNewClasses" prefHeight="36.0" prefWidth="210.0" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="GENERATE NEW CARD">
                <effect>

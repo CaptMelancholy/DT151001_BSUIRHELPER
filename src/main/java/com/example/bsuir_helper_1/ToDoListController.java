@@ -19,7 +19,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 
-public class OrganizerController {
+public class ToDoListController {
 
     @FXML
     public Button addEventButton;
@@ -69,7 +69,7 @@ public class OrganizerController {
     @FXML
     public Button backButtonOrg;
 
-    public File organaiserList = new File("organaiserList.txt");
+    public File todoList = new File("todoList.txt");
     String newTask;
     String[] listOfTasks = new String[40];
     String[] listOfColors = new String[40];
@@ -82,7 +82,7 @@ public class OrganizerController {
         if(nowNumberOfScroll == 0) backButtonOrg.setDisable(true);
         choiceBox.getItems().addAll("Light", "Medium", "High");
         choiceBox.setValue("Light");
-        try(BufferedReader readerOfNewFlashcards = new BufferedReader(new FileReader(organaiserList))){
+        try(BufferedReader readerOfNewFlashcards = new BufferedReader(new FileReader(todoList))){
             while((newTask = readerOfNewFlashcards.readLine()) != null){
                     listOfTasks[numberOfTasks] = newTask;
                     listOfColors[numberOfTasks] = readerOfNewFlashcards.readLine();
@@ -212,7 +212,7 @@ public class OrganizerController {
             }listOfTasks[numberOfTasks - 1] = "";
             listOfColors[numberOfTasks - 1] = "";
             numberOfTasks--;
-            try (BufferedWriter writerOfNewFlashcards = new BufferedWriter(new FileWriter(organaiserList))){
+            try (BufferedWriter writerOfNewFlashcards = new BufferedWriter(new FileWriter(todoList))){
 
                 for (int i = 0; i < numberOfTasks; i++) {
                     writerOfNewFlashcards.write(listOfTasks[i] + "\n");
@@ -274,7 +274,7 @@ public class OrganizerController {
                     default -> textOfOrg1.setText("error");
                 }
                 numberOfTasks++;
-                try(BufferedWriter writerOfNewFlashcards = new BufferedWriter(new FileWriter(organaiserList,true))){
+                try(BufferedWriter writerOfNewFlashcards = new BufferedWriter(new FileWriter(todoList,true))){
                     writerOfNewFlashcards.write(newTask+"\n");
                     writerOfNewFlashcards.write(choiceBox.getValue()+"\n");
                     writerOfNewFlashcards.flush();

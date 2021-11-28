@@ -86,9 +86,9 @@ public class FlashCardsController {
     @FXML
     private Button listOfFlashcardsButton;
 
-    public final String [] listOfFood = new String[] {"dining room in the 4th building","dining room in the 2nd building","buffet in the 4th building","buffet in the 5th building","church shop(5th building)","shop 'food/bar' ","shop 'corona'","buffet in the 2nd building"};
+    public final String [] listOfFood = new String[] {"CAFE (3RD BUILDING)", "CAFE (1TH BUILDING)","CAFE (2ND BUILDING)","CAFE (4TH BUILDING)","CAFE (5TH BUILDING)","CHURCH CONNECTED SHOP (5TH BUILDING)","SHOP 'FOOD/BAR' ","MACDONALD'S", "KFC", "BURGER KING","SHOP 'SOSEDI'", "VISIT COFIX", "VISIT HOTFIX", "VISIT LIDO","SHOP 'CORONA'"};
     public final int numberOfFood = Array.getLength(listOfFood);
-    public final String [] listOfClasses = new String[] {"make labs","check news","do your studies","watch th film","meet with your friends","take a walk in the street","play in the computer games","do your hobby"};
+    public final String [] listOfClasses = new String[] {"MAKE LABS","CHECK NEWS","DO YOUR STUDIES","WATCH NETFLIX","MEET WITH YOUR FRIENDS","TAKE A PHOTOWALK","PLAY GAMES","DO YOU HOBBY", "DO PROJECT ON JAVA"};
     public final int numberOfClasses = Array.getLength(listOfClasses);
 
     public final String [] listOfNewFlashcards = new String[15];
@@ -182,12 +182,12 @@ public class FlashCardsController {
         if (numOfNewFlashcards>14){
             Stage window = new Stage();
             window.initModality(Modality.APPLICATION_MODAL);
-            window.setTitle("Warning!");
+            window.setTitle("WARNING!");
             window.setMinWidth(300);
             window.setMinHeight(100);
 
-            Text WarningText = new Text("The limit flash-cards is exceeded");
-            Button okWarningButton = new Button("ok");
+            Text WarningText = new Text("THE LIMIT OF FLASH-CARDS IS EXCEEDED");
+            Button okWarningButton = new Button("OK");
             okWarningButton.setOnAction(e -> window.close());
 
             VBox layout = new VBox(2);
@@ -212,7 +212,7 @@ public class FlashCardsController {
                 case (2) -> textOfNewFlashcard3.setText(newFlashcard);
                 case (3) -> textOfNewFlashcard4.setText(newFlashcard);
                 case (4) -> textOfNewFlashcard5.setText(newFlashcard);
-                default -> textOfNewFlashcard1.setText("error");
+                default -> textOfNewFlashcard1.setText("ERROR");
             }
             try(BufferedWriter writerOfNewFlashcards = new BufferedWriter(new FileWriter(newFlashcards,true))){
                 writerOfNewFlashcards.write(newFlashcard+"\n");
