@@ -41,10 +41,10 @@
          </cursor>
       </Button>
    </AnchorPane>
-      <TabPane layoutX="300.0" layoutY="100.0" prefHeight="500.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane layoutX="300.0" layoutY="100.0" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: blue;" tabClosingPolicy="UNAVAILABLE">
             <Tab text="food">
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="219.0" prefWidth="837.0" style="-fx-background-color: #a297cd;">
-                        <Button layoutX="238.0" layoutY="428.0" mnemonicParsing="false" onAction="#generateNewPlace" prefHeight="36.0" prefWidth="210.0" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="GENERATE NEW CARD">
+                        <Button layoutX="233.0" layoutY="414.0" mnemonicParsing="false" onAction="#generateNewPlace" prefHeight="36.0" prefWidth="210.0" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="GENERATE NEW CARD">
                <effect>
                   <DropShadow />
                </effect>
@@ -54,12 +54,10 @@
                <font>
                   <Font name="Roboto Bold" size="18.0" />
                </font></Button>
-                     <AnchorPane layoutX="238.0" layoutY="111.0" prefHeight="200.0" prefWidth="200.0"
-                                 style="-fx-background-color: #c1b9de; -fx-border-color: grey;">
-                        <Text fx:id="food" layoutX="7.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0"
-                              textAlignment="CENTER" wrappingWidth="182.40011596679688">
+                     <AnchorPane layoutX="238.0" layoutY="111.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #c1b9de; -fx-border-color: grey;">
+                        <Text fx:id="food" layoutX="7.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="182.40011596679688">
                            <font>
-                              <Font name="Roboto Bold" size="18.0"/>
+                              <Font name="Roboto Bold" size="18.0" />
                            </font>
                         </Text>
                      </AnchorPane>
@@ -67,7 +65,7 @@
             </Tab>
             <Tab text="ideas for classes">
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #a297cd;">
-                        <Button layoutX="238.0" layoutY="428.0" mnemonicParsing="false" onAction="#generateNewClasses" prefHeight="36.0" prefWidth="210.0" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="GENERATE NEW CARD">
+                        <Button layoutX="233.0" layoutY="414.0" mnemonicParsing="false" onAction="#generateNewClasses" prefHeight="36.0" prefWidth="210.0" style="-fx-background-color: #7867b6; -fx-background-radius: 30;" text="GENERATE NEW CARD">
                <effect>
                   <DropShadow />
                </effect>
@@ -77,12 +75,10 @@
                <font>
                   <Font name="Roboto Bold" size="18.0" />
                </font></Button>
-                     <AnchorPane layoutX="238.0" layoutY="111.0" prefHeight="200.0" prefWidth="200.0"
-                                 style="-fx-background-color: #c1b9de; -fx-border-color: grey;">
-                        <Text fx:id="classes" layoutX="26.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0"
-                              textAlignment="CENTER" wrappingWidth="141.60333251953125">
+                     <AnchorPane layoutX="238.0" layoutY="111.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #c1b9de; -fx-border-color: grey;">
+                        <Text fx:id="classes" layoutX="26.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="141.60333251953125">
                            <font>
-                              <Font name="Roboto Bold" size="18.0"/>
+                              <Font name="Roboto Bold" size="18.0" />
                            </font>
                         </Text>
                      </AnchorPane>
@@ -102,7 +98,7 @@
                      <Cursor fx:constant="HAND" />
                   </cursor>
                </Button>
-               <Button layoutX="224.0" layoutY="414.0" mnemonicParsing="false" onAction="#generateNewFlashcard" prefHeight="36.0" prefWidth="227.0" style="-fx-background-radius: 30; -fx-background-color: #7867b6;" text="GENERATE NEW CARD">
+               <Button layoutX="233.0" layoutY="414.0" mnemonicParsing="false" onAction="#generateNewFlashcard" prefHeight="36.0" prefWidth="210.0" style="-fx-background-radius: 30; -fx-background-color: #7867b6;" text="GENERATE NEW CARD">
                   <font>
                      <Font name="Roboto Bold" size="18.0" />
                   </font>
@@ -113,12 +109,10 @@
                      <Cursor fx:constant="HAND" />
                   </cursor>
                </Button>
-                           <AnchorPane layoutX="237.0" layoutY="101.0" prefHeight="200.0" prefWidth="200.0"
-                                       style="-fx-background-color: #c1b9de; -fx-border-color: grey;">
-                              <Text fx:id="newCard" layoutX="7.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0"
-                                    textAlignment="CENTER" wrappingWidth="189.603515625">
+                           <AnchorPane layoutX="238.0" layoutY="111.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #c1b9de; -fx-border-color: grey;">
+                              <Text fx:id="newCard" layoutX="7.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="189.603515625">
                                  <font>
-                                    <Font name="Roboto Bold" size="18.0"/>
+                                    <Font name="Roboto Bold" size="18.0" />
                                  </font>
                               </Text>
                            </AnchorPane>
@@ -172,148 +166,130 @@
                      </cursor>
                   </Button>
                               </VBox>
-                              <AnchorPane fx:id="nameOfTabBackground" layoutX="126.0" layoutY="14.0" prefHeight="386.0" prefWidth="527.0" style="-fx-border-color: grey; -fx-background-color: #c1b9de;">
+                              <AnchorPane fx:id="nameOfTabBackground" layoutX="126.0" layoutY="14.0" prefHeight="386.0" prefWidth="527.0" style="-fx-border-color: grey; -fx-background-color: #c1b9de;" visible="false">
                                           <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="write new name of tab">
                                                 <font>
                                                       <Font size="14.0" />
                                                 </font>
                                           </Text>
-                                          <TextField fx:id="newNameOfTab" layoutX="183.0" layoutY="8.0" prefHeight="26.0" prefWidth="322.0" style="-fx-border-color: #646464; -fx-background-radius: 7; -fx-border-radius: 7;">
+                                          <TextField fx:id="newNameOfTab" layoutX="210.0" layoutY="10.0" prefHeight="26.0" prefWidth="322.0" style="-fx-border-color: #646464; -fx-background-radius: 7; -fx-border-radius: 7;">
                      <font>
                         <Font name="Roboto Bold" size="18.0" />
                      </font>
                   </TextField>
                               </AnchorPane>
-                              <AnchorPane fx:id="addNewBackground" layoutX="126.0" layoutY="14.0" prefHeight="386.0" prefWidth="527.0" style="-fx-border-color: grey; -fx-background-color: #c1b9de;" visible="false">
-                                          <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="write next fo new flas-card" />
-                                          <TextField fx:id="addNew" layoutX="184.0" layoutY="10.0" prefHeight="59.0" prefWidth="322.0" style="-fx-border-color: #646464; -fx-background-radius: 7; -fx-border-radius: 7;">
+                              <AnchorPane fx:id="addNewBackground" layoutX="126.0" layoutY="14.0" prefHeight="386.0" prefWidth="527.0" style="-fx-border-color: grey; -fx-background-color: #c1b9de;">
+                                          <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="write text for new flash-card">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Text>
+                                          <TextField fx:id="addNew" layoutX="210.0" layoutY="10.0" prefHeight="30.0" prefWidth="322.0" style="-fx-border-color: #646464; -fx-background-radius: 7; -fx-border-radius: 7;">
                      <font>
                         <Font name="Roboto Bold" size="18.0" />
                      </font>
                   </TextField>
                               </AnchorPane>
-                           <AnchorPane fx:id="listBackground" layoutX="126.0" layoutY="14.0" prefHeight="386.0"
-                                       prefWidth="527.0" style="-fx-border-color: grey; -fx-background-color: #c1b9de;"
-                                       visible="false">
-                              <Button fx:id="backButton" disable="true" layoutX="14.0" layoutY="347.0"
-                                      mnemonicParsing="false" onAction="#backButton" prefWidth="68.0"
-                                      style="-fx-background-radius: 30; -fx-background-color: #7867b6;" text="BACK">
+                           <AnchorPane fx:id="listBackground" layoutX="126.0" layoutY="14.0" prefHeight="386.0" prefWidth="527.0" style="-fx-border-color: grey; -fx-background-color: #c1b9de;" visible="false">
+                              <Button fx:id="backButton" disable="true" layoutX="14.0" layoutY="347.0" mnemonicParsing="false" onAction="#backButton" prefWidth="68.0" style="-fx-background-radius: 30; -fx-background-color: #7867b6;" text="BACK">
                                  <font>
-                                    <Font name="Roboto Bold" size="14.0"/>
+                                    <Font name="Roboto Bold" size="14.0" />
                                  </font>
                                  <effect>
-                                    <DropShadow/>
+                                    <DropShadow />
                                  </effect>
                                  <cursor>
-                                    <Cursor fx:constant="HAND"/>
+                                    <Cursor fx:constant="HAND" />
                                  </cursor>
                               </Button>
-                              <Button fx:id="nextButton" disable="true" layoutX="439.0" layoutY="347.0"
-                                      mnemonicParsing="false" onAction="#nextButton" prefWidth="68.0"
-                                      style="-fx-background-radius: 30; -fx-background-color: #7867b6;" text="NEXT">
+                              <Button fx:id="nextButton" disable="true" layoutX="439.0" layoutY="347.0" mnemonicParsing="false" onAction="#nextButton" prefWidth="68.0" style="-fx-background-radius: 30; -fx-background-color: #7867b6;" text="NEXT">
                                  <font>
-                                    <Font name="Roboto Bold" size="14.0"/>
+                                    <Font name="Roboto Bold" size="14.0" />
                                  </font>
                                  <effect>
-                                    <DropShadow/>
+                                    <DropShadow />
                                  </effect>
                                  <cursor>
-                                    <Cursor fx:constant="HAND"/>
+                                    <Cursor fx:constant="HAND" />
                                  </cursor>
                               </Button>
-                              <Text fx:id="newText5" layoutX="85.0" layoutY="270.0" strokeType="OUTSIDE"
-                                    strokeWidth="0.0" wrappingWidth="420.0">
+                              <Text fx:id="textOfNewFlashcard5" layoutX="85.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="420.0">
                                  <font>
-                                    <Font size="14.0"/>
+                                    <Font size="14.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="newText4" layoutX="85.0" layoutY="210.0" strokeType="OUTSIDE"
-                                    strokeWidth="0.0" wrappingWidth="420.0">
+                              <Text fx:id="textOfNewFlashcard4" layoutX="85.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="420.0">
                                  <font>
-                                    <Font size="14.0"/>
+                                    <Font size="14.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="newText3" layoutX="85.0" layoutY="150.0" strokeType="OUTSIDE"
-                                    strokeWidth="0.0" wrappingWidth="420.0">
+                              <Text fx:id="textOfNewFlashcard3" layoutX="85.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="420.0">
                                  <font>
-                                    <Font size="14.0"/>
+                                    <Font size="14.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="newText2" layoutX="85.0" layoutY="90.0" strokeType="OUTSIDE"
-                                    strokeWidth="0.0" wrappingWidth="420.0">
+                              <Text fx:id="textOfNewFlashcard2" layoutX="85.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="420.0">
                                  <font>
-                                    <Font size="14.0"/>
+                                    <Font size="14.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="newText1" layoutX="85.0" layoutY="30.0" strokeType="OUTSIDE"
-                                    strokeWidth="0.0" wrappingWidth="420.0">
+                              <Text fx:id="textOfNewFlashcard1" layoutX="85.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="420.0">
                                  <font>
-                                    <Font size="14.0"/>
+                                    <Font size="14.0" />
                                  </font>
                               </Text>
-                              <Button fx:id="deleteButton1" layoutX="14.0" layoutY="11.0" mnemonicParsing="false"
-                                      onAction="#deleteButton1"
-                                      style="-fx-background-radius: 30; -fx-background-color: #7867b6;" text="DELETE">
+                              <Button layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#deleteButton1" style="-fx-background-radius: 30; -fx-background-color: #7867b6;" text="DELETE">
                                  <font>
-                                    <Font name="Roboto Bold" size="14.0"/>
+                                    <Font name="Roboto Bold" size="14.0" />
                                  </font>
                                  <effect>
-                                    <DropShadow/>
+                                    <DropShadow />
                                  </effect>
                                  <cursor>
-                                    <Cursor fx:constant="HAND"/>
+                                    <Cursor fx:constant="HAND" />
                                  </cursor>
                               </Button>
-                              <Button fx:id="deleteButton2" layoutX="14.0" layoutY="71.0" mnemonicParsing="false"
-                                      onAction="#deleteButton2"
-                                      style="-fx-background-radius: 30; -fx-background-color: #7867b6;" text="DELETE">
+                              <Button layoutX="14.0" layoutY="71.0" mnemonicParsing="false" onAction="#deleteButton2" style="-fx-background-radius: 30; -fx-background-color: #7867b6;" text="DELETE">
                                  <font>
-                                    <Font name="Roboto Bold" size="14.0"/>
+                                    <Font name="Roboto Bold" size="14.0" />
                                  </font>
                                  <effect>
-                                    <DropShadow/>
+                                    <DropShadow />
                                  </effect>
                                  <cursor>
-                                    <Cursor fx:constant="HAND"/>
+                                    <Cursor fx:constant="HAND" />
                                  </cursor>
                               </Button>
-                              <Button fx:id="deleteButton3" layoutX="14.0" layoutY="131.0" mnemonicParsing="false"
-                                      onAction="#deleteButton3"
-                                      style="-fx-background-radius: 30; -fx-background-color: #7867b6;" text="DELETE">
+                              <Button layoutX="14.0" layoutY="131.0" mnemonicParsing="false" onAction="#deleteButton3" style="-fx-background-radius: 30; -fx-background-color: #7867b6;" text="DELETE">
                                  <font>
-                                    <Font name="Roboto Bold" size="14.0"/>
+                                    <Font name="Roboto Bold" size="14.0" />
                                  </font>
                                  <effect>
-                                    <DropShadow/>
+                                    <DropShadow />
                                  </effect>
                                  <cursor>
-                                    <Cursor fx:constant="HAND"/>
+                                    <Cursor fx:constant="HAND" />
                                  </cursor>
                               </Button>
-                              <Button fx:id="deleteButton4" layoutX="14.0" layoutY="191.0" mnemonicParsing="false"
-                                      onAction="#deleteButton4"
-                                      style="-fx-background-radius: 30; -fx-background-color: #7867b6;" text="DELETE">
+                              <Button layoutX="14.0" layoutY="191.0" mnemonicParsing="false" onAction="#deleteButton4" style="-fx-background-radius: 30; -fx-background-color: #7867b6;" text="DELETE">
                                  <font>
-                                    <Font name="Roboto Bold" size="14.0"/>
+                                    <Font name="Roboto Bold" size="14.0" />
                                  </font>
                                  <effect>
-                                    <DropShadow/>
+                                    <DropShadow />
                                  </effect>
                                  <cursor>
-                                    <Cursor fx:constant="HAND"/>
+                                    <Cursor fx:constant="HAND" />
                                  </cursor>
                               </Button>
-                              <Button fx:id="deleteButton5" layoutX="14.0" layoutY="251.0" mnemonicParsing="false"
-                                      onAction="#deleteButton5"
-                                      style="-fx-background-radius: 30; -fx-background-color: #7867b6;" text="DELETE">
+                              <Button layoutX="14.0" layoutY="251.0" mnemonicParsing="false" onAction="#deleteButton5" style="-fx-background-radius: 30; -fx-background-color: #7867b6;" text="DELETE">
                                  <font>
-                                    <Font name="Roboto Bold" size="14.0"/>
+                                    <Font name="Roboto Bold" size="14.0" />
                                  </font>
                                  <effect>
-                                    <DropShadow/>
+                                    <DropShadow />
                                  </effect>
                                  <cursor>
-                                    <Cursor fx:constant="HAND"/>
+                                    <Cursor fx:constant="HAND" />
                                  </cursor>
                               </Button>
                            </AnchorPane>
@@ -322,10 +298,9 @@
             </Tab>
       </TabPane>
    <AnchorPane layoutX="301.0" prefHeight="100.0" prefWidth="700.0" style="-fx-background-color: #59648d;">
-      <Label contentDisplay="CENTER" layoutX="255.0" layoutY="29.0" text="FLASH-CARDS" textAlignment="CENTER"
-             textFill="#d8d3ea">
+      <Label contentDisplay="CENTER" layoutX="255.0" layoutY="29.0" text="FLASH-CARDS" textAlignment="CENTER" textFill="#d8d3ea">
          <font>
-            <Font name="Roboto Bold" size="30.0"/>
+            <Font name="Roboto Bold" size="30.0" />
          </font>
       </Label>
    </AnchorPane>

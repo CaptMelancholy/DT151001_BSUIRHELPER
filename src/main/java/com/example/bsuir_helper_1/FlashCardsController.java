@@ -33,19 +33,19 @@ public class FlashCardsController {
     private Text newCard;
 
     @FXML
-    private Text newText1;
+    private Text textOfNewFlashcard1;
 
     @FXML
-    private Text newText2;
+    private Text textOfNewFlashcard2;
 
     @FXML
-    private Text newText3;
+    private Text textOfNewFlashcard3;
 
     @FXML
-    private Text newText4;
+    private Text textOfNewFlashcard4;
 
     @FXML
-    private Text newText5;
+    private Text textOfNewFlashcard5;
 
     @FXML
     private Text classes;
@@ -72,21 +72,6 @@ public class FlashCardsController {
     private AnchorPane listBackground;
 
     @FXML
-    private Button deleteButton1;
-
-    @FXML
-    private Button deleteButton2;
-
-    @FXML
-    private Button deleteButton3;
-
-    @FXML
-    private Button deleteButton4;
-
-    @FXML
-    private Button deleteButton5;
-
-    @FXML
     private Button nextButton;
 
     @FXML
@@ -101,9 +86,9 @@ public class FlashCardsController {
     @FXML
     private Button listOfFlashcardsButton;
 
-    final public String [] listOfFood = new String[] {"сталовка 4к","сталовка 2к","буфет 4к","буфет 5к","церковная лавка","продукты бар","корона","буфут 2к"};
+    final public String [] listOfFood = new String[] {"dining room in the 4th building","dining room in the 2nd building","buffet in the 4th building","buffet in the 5th building","church shop(5th building)","shop 'food/bar' ","shop 'corona'","buffet in the 2nd building"};
     final public int numberOfFood = Array.getLength(listOfFood);
-    final public String [] listOfClasses = new String[] {"лабы/учеба","фильмец","накотить встречу с друзьями","прогуляться по улице","погамать в компик","заняться свои хобби"};
+    final public String [] listOfClasses = new String[] {"make labs","check news","do your studies","watch th film","meet with your friends","take a walk in the street","play in the computer games","do your hobby"};
     final public int numberOfClasses = Array.getLength(listOfClasses);
 
     public String [] listOfNewFlashcards = new String[15];
@@ -130,17 +115,19 @@ public class FlashCardsController {
                 listOfNewFlashcards[numOfNewFlashcards] = newFlashcard;
                 numOfNewFlashcards++;}
             }
+            readerOfNewFlashcards.close();
             numberOfScroll = (numOfNewFlashcards-1)/5;
             if(numberOfScroll>0) nextButton.setDisable(false);
-            newText1.setText(listOfNewFlashcards[nowNumberOfScroll*5]);
-            newText2.setText(listOfNewFlashcards[nowNumberOfScroll*5+1]);
-            newText3.setText(listOfNewFlashcards[nowNumberOfScroll*5+2]);
-            newText4.setText(listOfNewFlashcards[nowNumberOfScroll*5+3]);
-            newText5.setText(listOfNewFlashcards[nowNumberOfScroll*5+4]);
+            textOfNewFlashcard1.setText(listOfNewFlashcards[nowNumberOfScroll*5]);
+            textOfNewFlashcard2.setText(listOfNewFlashcards[nowNumberOfScroll*5+1]);
+            textOfNewFlashcard2.setText(listOfNewFlashcards[nowNumberOfScroll*5+2]);
+            textOfNewFlashcard4.setText(listOfNewFlashcards[nowNumberOfScroll*5+3]);
+            textOfNewFlashcard5.setText(listOfNewFlashcards[nowNumberOfScroll*5+4]);
         }catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 
     public void generateNewPlace(){
         int newRandFood = (int) (Math.random() *numberOfFood);
@@ -208,16 +195,18 @@ public class FlashCardsController {
             window.show();
         }
         else{
+            if(!addNew.getText().equals("")){
             listOfNewFlashcards[numOfNewFlashcards] = addNew.getText();
             numOfNewFlashcards++;
             numberOfScroll = (numOfNewFlashcards-1)/5;
             if(numberOfScroll>0) nextButton.setDisable(false);
+
             switch ((numOfNewFlashcards-1)%5) {
-                case (0) -> newText1.setText(addNew.getText());
-                case (1) -> newText2.setText(addNew.getText());
-                case (2) -> newText3.setText(addNew.getText());
-                case (3) -> newText4.setText(addNew.getText());
-                case (4) -> newText5.setText(addNew.getText());
+                case (0) -> textOfNewFlashcard1.setText(addNew.getText());
+                case (1) -> textOfNewFlashcard2.setText(addNew.getText());
+                case (2) -> textOfNewFlashcard3.setText(addNew.getText());
+                case (3) -> textOfNewFlashcard4.setText(addNew.getText());
+                case (4) -> textOfNewFlashcard5.setText(addNew.getText());
                 default -> System.out.println("error");
             }
             try{
@@ -229,6 +218,42 @@ public class FlashCardsController {
             }catch (IOException e) {
                 e.printStackTrace();
             }
+            }
+        }
+    }
+
+    public void delete(int number){
+        if(numOfNewFlashcards!=0) {
+            listOfNewFlashcards[number] = "";
+            if (numOfNewFlashcards - 1 - number >= 0)
+                System.arraycopy(listOfNewFlashcards, number + 1, listOfNewFlashcards, number, numOfNewFlashcards - 1 - number);
+            listOfNewFlashcards[numOfNewFlashcards - 1] = "";
+            numOfNewFlashcards--;
+            try {
+                BufferedWriter writerOfNewFlashcards = new BufferedWriter(new FileWriter(newFlashcards));
+                for (int i = 0; i < numOfNewFlashcards; i++) {
+                    writerOfNewFlashcards.write(listOfNewFlashcards[i] + "\n");
+                    writerOfNewFlashcards.flush();
+                }
+                writerOfNewFlashcards.close();
+                numberOfScroll = (numOfNewFlashcards - 1) / 5;
+                if (numberOfScroll <= nowNumberOfScroll) nextButton.setDisable(true);
+                if (numOfNewFlashcards % 5 == 0 && nowNumberOfScroll != 0) {
+                    textOfNewFlashcard1.setText(listOfNewFlashcards[(nowNumberOfScroll - 1) * 5]);
+                    textOfNewFlashcard2.setText(listOfNewFlashcards[(nowNumberOfScroll - 1) * 5 + 1]);
+                    textOfNewFlashcard3.setText(listOfNewFlashcards[(nowNumberOfScroll - 1) * 5 + 2]);
+                    textOfNewFlashcard4.setText(listOfNewFlashcards[(nowNumberOfScroll - 1) * 5 + 3]);
+                    textOfNewFlashcard5.setText(listOfNewFlashcards[(nowNumberOfScroll - 1) * 5 + 4]);
+                } else {
+                    textOfNewFlashcard1.setText(listOfNewFlashcards[nowNumberOfScroll * 5]);
+                    textOfNewFlashcard2.setText(listOfNewFlashcards[nowNumberOfScroll * 5 + 1]);
+                    textOfNewFlashcard3.setText(listOfNewFlashcards[nowNumberOfScroll * 5 + 2]);
+                    textOfNewFlashcard4.setText(listOfNewFlashcards[nowNumberOfScroll * 5 + 3]);
+                    textOfNewFlashcard5.setText(listOfNewFlashcards[nowNumberOfScroll * 5 + 4]);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -236,58 +261,68 @@ public class FlashCardsController {
         nameOfTabBackground.setVisible(true);
         addNewBackground.setVisible(false);
         listBackground.setVisible(false);
+        nameOfTabButton.setDisable(true);
+        addNewButton.setDisable(false);
+        listOfFlashcardsButton.setDisable(false);
     }
 
     public void addNewButton(){
         nameOfTabBackground.setVisible(false);
         addNewBackground.setVisible(true);
         listBackground.setVisible(false);
+        nameOfTabButton.setDisable(false);
+        addNewButton.setDisable(true);
+        listOfFlashcardsButton.setDisable(false);
     }
 
     public void listOfFlashcardsButton(){
         nameOfTabBackground.setVisible(false);
         addNewBackground.setVisible(false);
         listBackground.setVisible(true);
+        nameOfTabButton.setDisable(false);
+        addNewButton.setDisable(false);
+        listOfFlashcardsButton.setDisable(true);
     }
 
     public void deleteButton1(){
-
+        delete(nowNumberOfScroll*5);
     }
 
     public void deleteButton2(){
-
+        delete(nowNumberOfScroll*5+1);
     }
 
     public void deleteButton3(){
-
+        delete(nowNumberOfScroll*5+2);
     }
 
     public void deleteButton4(){
-
+        delete(nowNumberOfScroll*5+3);
     }
 
     public void deleteButton5(){
-
+        delete(nowNumberOfScroll*5+4);
     }
 
     public void backButton(){
         nowNumberOfScroll--;
-        newText1.setText(listOfNewFlashcards[nowNumberOfScroll*5]);
-        newText2.setText(listOfNewFlashcards[nowNumberOfScroll*5+1]);
-        newText3.setText(listOfNewFlashcards[nowNumberOfScroll*5+2]);
-        newText4.setText(listOfNewFlashcards[nowNumberOfScroll*5+3]);
-        newText5.setText(listOfNewFlashcards[nowNumberOfScroll*5+4]);
+        textOfNewFlashcard1.setText(listOfNewFlashcards[nowNumberOfScroll*5]);
+        textOfNewFlashcard2.setText(listOfNewFlashcards[nowNumberOfScroll*5+1]);
+        textOfNewFlashcard3.setText(listOfNewFlashcards[nowNumberOfScroll*5+2]);
+        textOfNewFlashcard4.setText(listOfNewFlashcards[nowNumberOfScroll*5+3]);
+        textOfNewFlashcard5.setText(listOfNewFlashcards[nowNumberOfScroll*5+4]);
         nextButton.setDisable(false);
         if(nowNumberOfScroll==0) backButton.setDisable(true);
+        if(numberOfScroll<=nowNumberOfScroll) nextButton.setDisable(true);
     }
 
     public void nextButton(){
         nowNumberOfScroll++;
-        newText1.setText(listOfNewFlashcards[nowNumberOfScroll*5]);
-        newText2.setText(listOfNewFlashcards[nowNumberOfScroll*5+1]);
-        newText3.setText(listOfNewFlashcards[nowNumberOfScroll*5+2]);
-        newText4.setText(listOfNewFlashcards[nowNumberOfScroll*5+3]);
-        newText5.setText(listOfNewFlashcards[nowNumberOfScroll*5+4]);
+        textOfNewFlashcard1.setText(listOfNewFlashcards[nowNumberOfScroll*5]);
+        textOfNewFlashcard2.setText(listOfNewFlashcards[nowNumberOfScroll*5+1]);
+        textOfNewFlashcard3.setText(listOfNewFlashcards[nowNumberOfScroll*5+2]);
+        textOfNewFlashcard4.setText(listOfNewFlashcards[nowNumberOfScroll*5+3]);
+        textOfNewFlashcard5.setText(listOfNewFlashcards[nowNumberOfScroll*5+4]);
         backButton.setDisable(false);
         if(nowNumberOfScroll==numberOfScroll) nextButton.setDisable(true);
     }
