@@ -9,12 +9,16 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.Objects;
-
+/**
+ *Основной класс меню
+ */
 public class ControllerBSUIRHELPER {
     private Stage stage;
     private Scene scene;
     private Parent root;
-
+    /**
+     *Переход на окно змейки
+     */
     public void moveToGameSnake(final ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("gamesnake.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -23,8 +27,10 @@ public class ControllerBSUIRHELPER {
         stage.setTitle("BSUIR HELPER. PLAY IN FREE TIME");
         stage.centerOnScreen();
         stage.show();
- }
-
+    }
+    /**
+     *Переход на окно to-do списка
+     */
     public void moveToOrganizer(final ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("organizer.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -34,7 +40,9 @@ public class ControllerBSUIRHELPER {
         stage.centerOnScreen();
         stage.show();
     }
-
+    /**
+     *Переход на окно флеш-карточек
+     */
     public void moveToFlashcards(final ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("flashcards.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -44,8 +52,9 @@ public class ControllerBSUIRHELPER {
         stage.centerOnScreen();
         stage.show();
     }
-
-
+    /**
+     *Переход на окно прогноза погоды
+     */
     public void moveToWeather(final ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("weather.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();

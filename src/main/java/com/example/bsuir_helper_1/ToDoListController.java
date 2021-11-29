@@ -18,7 +18,9 @@ import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-
+/**
+ * Основной класс to-do списка
+ */
 public class ToDoListController {
 
     @FXML
@@ -136,6 +138,10 @@ public class ToDoListController {
     int numberOfTasks = 0;
     int numberOfScroll;
     int nowNumberOfScroll;
+
+    /**
+     * Инициализация данных с текстового файла
+     */
     @FXML
     public void initialize() {
         if(numberOfScroll<=nowNumberOfScroll) nextButtonOrg.setDisable(true);
@@ -156,6 +162,9 @@ public class ToDoListController {
         changeTasks();
     }
 
+    /**
+     * Заполнение текстовых полей и их окрашивание
+     */
     public void changeTasks(){
         textOfOrg1.setText(listOfTasks[nowNumberOfScroll * 10]);
             if(!Objects.equals(listOfColors[nowNumberOfScroll * 10], null)){ switch (listOfColors[nowNumberOfScroll*10]){
@@ -249,51 +258,99 @@ public class ToDoListController {
         else {changePrioritize10.setVisible(false);
             deleteButtonOrg10.setVisible(false);}
     }
+
+    /**
+     * Изменение приоритета задачи
+     * @param number номер задачи, у котороё меняется приоритет
+     */
     public void changePrioritize(int number) {
          listOfColors[nowNumberOfScroll*10 + number] = choiceBox.getValue();
         }
 
+    /**
+     * Изменение приоритета для первой задачи на экране задачи
+     */
     public void changePrioritize1(){
         changePrioritize(0);
         changeTasks();
     }
 
+    /**
+     * Изменение приоритета для второй задачи на экране задачи
+     */
     public void changePrioritize2(){
         changePrioritize(1);
         changeTasks();
     }
+
+    /**
+     * Изменение приоритета для третьей задачи на экране задачи
+     */
     public void changePrioritize3(){
         changePrioritize(2);
         changeTasks();
     }
+
+    /**
+     * Изменение приоритета для четвёртой задачи на экране задачи
+     */
     public void changePrioritize4(){
         changePrioritize(3);
         changeTasks();
     }
+
+    /**
+     * Изменение приоритета для пятой задачи на экране задачи
+     */
     public void changePrioritize5(){
         changePrioritize(4);
         changeTasks();
     }
+
+    /**
+     * Изменение приоритета для шестой задачи на экране задачи
+     */
     public void changePrioritize6(){
         changePrioritize(5);
         changeTasks();
     }
+
+    /**
+     * Изменение приоритета для седьмой задачи на экране задачи
+     */
     public void changePrioritize7(){
         changePrioritize(6);
         changeTasks();
     }
+
+    /**
+     * Изменение приоритета для восьмой задачи на экране задачи
+     */
     public void changePrioritize8(){
         changePrioritize(7);
         changeTasks();
     }
+
+    /**
+     * Изменение приоритета для девятой задачи на экране задачи
+     */
     public void changePrioritize9(){
         changePrioritize(8);
         changeTasks();
     }
+
+    /**
+     * Изменение приоритета для десятой задачи на экране задачи
+     */
     public void changePrioritize10(){
         changePrioritize(9);
         changeTasks();
     }
+
+    /**
+     * Удаление определённлй задачи
+     * @param number Номер задачи на экране, которую удаляем
+     */
     public void delete(int number){
         if(numberOfTasks!=0) {
             listOfTasks[number] = "";
@@ -333,6 +390,10 @@ public class ToDoListController {
         if (Objects.equals(listOfTasks[nowNumberOfScroll * 10+8], "")) {deleteButtonOrg9.setVisible(false);changePrioritize9.setVisible(false);}
         if (Objects.equals(listOfTasks[nowNumberOfScroll * 10+9], "")) {deleteButtonOrg10.setVisible(false);changePrioritize10.setVisible(false);}}
     }
+
+    /**
+     * Создание новой задачи
+     */
     @FXML
     private void addEventHandler() {
         if (numberOfTasks > 39) {
@@ -388,46 +449,71 @@ public class ToDoListController {
         }
 
     }
+
+    /**
+     * Удаление первой задачи из списка на экране
+     */
     public void deleteButtonOrg1(){
         delete(nowNumberOfScroll*10);
     }
-
+    /**
+     * Удаление второой задачи из списка на экране
+     */
     public void deleteButtonOrg2(){
         delete(nowNumberOfScroll*10+1);
     }
-
+    /**
+     * Удаление третьей задачи из списка на экране
+     */
     public void deleteButtonOrg3(){
         delete(nowNumberOfScroll*10+2);
     }
-
+    /**
+     * Удаление четвёртой задачи из списка на экране
+     */
     public void deleteButtonOrg4(){
         delete(nowNumberOfScroll*10+3);
     }
-
+    /**
+     * Удаление пятой задачи из списка на экране
+     */
     public void deleteButtonOrg5(){
         delete(nowNumberOfScroll*10+4);
     }
-
+    /**
+     * Удаление шестой задачи из списка на экране
+     */
     public void deleteButtonOrg6(){
         delete(nowNumberOfScroll*10+5);
     }
-
+    /**
+     * Удаление седьмой задачи из списка на экране
+     */
     public void deleteButtonOrg7(){
         delete(nowNumberOfScroll*10+6);
     }
-
+    /**
+     * Удаление восьмой задачи из списка на экране
+     */
     public void deleteButtonOrg8(){
         delete(nowNumberOfScroll*10+7);
     }
-
+    /**
+     * Удаление девятой задачи из списка на экране
+     */
     public void deleteButtonOrg9(){
         delete(nowNumberOfScroll*10+8);
     }
-
+    /**
+     * Удаление десятой задачи из списка на экране
+     */
     public void deleteButtonOrg10(){
         delete(nowNumberOfScroll*10+9);
     }
 
+    /**
+     * Переход на следующую страницу списка задач
+     */
     public void nextButtonOrg(){
         nowNumberOfScroll++;
         changeTasks();
@@ -435,6 +521,9 @@ public class ToDoListController {
         if(nowNumberOfScroll==numberOfScroll) nextButtonOrg.setDisable(true);
     }
 
+    /**
+     * Переход на предыдущую страницу списка задач
+     */
     public void backButtonOrg(){
         nowNumberOfScroll--;
         changeTasks();
@@ -443,6 +532,9 @@ public class ToDoListController {
         if(numberOfScroll==nowNumberOfScroll) nextButtonOrg.setDisable(true);
     }
 
+    /**
+     * Возврат в главное меню
+     */
     public void gotoMainMenu(final ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sample.fxml")));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

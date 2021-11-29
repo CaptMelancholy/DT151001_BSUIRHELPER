@@ -19,6 +19,9 @@ import java.util.Objects;
 
 import javafx.stage.Stage;
 
+/**
+ * Основной класс прогноза погоды
+ */
 public class WeatherController {
 
     @FXML
@@ -56,6 +59,9 @@ public class WeatherController {
 
     private static final OpenMapWeatherService openMapWeatherService = new OpenMapWeatherService(new HttpService());
 
+    /**
+     * Возврат в главное меню
+     */
     @FXML
     void backToMenu(final ActionEvent event) throws IOException {
         final Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sample.fxml")));
@@ -67,6 +73,9 @@ public class WeatherController {
             stage.show();
         }
 
+    /**
+     * Выводит информацию о погоде в конкретном месте
+     */
     @FXML
     public void initialize() {
         checkWeatherButton.setOnAction(event -> {

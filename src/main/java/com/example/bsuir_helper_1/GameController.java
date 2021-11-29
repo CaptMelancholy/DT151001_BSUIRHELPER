@@ -25,7 +25,7 @@ import java.util.ResourceBundle;
 
 
 public class GameController implements Initializable {
-    //TODO почему всё public ? Где-то нет модификаторов доступа совсем, переменные раскиданы по всему классу фиг знает как, выглядит очень так себе, перепишите нормально
+
     private static final int SNAKE_SIZE = 50;
     public Button startButton;
     public Label gameoverlabel;

@@ -21,6 +21,9 @@ import java.io.*;
 import java.lang.reflect.Array;
 import java.util.Objects;
 
+/**
+ * Основной класс фоеш-карточек
+ */
 public class FlashCardsController {
 
     @FXML
@@ -102,6 +105,9 @@ public class FlashCardsController {
     public File fileNameOfTab = new File("fileNameOfTab.txt");
     public File newFlashcards = new File("newFlashcards.txt");
 
+    /**
+     *Инициализирует информацию с текстовых файлов
+     */
     @FXML
     private void initialize() {
         try(BufferedReader reader = new BufferedReader(new FileReader(fileNameOfTab))) {
@@ -131,23 +137,34 @@ public class FlashCardsController {
         }
     }
 
-
+    /**
+     * Выводит случайную информацию из списка про места, где можно поесть
+     */
     public void generateNewPlace(){
         int newRandFood = (int) (Math.random() *numberOfFood);
         food.setText(listOfFood[newRandFood]);
 
     }
 
+    /**
+     * Выводит случайную информацию из списка про идей для занятий
+     */
     public void generateNewClasses(){
         int newRandClasses = (int) (Math.random() *numberOfClasses);
         classes.setText(listOfClasses[newRandClasses]);
     }
 
+    /**
+     * Выводит случайную флеш-карточку, созданную пользователем
+     */
     public void generateNewFlashcard(){
         int newRandClasses = (int) (Math.random() *numOfNewFlashcards);
         if (numOfNewFlashcards != 0) newCard.setText(listOfNewFlashcards[newRandClasses]);
     }
 
+    /**
+     * Переход к настройкам флеш-карточек
+     */
     public void settings(){
     mainWindowBackground.setVisible(false);
     settingsWindowBackground.setVisible(true);
@@ -160,11 +177,17 @@ public class FlashCardsController {
 
     }
 
+    /**
+     * Закрывает окно настроек
+     */
     public void closeButton(){
         settingsWindowBackground.setVisible(false);
         mainWindowBackground.setVisible(true);
     }
 
+    /**
+     * Сохраняет настройки флеш-карточек и записывает их в текстовый файл
+     */
     public void saveButton(){
         if (!Objects.equals(newNameOfTab.getText(), "")){
         nameOfTopic.setText(newNameOfTab.getText());
@@ -224,6 +247,10 @@ public class FlashCardsController {
         }
     }
 
+    /**
+     * Удаляет флеш-карточку
+     * @param number Номер флеш-карточки на экране
+     */
     public void delete(int number){
         if(numOfNewFlashcards!=0) {
             listOfNewFlashcards[number] = "";
@@ -254,6 +281,9 @@ public class FlashCardsController {
         }
     }
 
+    /**
+     * Переход на окно настроек названия вкладки
+     */
     public void nameOfTabButton(){
         nameOfTabBackground.setVisible(true);
         addNewBackground.setVisible(false);
@@ -263,6 +293,9 @@ public class FlashCardsController {
         listOfFlashcardsButton.setDisable(false);
     }
 
+    /**
+     * Переход на окно настроек добавления своей флеш-карточки
+     */
     public void addNewButton(){
         nameOfTabBackground.setVisible(false);
         addNewBackground.setVisible(true);
@@ -272,6 +305,9 @@ public class FlashCardsController {
         listOfFlashcardsButton.setDisable(false);
     }
 
+    /**
+     * Переход на окно настроек списка своих флеш-карточек
+     */
     public void listOfFlashcardsButton(){
         nameOfTabBackground.setVisible(false);
         addNewBackground.setVisible(false);
@@ -281,26 +317,40 @@ public class FlashCardsController {
         listOfFlashcardsButton.setDisable(true);
     }
 
+    /**
+     * Удаление первой флеш-карточки из списка на экране
+     */
     public void deleteButton1(){
         delete(nowNumberOfScroll*5);
     }
-
+    /**
+     * Удаление второй флеш-карточки из списка на экране
+     */
     public void deleteButton2(){
         delete(nowNumberOfScroll*5+1);
     }
-
+    /**
+     * Удаление третьей флеш-карточки из списка на экране
+     */
     public void deleteButton3(){
         delete(nowNumberOfScroll*5+2);
     }
-
+    /**
+     * Удаление четвертоё флеш-карточки из списка на экране
+     */
     public void deleteButton4(){
         delete(nowNumberOfScroll*5+3);
     }
-
+    /**
+     * Удаление пятой флеш-карточки из списка на экране
+     */
     public void deleteButton5(){
         delete(nowNumberOfScroll*5+4);
     }
 
+    /**
+     * Переход на предыдущую станицу списка своих флеш-карточек
+     */
     public void backButton(){
         nowNumberOfScroll--;
         textOfNewFlashcard1.setText(listOfNewFlashcards[nowNumberOfScroll*5]);
@@ -312,7 +362,9 @@ public class FlashCardsController {
         if(nowNumberOfScroll==0) backButton.setDisable(true);
         if(numberOfScroll<=nowNumberOfScroll) nextButton.setDisable(true);
     }
-
+    /**
+     * Переход на следующую станицу списка своих флеш-карточек
+     */
     public void nextButton(){
         nowNumberOfScroll++;
         textOfNewFlashcard1.setText(listOfNewFlashcards[nowNumberOfScroll*5]);
@@ -324,6 +376,9 @@ public class FlashCardsController {
         if(nowNumberOfScroll==numberOfScroll) nextButton.setDisable(true);
     }
 
+    /**
+     * Возврат в главное меню
+     */
     public void BackToMenuFlashCards(final ActionEvent event) throws IOException
     {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sample.fxml")));
