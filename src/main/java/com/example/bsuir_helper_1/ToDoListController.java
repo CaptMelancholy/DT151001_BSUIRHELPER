@@ -19,7 +19,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
- * Основной класс to-do списка
+ * To-do list main class
  */
 public class ToDoListController {
 
@@ -140,7 +140,7 @@ public class ToDoListController {
     int nowNumberOfScroll;
 
     /**
-     * Инициализация данных с текстового файла
+     * Initializing text file data
      */
     @FXML
     public void initialize() {
@@ -163,7 +163,7 @@ public class ToDoListController {
     }
 
     /**
-     * Заполнение текстовых полей и их окрашивание
+     * Text fields filling and their coloring
      */
     public void changeTasks(){
         textOfOrg1.setText(listOfTasks[nowNumberOfScroll * 10]);
@@ -260,15 +260,15 @@ public class ToDoListController {
     }
 
     /**
-     * Изменение приоритета задачи
-     * @param number номер задачи, у котороё меняется приоритет
+     * The task priority change
+     * @param number The number of the task which priority is being changed
      */
     public void changePrioritize(int number) {
          listOfColors[nowNumberOfScroll*10 + number] = choiceBox.getValue();
         }
 
     /**
-     * Изменение приоритета для первой задачи на экране задачи
+     * Changing the priority of the first task on the filed
      */
     public void changePrioritize1(){
         changePrioritize(0);
@@ -276,7 +276,7 @@ public class ToDoListController {
     }
 
     /**
-     * Изменение приоритета для второй задачи на экране задачи
+     * Changing the priority of the second task on the filed
      */
     public void changePrioritize2(){
         changePrioritize(1);
@@ -284,7 +284,7 @@ public class ToDoListController {
     }
 
     /**
-     * Изменение приоритета для третьей задачи на экране задачи
+     * Changing the priority of the third task on the filed
      */
     public void changePrioritize3(){
         changePrioritize(2);
@@ -292,7 +292,7 @@ public class ToDoListController {
     }
 
     /**
-     * Изменение приоритета для четвёртой задачи на экране задачи
+     * Changing the priority of the fourth task on the filed
      */
     public void changePrioritize4(){
         changePrioritize(3);
@@ -300,7 +300,7 @@ public class ToDoListController {
     }
 
     /**
-     * Изменение приоритета для пятой задачи на экране задачи
+     * Changing the priority of the fifth task on the filed
      */
     public void changePrioritize5(){
         changePrioritize(4);
@@ -308,7 +308,7 @@ public class ToDoListController {
     }
 
     /**
-     * Изменение приоритета для шестой задачи на экране задачи
+     * Changing the priority of the sixth task on the filed
      */
     public void changePrioritize6(){
         changePrioritize(5);
@@ -316,7 +316,7 @@ public class ToDoListController {
     }
 
     /**
-     * Изменение приоритета для седьмой задачи на экране задачи
+     * Changing the priority of the seventh task on the filed
      */
     public void changePrioritize7(){
         changePrioritize(6);
@@ -324,7 +324,7 @@ public class ToDoListController {
     }
 
     /**
-     * Изменение приоритета для восьмой задачи на экране задачи
+     * Changing the priority of the eighth task on the filed
      */
     public void changePrioritize8(){
         changePrioritize(7);
@@ -332,7 +332,7 @@ public class ToDoListController {
     }
 
     /**
-     * Изменение приоритета для девятой задачи на экране задачи
+     * Changing the priority of the nineth task on the filed
      */
     public void changePrioritize9(){
         changePrioritize(8);
@@ -340,7 +340,7 @@ public class ToDoListController {
     }
 
     /**
-     * Изменение приоритета для десятой задачи на экране задачи
+     * Changing the priority of the tenth task on the filed
      */
     public void changePrioritize10(){
         changePrioritize(9);
@@ -348,8 +348,8 @@ public class ToDoListController {
     }
 
     /**
-     * Удаление определённлй задачи
-     * @param number Номер задачи на экране, которую удаляем
+     * Deleting a choosed task
+     * @param number The number of the task which is being deleted
      */
     public void delete(int number){
         if(numberOfTasks!=0) {
@@ -392,7 +392,7 @@ public class ToDoListController {
     }
 
     /**
-     * Создание новой задачи
+     * Creating a new task
      */
     @FXML
     private void addEventHandler() {
@@ -451,68 +451,68 @@ public class ToDoListController {
     }
 
     /**
-     * Удаление первой задачи из списка на экране
+     * Deleting the first task on the filed
      */
     public void deleteButtonOrg1(){
         delete(nowNumberOfScroll*10);
     }
     /**
-     * Удаление второой задачи из списка на экране
+     * Deleting the second task on the filed
      */
     public void deleteButtonOrg2(){
         delete(nowNumberOfScroll*10+1);
     }
     /**
-     * Удаление третьей задачи из списка на экране
+     * Deleting the third task on the filed
      */
     public void deleteButtonOrg3(){
         delete(nowNumberOfScroll*10+2);
     }
     /**
-     * Удаление четвёртой задачи из списка на экране
+     * Deleting the fourth task on the filed
      */
     public void deleteButtonOrg4(){
         delete(nowNumberOfScroll*10+3);
     }
     /**
-     * Удаление пятой задачи из списка на экране
+     * Deleting the fifth task on the filed
      */
     public void deleteButtonOrg5(){
         delete(nowNumberOfScroll*10+4);
     }
     /**
-     * Удаление шестой задачи из списка на экране
+     * Deleting the sixth task on the filed
      */
     public void deleteButtonOrg6(){
         delete(nowNumberOfScroll*10+5);
     }
     /**
-     * Удаление седьмой задачи из списка на экране
+     * Deleting the seventh task on the filed
      */
     public void deleteButtonOrg7(){
         delete(nowNumberOfScroll*10+6);
     }
     /**
-     * Удаление восьмой задачи из списка на экране
+     * Deleting the eigth task on the filed
      */
     public void deleteButtonOrg8(){
         delete(nowNumberOfScroll*10+7);
     }
     /**
-     * Удаление девятой задачи из списка на экране
+     * Deleting the nineth task on the filed
      */
     public void deleteButtonOrg9(){
         delete(nowNumberOfScroll*10+8);
     }
     /**
-     * Удаление десятой задачи из списка на экране
+     * Deleting the tenth task on the filed
      */
     public void deleteButtonOrg10(){
         delete(nowNumberOfScroll*10+9);
     }
 
     /**
-     * Переход на следующую страницу списка задач
+     * Transition to the next page of task list
      */
     public void nextButtonOrg(){
         nowNumberOfScroll++;
@@ -522,7 +522,7 @@ public class ToDoListController {
     }
 
     /**
-     * Переход на предыдущую страницу списка задач
+     * Transition to the previous page of task list
      */
     public void backButtonOrg(){
         nowNumberOfScroll--;
@@ -533,7 +533,7 @@ public class ToDoListController {
     }
 
     /**
-     * Возврат в главное меню
+     * Returning to the main menu
      */
     public void gotoMainMenu(final ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sample.fxml")));
