@@ -1,16 +1,16 @@
 package com.example.bsuir_helper_1;
 
 /**
- * Основной класс местоположения
+ * Location main class
  */
 public class Position {
     private double xPos;
     private double yPos;
 
     /**
-     * Координаты местоположения
-     * @param xPos x координата
-     * @param yPos y координата
+     * Location coordinates
+     * @param xPos x coordinate
+     * @param yPos y coordinate
      */
     public Position(final double xPos, final double yPos) {
         this.xPos = xPos;
@@ -18,28 +18,28 @@ public class Position {
     }
 
     /**
-     *  Возвращает x координату
+     *  Returns x coordinate
      */
     public double getXPos() {
         return xPos;
     }
 
     /**
-     * Возвращает y координату
+     * Returns y coordinate
      */
     public double getYPos() {
         return yPos;
     }
 
     /**
-     * Указывает x координтау
+     * Indicates x coordinate
      */
     public void setXPos(double xPos) {
         this.xPos = xPos;
     }
 
     /**
-     * Указывает y координату
+     * Indicates y coordinate
      */
     public void setYPos(double yPos) {
         this.yPos = yPos;
