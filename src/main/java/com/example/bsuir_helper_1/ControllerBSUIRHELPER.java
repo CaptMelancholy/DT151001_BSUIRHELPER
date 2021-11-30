@@ -10,14 +10,14 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 /**
- *Основной класс меню
+ *Main class menu
  */
 public class ControllerBSUIRHELPER {
     private Stage stage;
     private Scene scene;
     private Parent root;
     /**
-     *Переход на окно змейки
+     *Snake Game launch
      */
     public void moveToGameSnake(final ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("gamesnake.fxml")));
@@ -29,7 +29,7 @@ public class ControllerBSUIRHELPER {
         stage.show();
     }
     /**
-     *Переход на окно to-do списка
+     *To-do list launch
      */
     public void moveToOrganizer(final ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("organizer.fxml")));
@@ -41,7 +41,7 @@ public class ControllerBSUIRHELPER {
         stage.show();
     }
     /**
-     *Переход на окно флеш-карточек
+     *Flash-cards launch
      */
     public void moveToFlashcards(final ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("flashcards.fxml")));
@@ -53,7 +53,7 @@ public class ControllerBSUIRHELPER {
         stage.show();
     }
     /**
-     *Переход на окно прогноза погоды
+     *Weather checker launch
      */
     public void moveToWeather(final ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("weather.fxml")));
