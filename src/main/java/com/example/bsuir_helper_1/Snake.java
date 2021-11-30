@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Основной класс змейки
+ * Snake main class
  */
 public class Snake {
     //A snake body part is 50x50
@@ -31,9 +31,9 @@ public class Snake {
     //Direction snake is moving at start
 
     /**
-     * Задание размера ополя игры
-     * @param gameField Поле игры
-     * @param size Разме поля игры
+     * Creating the field size
+     * @param gameField Game filed
+     * @param size Field size
      */
     public Snake(AnchorPane gameField, double size) {
         this.gameField = gameField;
@@ -41,7 +41,7 @@ public class Snake {
     }
 
     /**
-     * Старт игры
+     * Game start
      */
     public void start() {
         cleanItself();
@@ -63,7 +63,7 @@ public class Snake {
     }
 
     /**
-     * Передвижение хвоста змейки
+     * Snake tail movements
      */
     public void moveSnakeForward() {
 
@@ -76,7 +76,7 @@ public class Snake {
     }
 
     /**
-     * Перемещение головы змейки
+     * Snake head movements
      */
     private void moveHead() {
         if (getDirection().equals(Direction.D)) {
@@ -95,9 +95,9 @@ public class Snake {
     }
 
     /**
-     * Передвижение тела змейки
-     * @param snakeTail Название тела змейки
-     * @param tailNumber Разер тела
+     * Snake body movements
+     * @param snakeTail Snake body name
+     * @param tailNumber Body size
      */
     private void moveSnakeTail(Rectangle snakeTail, int tailNumber) {
         double yPos = positions.get(gameTicks - tailNumber + 1).getYPos() - snakeTail.getY();
@@ -107,7 +107,7 @@ public class Snake {
     }
 
     /**
-     * Очищение поля
+     * Field clearing
      */
     public void cleanItself() {
         for (Rectangle snake : snakeBody) {
@@ -116,24 +116,24 @@ public class Snake {
     }
 
     /**
-     * Получение направления двежения змейки
-     * @return Возвращает направления двежения змейки
+     * Receiving the direction of snake movements
+     * @return Returns the direction of snake movements
      */
     public Direction getDirection() {
         return direction;
     }
 
     /**
-     * Задание напрвления движения змейки
-     * @param direction направления двежения змейки
+     * Creating the direction of snake movements
+     * @param direction Snake movement direction
      */
     public void setDirection(Direction direction) {
         this.direction = direction;
     }
 
     /**
-     * Увеличение размера тела при подборе еды
-     * @param food Переменная, отвечающая за еду
+     * Increasing body sizes when collecting food
+     * @param food A variable for food
      */
     public boolean isFoodInsideSnake(Food food) {
         int size = positions.size();
@@ -149,9 +149,9 @@ public class Snake {
     }
 
     /**
-     * Отвечает за то, коснулась ли змея еды
-     * @param food Переменная отвечающая за еду
-     * @return Возвращает, затронула ли змея еду
+     * Is responsible for checking if the snake has touched food or not
+     * @param food A variable for food
+     * @return Returns if the snake has collected food
      */
     public boolean isSnakeHitFood(Food food) {
         return xPos + snakeHead.getX() == food.getPosition().getXPos() && yPos + snakeHead.getY() == food.getPosition().getYPos();
@@ -160,7 +160,7 @@ public class Snake {
     //New snake tail is created and added to the snake and the anchor pane
 
     /**
-     * Создание нового тела змейки при подборе еды
+     * Creating a new snake body when collecting food
      */
     public void onFoodEat() {
         Rectangle snakeTail = new Rectangle(
@@ -173,22 +173,22 @@ public class Snake {
     }
 
     /**
-     * Коснулась ли змейка стены
+     * Returns if the snake has touched a wall
      */
     public boolean isSnakeHitWall() {
         return xPos > 250 || xPos < -250 || yPos < -250 || yPos > 250;
     }
 
     /**
-     * Получения размера змейки
+     * Returns snake size
      */
     public int getSnakeSize() {
         return snakeBody.size();
     }
 
     /**
-     * Коснулась ли змейка с собой
-     * @return Возврат ответа, коснулась ли она себя
+     * Checking if the snake has touched itself
+     * @return Returns if the snake has touched itself
      */
     public boolean isSnakeHitItSelf() {
         int size = positions.size() - 1;
@@ -204,8 +204,8 @@ public class Snake {
     }
 
     /**
-     * Получения координат местоположения змейки
-     * @return Возвращает координаты змейки
+     * Receiving the coordinates of snake location
+     * @return Returns the snake coordinates
      */
     Position getSnakeHeadPosition() {
         return new Position(snakeHead.getTranslateX(), snakeHead.getTranslateY());
