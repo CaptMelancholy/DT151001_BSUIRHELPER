@@ -20,7 +20,7 @@ import java.util.Objects;
 import javafx.stage.Stage;
 
 /**
- * Основной класс прогноза погоды
+ * Weather checker main class
  */
 public class WeatherController {
 
@@ -60,7 +60,7 @@ public class WeatherController {
     private static final OpenMapWeatherService openMapWeatherService = new OpenMapWeatherService(new HttpService());
 
     /**
-     * Возврат в главное меню
+     * Returning to the main menu
      */
     @FXML
     void backToMenu(final ActionEvent event) throws IOException {
@@ -74,7 +74,7 @@ public class WeatherController {
         }
 
     /**
-     * Выводит информацию о погоде в конкретном месте
+     * Displays the information of weather in a specific place
      */
     @FXML
     public void initialize() {
