@@ -6,7 +6,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 /**
- *Запуск главного окна
+ *Main window launch
  */
 public class ApplicationBSUIRHELPER extends javafx.application.Application {
     @Override
@@ -21,7 +21,7 @@ public class ApplicationBSUIRHELPER extends javafx.application.Application {
         Notification.moveToCovid19AlertPage();
     }
     /**
-     *Запуск программы
+     *Programm launch
      */
     public static void main(final String[] args) {
         launch();
