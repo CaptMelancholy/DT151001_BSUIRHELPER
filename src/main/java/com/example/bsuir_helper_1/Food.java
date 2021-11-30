@@ -7,7 +7,7 @@ import javafx.scene.shape.Rectangle;
 import java.util.Random;
 
 /**
- * Главный класс, отчечающий за блоки еды
+ * The main class for food section
  */
 public class Food {
     private final Position position;
@@ -16,11 +16,11 @@ public class Food {
     private final double size;
 
     /**
-     * Основные параметры еды
-     * @param xPos y координата еды
-     * @param yPos x координата еды
-     * @param pane Фон, на котором появляется еда
-     * @param size Размер еды
+     * The main food parameters
+     * @param xPos y food coordinate
+     * @param yPos x food coordinate
+     * @param pane The background where food appears
+     * @param size Food size
      */
     public Food(final double xPos, final double yPos, final AnchorPane pane, final double size) {
         this.size = (int) size;
@@ -30,29 +30,29 @@ public class Food {
     }
 
     /**
-     * Возвращает позицию еды
-     * @return Позиция еды
+     * Returns food position
+     * @return Food position
      */
     public Position getPosition() {
         return position;
     }
 
     /**
-     * Генерация еды на случайном месте поля
+     * Generates food on the random field spot
      */
     public void moveFood() {
         getRandomSpotForFood();
     }
 
     /**
-     * Уничтожение еды при ее подборе
+     * Destoys food once collected
      */
     public void destroyFood() {
         rectangle.setVisible(false);
     }
 
     /**
-     * Генерация случайного места для еды
+     * Generates a random place for food
      */
     public void getRandomSpotForFood() {
         double positionX = random.nextInt(10);
