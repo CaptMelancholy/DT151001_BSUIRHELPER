@@ -1,7 +1,7 @@
 package com.example.bsuir_helper_1;
 
 /**
- * Осноной класс приложения
+ * App main class
  */
 public class Main {
 
