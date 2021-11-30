@@ -1,7 +1,7 @@
 package com.example.bsuir_helper_1;
 
 /**
- * Перечисление логически связанных констант - в нашем случае - управление по стрелочкам
+ * Enumeration of logical constants, in our case, arrows directions 
  */
 public enum Direction {
     W, S, D, A
