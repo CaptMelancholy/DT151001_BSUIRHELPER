@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 public class Notification {
     /**
-     * Вызов сообщения о covid-19
+     * Covid-19 notification
      */
     public static void moveToCovid19AlertPage(){
         Stage window = new Stage();
